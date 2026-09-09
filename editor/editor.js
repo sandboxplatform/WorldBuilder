@@ -539,6 +539,21 @@ function objFits(x, y, w, h) {
   return Math.floor(x / T) >= r.x0 && Math.floor(y / T) >= r.y0
       && Math.floor((x + w - 1) / T) <= r.x1 && Math.floor((y + h - 1) / T) <= r.y1;
 }
+// One drop of the sprite stamp, snapped to its own footprint. Quiet on a drag,
+// where a cell that does not fit is passed over rather than announced each time.
+function dropSprite(ev, quiet) {
+  const L = objLayer();
+  if (!L) { if (!quiet) toast("add an object layer first", false); return null; }
+  const p = pixelAt(ev);
+  const it = { id: state.stamp.sprite, x: snapObj(p.x), y: snapObj(p.y) };
+  const [w, h] = objSize(it.id);
+  if (!objFits(it.x, it.y, w, h)) {
+    if (!quiet) toast("does not fit in the selection", false);
+    return null;
+  }
+  L.items.push(it); state.sel = it;
+  return it;
+}
 function objSize(id) {
   const a = state.singles?.byId?.[id];
   if (!a) return [M.tile, M.tile];
@@ -771,16 +786,11 @@ function onMapDown(ev) {
       draw(); return;
     }
     snapshot();
-    const L = objLayer();
-    if (!L) { toast("add an object layer first", false); return; }
-    const [w, h] = objSize(state.stamp.sprite);
-    // drop it into the cell under the cursor, aligned by its own footprint
-    const it = { id: state.stamp.sprite, x: snapObj(p.x), y: snapObj(p.y) };
-    if (!objFits(it.x, it.y, w, h)) {
-      toast("does not fit in the selection", false); drag = null; return;
-    }
-    L.items.push(it); state.sel = it;
-    drag = { obj: it, dx: 0, dy: 0 };
+    const it = dropSprite(ev);
+    if (!it) { drag = null; return; }
+    // dragging on goes on painting, the way a tile stamp does. Nudging what you
+    // just put down is the move tool's job, and it used to steal the drag here.
+    drag = { paintObj: true, last: `${it.x},${it.y}` };
     draw(); return;
   }
   // A live selection masks editing. Silently ignoring clicks outside it is the one
@@ -826,6 +836,12 @@ function onMapMove(ev) {
   if (drag.marquee) { const c2 = cellAt(ev);
     state.marquee.x1 = c2.x; state.marquee.y1 = c2.y; draw(); return; }
   if (drag.erasingObjects) { eraseObjectAt(ev); draw(); return; }
+  if (drag.paintObj) {
+    // one per cell entered: without this a wobble inside one cell stacks copies
+    const p = pixelAt(ev), k = `${snapObj(p.x)},${snapObj(p.y)}`;
+    if (k !== drag.last && dropSprite(ev, true)) drag.last = k;
+    draw(); return;
+  }
   if (drag.obj) { const p = pixelAt(ev, false);
     const nx = snapObj(p.x + drag.dx), ny = snapObj(p.y + drag.dy);
     const [ow, oh] = objSize(drag.obj.id);
@@ -884,6 +900,25 @@ function onMapUp() {
       const r = selRect();
       if (r && (x1 < r.x0 || x0 > r.x1 || y1 < r.y0 || y0 > r.y1))
         toast("outside the selection — esc to clear", false);
+    } else if (st) {
+      // A sprite has no sheet to slice, so the rect used to fall past this branch
+      // and do nothing at all. It fills as a grid of drops instead, stepping by the
+      // sprite's own footprint the way a multi-tile tile stamp repeats -- and only
+      // where a whole one fits, since half an object is not something to place.
+      const L = objLayer();
+      if (!L) toast("add an object layer first", false);
+      else {
+        const T = M.tile, [pw, ph] = objSize(st.sprite);
+        const cw = Math.max(1, Math.round(pw / T)), ch = Math.max(1, Math.round(ph / T));
+        let n = 0;
+        for (let y = y0; y + ch - 1 <= y1; y += ch)
+          for (let x = x0; x + cw - 1 <= x1; x += cw) {
+            if (!objFits(x * T, y * T, pw, ph)) continue;
+            L.items.push({ id: st.sprite, x: x * T, y: y * T });
+            n++;
+          }
+        if (!n) toast(`nothing placed — a ${cw}×${ch} sprite does not fit`, false);
+      }
     }
   }
   drag = null;

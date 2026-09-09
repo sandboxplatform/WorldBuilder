@@ -186,6 +186,41 @@ export async function run() {
     ok(objs().every(i => i.x % T() === 0 && i.y % T() === 0), 'object off grid');
   });
 
+  await t('dragging a sprite stamp keeps painting, one per cell', async () => {
+    await freshMap(); await grabSprite('int.single.living_room', 0);
+    layer('props'); tool('paint');
+    down(at(3, 3));
+    for (const x of [4, 5, 6]) { move(at(x, 3)); await sleep(30); }
+    up(); await sleep(60);
+    eq(objs().length, 4, 'the drag stopped painting after the first drop');
+    eq(objs()[0].x, 3 * T(), 'the first drop was dragged along instead of left alone');
+    // a wobble inside one cell is one object, not a pile of them
+    down(at(9, 9)); move(at(9, 9)); move(at(9, 9)); up(); await sleep(60);
+    eq(objs().length, 5, 'one cell took more than one copy');
+  });
+
+  await t('a rect fills the area with the sprite stamp', async () => {
+    await freshMap();
+    const cats = state.singles.cats;
+    const cat = Object.keys(cats).find(c => cats[c].some(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    await grabSprite(cat, cats[cat].findIndex(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    layer('props'); tool('rect');
+    down(at(2, 2)); move(at(5, 5)); up(); await sleep(80);
+    eq(objs().length, 16, 'a 4x4 rect of a 1x1 sprite is 16 drops');
+    ok(objs().every(i => i.x % T() === 0 && i.y % T() === 0), 'object off grid');
+
+    // one too big for the rectangle places nothing rather than half of itself
+    await freshMap();
+    const big = Object.keys(cats).map(c => cats[c].find(e => e.tiles[0] > 2 && e.tiles[1] > 2))
+      .find(Boolean);
+    if (big) {
+      state.stamp = { sprite: big.id, w: big.tiles[0], h: big.tiles[1], image: big.image };
+      layer('props'); tool('rect');
+      down(at(2, 2)); move(at(3, 3)); up(); await sleep(80);
+      eq(objs().length, 0, 'a sprite bigger than the rect was placed anyway');
+    }
+  });
+
   await t('select drags a single object and it stays snapped', async () => {
     await freshMap(); const a = await grabSprite('int.single.living_room', 0);
     layer('props'); tool('paint'); down(at(3, 3)); up(); await sleep(40);
