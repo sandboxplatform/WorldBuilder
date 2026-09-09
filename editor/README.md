@@ -73,8 +73,10 @@ whole. Picking one gives a sprite stamp; it exports as an object placement.
 ## Layout
 
 The three columns resize: drag either gutter, double click one to restore its default.
-The chevron in each gutter collapses that side panel away and brings it back — the
-chevron stays put when the panel goes, so the way out is where the way in was. The
+Either side panel folds away to give the map the space: **◧** and **◨** in the header,
+or the chevron tab at the top of each gutter. The chevron stays put when the panel
+goes, so the way out is where the way in was, and the header button lights up while
+its panel is hidden. The
 palette resizes on its own bottom edge. Every size and collapsed state persists per
 browser.
 

@@ -1363,7 +1363,12 @@ function setCollapsed(which, off) {
   const left = which === "colL";
   // the chevron always points the way the panel will move
   chev.textContent = off === left ? "›" : "‹";
-  chev.dataset.tip = `${off ? "Show" : "Collapse"} the ${PANEL.label[which]} panel.`;
+  const tip = `${off ? "Show" : "Collapse"} the ${PANEL.label[which]} panel.`;
+  chev.dataset.tip = tip;
+  // the gutter chevron is a hairline you have to know about; the header button is
+  // where someone actually looks for this
+  const hdr = $(which === "colL" ? "#btnPanelL" : "#btnPanelR");
+  if (hdr) { hdr.dataset.tip = tip; hdr.classList.toggle("on", off); }
   store("wb." + which + ".off", off ? "1" : "0");
   draw();
 }
@@ -1399,8 +1404,11 @@ function initLayout() {
   };
   drag($("#gutL"), "colL", 1);
   drag($("#gutR"), "colR", -1);
-  $("#chevL").onclick = () => setCollapsed("colL", !collapsed("colL"));
-  $("#chevR").onclick = () => setCollapsed("colR", !collapsed("colR"));
+  const toggle = which => () => setCollapsed(which, !collapsed(which));
+  $("#chevL").onclick = toggle("colL");
+  $("#chevR").onclick = toggle("colR");
+  $("#btnPanelL").onclick = toggle("colL");
+  $("#btnPanelR").onclick = toggle("colR");
 
   if (window.ResizeObserver)
     new ResizeObserver(() => {

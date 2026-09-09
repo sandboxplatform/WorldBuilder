@@ -34,7 +34,7 @@
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
     font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:hidden}
-  #app{display:grid;grid-template-columns:var(--colL,280px) 6px 1fr 6px var(--colR,210px);
+  #app{display:grid;grid-template-columns:var(--colL,280px) 12px 1fr 12px var(--colR,210px);
     grid-template-rows:42px 1fr;height:100%}
   /* drag handles between the three columns; the palette resizes on its own edge */
   .gutter{background:var(--panel);border-left:1px solid var(--line);border-right:1px solid var(--line);
@@ -46,11 +46,11 @@
   .gutter.off::after{display:none}
   /* the chevron lives in the gutter: the one place that is still on screen when the
      panel it belongs to has been collapsed away */
-  .chev{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-    width:16px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;
-    border:1px solid var(--line);border-radius:4px;background:var(--ctl);color:var(--dim);
-    font-size:10px;line-height:1;cursor:pointer}
-  .chev:hover{color:var(--ink);border-color:var(--ctlHi);background:var(--selBg)}
+  .chev{position:absolute;left:50%;top:14px;transform:translateX(-50%);
+    width:20px;height:46px;padding:0;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--selLine);border-radius:5px;background:var(--ctl);color:var(--ink);
+    font-size:12px;line-height:1;cursor:pointer;box-shadow:var(--shadow)}
+  .chev:hover{color:var(--onAccent);border-color:var(--accent);background:var(--accent)}
   /* collapsed, the gutter sits hard against the window edge, and a chevron centred
      on 6px hangs half of itself off screen -- so tuck it inward */
   #gutL.off .chev{left:0;transform:translate(0,-50%)}
@@ -173,6 +173,8 @@
     <button id="btnGrid" class="on" data-key="g" data-tip="Show the tile grid over the map.">grid</button>
     <button id="btnColl" data-key="c" data-tip="Tint every tile a character cannot walk through.">collision</button>
     <button id="btnPlay" data-tip="Drop the character in and walk the map, obeying collision.">▶ walk</button>
+    <button id="btnPanelL" data-tip="Collapse the tiles panel.">◧</button>
+    <button id="btnPanelR" data-tip="Collapse the tools panel.">◨</button>
     <button id="btnTheme" data-tip="Theme: system, light or dark.">◐</button>
     <button id="selBadge" hidden
       style="background:var(--accentBg);border-color:var(--accent);color:var(--accent)"

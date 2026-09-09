@@ -403,8 +403,9 @@ export async function run() {
 
   await t('side panels collapse and come back', async () => {
     const stage = () => document.querySelector('#stage').getBoundingClientRect().width;
-    for (const [chev, sel, key] of [['#chevL', 'aside:not(.right)', 'colL'],
-                                    ['#chevR', 'aside.right', 'colR']]) {
+    // both the hairline gutter chevron and the header button drive the same thing
+    for (const [chev, sel, key, hdr] of [['#chevL', 'aside:not(.right)', 'colL', '#btnPanelL'],
+                                         ['#chevR', 'aside.right', 'colR', '#btnPanelR']]) {
       setCollapsed(key, false); await sleep(150);
       const open = stage();
       const panel = document.querySelector(sel);
@@ -419,7 +420,9 @@ export async function run() {
       ok(c.width > 0 && c.left >= 0 && c.right <= innerWidth,
          `${key} chevron went off screen when collapsed`);
 
-      document.querySelector(chev).click(); await sleep(200);
+      ok(document.querySelector(hdr).classList.contains('on'),
+         `${key} header button does not show the collapsed state`);
+      document.querySelector(hdr).click(); await sleep(200);   // header button restores
       ok(!panel.classList.contains('collapsed'), `${key} did not come back`);
       ok(Math.abs(stage() - open) < 2, `${key} did not restore its width`);
       ok(document.querySelector('#map').width > 100, 'map canvas lost its size');
