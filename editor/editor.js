@@ -546,26 +546,47 @@ function objSize(id) {
  * than baked into an index: the sheets are already loaded for the palette, and it
  * keeps this true for any sheet without another build step.
  */
-const emptyTiles = new Map();
-function tileIsEmpty(sheetId, col, row) {
+const tileAlphaCache = new Map();
+// "empty" nothing at all, "partial" art with see-through gaps, "solid" edge to edge
+function tileAlpha(sheetId, col, row) {
   const key = `${sheetId}#${col},${row}`;
-  const hit = emptyTiles.get(key);
+  const hit = tileAlphaCache.get(key);
   if (hit !== undefined) return hit;
-  const sh = sheetOf(sheetId); if (!sh) return false;
+  const sh = sheetOf(sheetId); if (!sh) return "solid";
   const im = imgFor(sh.image);
-  if (!im.complete || !im.naturalWidth) return false;   // unknown yet: paint it
+  if (!im.complete || !im.naturalWidth) return "solid";   // unknown yet: paint it
   const T = state.tile;
-  let c = tileIsEmpty._c;
-  if (!c) { c = tileIsEmpty._c = document.createElement("canvas"); c.width = c.height = T; }
+  let c = tileAlpha._c;
+  if (!c) { c = tileAlpha._c = document.createElement("canvas"); }
   if (c.width !== T) { c.width = c.height = T; }
   const x = c.getContext("2d", { willReadFrequently: true });
   x.clearRect(0, 0, T, T);
   x.drawImage(im, col * T, row * T, T, T, 0, 0, T, T);
   const d = x.getImageData(0, 0, T, T).data;
-  let empty = true;
-  for (let i = 3; i < d.length; i += 4) if (d[i] > 8) { empty = false; break; }
-  emptyTiles.set(key, empty);
-  return empty;
+  let opaque = 0, clear = 0;
+  for (let i = 3; i < d.length; i += 4) {
+    if (d[i] > 200) opaque++; else if (d[i] < 8) clear++;
+  }
+  const cls = opaque === 0 ? "empty" : clear > 0 ? "partial" : "solid";
+  tileAlphaCache.set(key, cls);
+  return cls;
+}
+function tileIsEmpty(sheetId, col, row) { return tileAlpha(sheetId, col, row) === "empty"; }
+
+/*
+ * One cell holds one tile, so painting sand with see-through edges straight onto the
+ * grass replaces the grass and the gaps show the empty canvas. Layers are the answer
+ * and they already work -- but nothing said so, and the result reads as a bug. Say it
+ * once, when it actually happens.
+ */
+let coverWarned = 0;
+function warnCoveringWithHoles(layerName) {
+  const now = Date.now();
+  if (now - coverWarned < 12000) return;
+  coverWarned = now;
+  const i = M.layers.findIndex(L => L.name === layerName);
+  const above = M.layers[i + 1];
+  toast(`that tile has see-through parts — paint it on ${above ? `"${above.name}"` : "a higher layer"} to keep "${layerName}" showing underneath`, false);
 }
 
 function applyStamp(x, y) {
@@ -575,13 +596,17 @@ function applyStamp(x, y) {
   // A multi-tile stamp is one object: remember which cells came from it so erasing
   // any of them takes the whole thing, rather than punching a hole in a desk.
   const gid = (st.w * st.h > 1) ? state.nextGroup++ : 0;
+  let covering = false;
   for (let dy = 0; dy < st.h; dy++) for (let dx = 0; dx < st.w; dx++) {
     const tx = x + dx, ty = y + dy;
-    if (editable(tx, ty) && !tileIsEmpty(st.sheet, st.col + dx, st.row + dy)) {
-      L.grid[ty][tx] = makeRef(st.sheet, st.col + dx, st.row + dy);
-      L.groups[ty][tx] = gid;
-    }
+    if (!editable(tx, ty)) continue;
+    const cls = tileAlpha(st.sheet, st.col + dx, st.row + dy);
+    if (cls === "empty") continue;                 // never blank out what is under
+    if (cls === "partial" && L.grid[ty][tx]) covering = true;
+    L.grid[ty][tx] = makeRef(st.sheet, st.col + dx, st.row + dy);
+    L.groups[ty][tx] = gid;
   }
+  if (covering) warnCoveringWithHoles(L.name);
 }
 function eraseAt(x, y) {
   const L = M.layers[state.layerIdx];

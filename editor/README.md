@@ -157,6 +157,17 @@ and below the next layer, which is what makes "put this lamp on overhead" mean
 something. They block from where they sit, save with their layer, and the sprite count
 shows beside the layer name.
 
+## Stacking tiles in one cell
+
+Every tile layer has its own grid, so one cell holds **one tile per layer** — six of
+them (floor, walls, ground, furniture, objects, overhead), drawn in that order. Sand
+with see-through edges laid on `ground` over grass on `floor` shows the grass through
+the gaps; that is the whole point of the layer order.
+
+What does *not* work is painting both on the same layer. One cell holds one tile per
+layer, so the sand replaces the grass and its see-through parts show bare canvas. When
+that happens the editor now says so and names the layer to use instead.
+
 ## Stamps and transparency
 
 A stamp block is a rectangle, but the art inside it rarely is. The camping dock has
@@ -278,7 +289,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-31 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+33 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
@@ -291,7 +302,9 @@ deleting a saved world including the cancel path, collapsing
 each side panel and restoring it, a stamp leaving what is under its transparent
 cells alone, a sprite landing on the chosen layer and surviving a save, and the
 active layer being marked, named in the status line and unaffected by the
-visibility box.
+visibility box, a cell stacking a tile on every layer with the lower one
+showing through the upper one's gaps, and the warning naming where to put a
+see-through tile.
 
 ## Licensing
 

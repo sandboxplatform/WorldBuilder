@@ -511,6 +511,71 @@ export async function run() {
     ok(state.layerIdx !== idx, 'clicking a layer name did not select it');
   });
 
+  await t('one cell stacks a tile per layer, and see-through art composites', async () => {
+    await freshMap(10, 10);
+    const cam = state.sheetsBySize['32'].find(s => s.id.includes('camping'));
+    selectSheet(cam.id);
+    await new Promise(r => { const im = imgFor(cam.image);
+      im.complete ? r() : im.addEventListener('load', r, { once: true }); });
+
+    // a solid tile to sit underneath, and one with see-through gaps to lay over it
+    let solid = null, partial = null;
+    for (let row = 0; row < 40 && !(solid && partial); row++)
+      for (let col = 0; col < cam.cols; col++) {
+        const cls = tileAlpha(cam.id, col, row);
+        if (cls === 'solid' && !solid) solid = { col, row };
+        if (cls === 'partial' && !partial) partial = { col, row };
+      }
+    ok(solid && partial, 'needed one solid and one see-through tile');
+
+    const tiles = M.layers.filter(L => L.role !== 'objects');
+    ok(tiles.length >= 3, `only ${tiles.length} tile layers to stack into`);
+    tiles.forEach(L => { L.grid[3][3] = makeRef(cam.id, solid.col, solid.row); });
+    eq(tiles.filter(L => L.grid[3][3]).length, tiles.length,
+       'a cell cannot hold a tile on every layer');
+
+    // now the real question: does the lower layer show through the upper one?
+    tiles.forEach(L => { L.grid[3][3] = null; });
+    M.layers.find(L => L.name === 'floor').grid[3][3] = makeRef(cam.id, solid.col, solid.row);
+    M.layers.find(L => L.name === 'ground').grid[3][3] = makeRef(cam.id, partial.col, partial.row);
+    state.cam = { x: 0, y: 0 }; state.zoom = 2; draw(); await sleep(250);
+
+    const ctx = map().getContext('2d');
+    const S = 32 * 2;
+    const bg = cssVar('--canvas').trim();
+    let sawUnder = false;
+    for (let dy = 1; dy < S && !sawUnder; dy += 3)
+      for (let dx = 1; dx < S; dx += 3) {
+        const [r, g, b, a] = ctx.getImageData(3 * S + dx, 3 * S + dy, 1, 1).data;
+        const hex = '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+        if (a === 255 && hex !== bg) { sawUnder = true; break; }
+      }
+    ok(sawUnder, 'the upper tile blanked the layer under it instead of compositing');
+  });
+
+  await t('covering a tile with see-through art says what to do', async () => {
+    await freshMap(10, 10);
+    const cam = state.sheetsBySize['32'].find(s => s.id.includes('camping'));
+    selectSheet(cam.id);
+    await new Promise(r => { const im = imgFor(cam.image);
+      im.complete ? r() : im.addEventListener('load', r, { once: true }); });
+    let partial = null;
+    for (let row = 0; row < 40 && !partial; row++)
+      for (let col = 0; col < cam.cols; col++)
+        if (tileAlpha(cam.id, col, row) === 'partial') { partial = { col, row }; break; }
+
+    layer('floor');
+    const L = M.layers[state.layerIdx];
+    L.grid[4][4] = 'tile:' + cam.id + '#0,1';
+    coverWarned = 0;                                   // allow the warning to fire
+    state.stamp = { sheet: cam.id, col: partial.col, row: partial.row, w: 1, h: 1 };
+    applyStamp(4, 4); await sleep(150);
+    const t = document.querySelector('#toast');
+    ok(t.classList.contains('show'), 'no warning when covering with see-through art');
+    ok(/see-through/.test(t.textContent), `unexpected warning: ${t.textContent}`);
+    ok(/walls|higher layer/.test(t.textContent), 'the warning does not name where to put it');
+  });
+
   const pass = results.filter(r => r[0] === 'pass').length;
   console.log(results.map(r => `${r[0]}  ${r[1]}${r[2] ? '\n        ' + r[2] : ''}`).join('\n'));
   return { pass, fail: results.length - pass,
