@@ -907,7 +907,7 @@ function deserialise(d) {
   fillSheetSelect();
   M.size = d.size; M.background = d.background || DEFAULT_BG;
   const byName = Object.fromEntries((d.layers || []).map(L => [L.name, L]));
-  const names = [...new Set([...LAYERS, ...(d.layers || []).map(L => L.name)])];
+  const names = [...new Set([...LAYERS.map(L => L.name), ...(d.layers || []).map(L => L.name)])];
   const defRole = Object.fromEntries(LAYERS.map(L => [L.name, L.role]));
   M.layers = names.map(n => {
     const L = byName[n];
