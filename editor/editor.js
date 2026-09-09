@@ -723,6 +723,7 @@ function onMapMove(ev) {
   const c = cellAt(ev);
   const r0 = selRect();
   $("#status").textContent = `${c.x},${c.y}`
+    + `  → ${M.layers[state.layerIdx]?.name ?? "?"}`
     + (state.stamp ? `  stamp ${state.stamp.w}×${state.stamp.h}` : "")
     + (r0 ? `  · masked to ${r0.x1-r0.x0+1}×${r0.y1-r0.y0+1}  (esc to clear)` : "");
   if (!drag) return;
@@ -803,8 +804,11 @@ function onMapUp() {
 /* ----------------------------------------------------------------- layers */
 function renderLayers() {
   $("#layers").innerHTML = M.layers.map((L, i) => `
-    <div class="layer ${i === state.layerIdx ? "sel" : ""}" data-i="${i}">
-      <input type="checkbox" ${L.visible ? "checked" : ""} data-vis="${i}">
+    <div class="layer ${i === state.layerIdx ? "sel" : ""}" data-i="${i}"
+         data-tip="${i === state.layerIdx ? "You are drawing here."
+                     : "Click to draw on " + L.name + "."} The box only hides it.">
+      <input type="checkbox" ${L.visible ? "checked" : ""} data-vis="${i}"
+             data-tip="Show or hide ${L.name}.">
       <span>${L.name}</span>
       <small style="color:var(--dim)">${L.items?.length
         ? L.items.length + (L.role === "objects" ? " obj" : " spr")

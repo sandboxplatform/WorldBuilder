@@ -139,6 +139,16 @@ deliberately excluded: you walk over a rug and under a branch.
 
 Add your own with **+ layer**; you choose tiles or objects.
 
+## Choosing what you draw on
+
+Click a layer's **name** in the Layers list — that is the one every stroke lands on,
+tiles and sprites alike. It gets an accent bar and its name in bold, and the status
+line at the bottom of the canvas reads `12,7 → furniture` so you can see the target
+without looking away from the map. `[` and `]` step through the layers.
+
+The checkbox beside each name is visibility only. Ticking it hides or shows that
+layer and never changes what you are drawing on.
+
 ## Putting a sprite on a chosen layer
 
 Select a layer and place a sprite, and it lands on **that** layer — not on `props`.
@@ -268,7 +278,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-30 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+31 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
@@ -279,7 +289,9 @@ cycling system/light/dark and repainting both chrome and canvas, column resizing
 every tool having an icon, a tip and a shortcut that shows on hover, and
 deleting a saved world including the cancel path, collapsing
 each side panel and restoring it, a stamp leaving what is under its transparent
-cells alone, and a sprite landing on the chosen layer and surviving a save.
+cells alone, a sprite landing on the chosen layer and surviving a save, and the
+active layer being marked, named in the status line and unaffected by the
+visibility box.
 
 ## Licensing
 

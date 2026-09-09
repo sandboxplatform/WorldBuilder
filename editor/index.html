@@ -130,7 +130,13 @@
   #tip kbd{margin-left:5px}
   .layer{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:5px;cursor:pointer;
     border:1px solid transparent}
+  /* the active layer is where every stroke lands, so it gets an accent bar and its
+     name in bold -- the old pale fill alone read as a hover state */
+  .layer{position:relative;padding-left:12px}
   .layer.sel{background:var(--selBg);border-color:var(--selLine)}
+  .layer.sel::before{content:"";position:absolute;left:3px;top:5px;bottom:5px;width:3px;
+    background:var(--accent);border-radius:2px}
+  .layer.sel span{font-weight:700;color:var(--ink)}
   .layer input{margin:0}
   .layer span{flex:1}
   #status{position:absolute;left:8px;bottom:8px;background:var(--overlay);border:1px solid var(--line);
@@ -237,6 +243,8 @@
         <option value="16">half tile</option>
       </select></div>
     <h3>Layers</h3>
+    <div class="row"><small style="color:var(--dim)">click a name to draw there ·
+      <kbd>[</kbd> <kbd>]</kbd> to step</small></div>
     <div id="layers"></div>
     <div class="row"><button id="btnAddLayer">+ layer</button></div>
     <h3>Character</h3>

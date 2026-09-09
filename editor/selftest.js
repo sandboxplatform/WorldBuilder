@@ -485,6 +485,32 @@ export async function run() {
     ok(M.collision.size > 0, 'a sprite on a tile layer contributes no collision');
   });
 
+  await t('the layer you are drawing on is obvious and separate from visibility', async () => {
+    await freshMap(10, 10);
+    const rows = () => [...document.querySelectorAll('#layers .layer')];
+    layer('ground');
+    const idx = state.layerIdx;
+    const row = rows()[idx];
+    ok(row.classList.contains('sel'), 'the active layer is not marked');
+    eq(rows().filter(r => r.classList.contains('sel')).length, 1, 'more than one marked');
+
+    const b = map().getBoundingClientRect();
+    map().dispatchEvent(new MouseEvent('mousemove',
+      { clientX: b.left + 120, clientY: b.top + 90, bubbles: true }));
+    await sleep(120);
+    ok(document.querySelector('#status').textContent.includes('ground'),
+       'the status line does not say which layer is being written to');
+
+    // the checkbox is visibility only -- it must not steal the selection
+    const other = rows()[idx === 0 ? 1 : 0];
+    other.querySelector('input').click(); await sleep(150);
+    eq(state.layerIdx, idx, 'ticking the visibility box changed the active layer');
+    other.querySelector('input').click(); await sleep(100);
+
+    other.click(); await sleep(150);
+    ok(state.layerIdx !== idx, 'clicking a layer name did not select it');
+  });
+
   const pass = results.filter(r => r[0] === 'pass').length;
   console.log(results.map(r => `${r[0]}  ${r[1]}${r[2] ? '\n        ' + r[2] : ''}`).join('\n'));
   return { pass, fail: results.length - pass,
