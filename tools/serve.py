@@ -1,43 +1,136 @@
 #!/usr/bin/env python3
 """
-Local server for the editor and viewer.
+Server for the editor and viewer -- the same program locally and deployed.
 
-Serves the project root so sheet images stream straight out of images/extracted --
-nothing is copied, and nothing leaves this machine. Adds a small save/load API so
-the editor can write maps to maps/ instead of relying on browser downloads.
+Locally it binds 127.0.0.1 and serves the project root, so sheet images stream
+straight out of images/extracted: nothing is copied and nothing leaves the machine.
+
+Deployed it reads its configuration from the environment:
+
+    PORT        bind port, and binding moves to 0.0.0.0 (Railway sets this)
+    WB_USER     enable HTTP basic auth -- without both of these there is no login,
+    WB_PASS       which is right for localhost and wrong for anything public
+    WB_MAPS     where maps are saved       (default <root>/maps)
+    WB_OUT      where export bundles land  (default <root>/out)
 
     python3 tools/serve.py 8823
     editor  -> http://127.0.0.1:8823/editor/
     viewer  -> http://127.0.0.1:8823/viewer/
 """
-import functools, http.server, json, os, re, socketserver, sys, urllib.parse
+import base64, functools, hmac, http.server, io, json, os, re, sys, urllib.parse, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Export shells out to the image tools, which need Pillow. Prefer the project venv
 # over whatever interpreter happens to be running the server.
 VENV_PY = os.path.join(ROOT, ".venv", "bin", "python")
 PY = VENV_PY if os.path.exists(VENV_PY) else sys.executable
-MAPS = os.path.join(ROOT, "maps")
-PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8823
+
+MAPS = os.environ.get("WB_MAPS") or os.path.join(ROOT, "maps")
+OUT = os.environ.get("WB_OUT") or os.path.join(ROOT, "out")
+USER, PASS = os.environ.get("WB_USER"), os.environ.get("WB_PASS")
+
+# $PORT is how a platform tells us to listen; its presence means we are not local.
+ENV_PORT = os.environ.get("PORT")
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else int(ENV_PORT or 8823)
+HOST = "0.0.0.0" if ENV_PORT else "127.0.0.1"
+
 SAFE = re.compile(r"^[A-Za-z0-9_\-]{1,64}$")
+# Sheet art never changes: cache it for a year so a session downloads each sheet once
+# rather than on every click. The indexes are rebuilt by the tools, so they revalidate.
+IMMUTABLE = re.compile(r"^/(images|web_assets)/|^/editor/thumbs_.*\.png$")
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
+    # ------------------------------------------------------------------ helpers
     def _json(self, obj, code=200):
         body = json.dumps(obj).encode()
         self.send_response(code)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
-        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
 
+    def _authorised(self):
+        """Basic auth, on only when both credentials are configured."""
+        if not (USER and PASS):
+            return True
+        got = self.headers.get("Authorization", "")
+        if got.startswith("Basic "):
+            try:
+                user, _, pw = base64.b64decode(got[6:]).decode().partition(":")
+            except Exception:
+                user = pw = ""
+            # compare_digest on both halves: a plain == leaks length by timing
+            if hmac.compare_digest(user, USER) and hmac.compare_digest(pw, PASS):
+                return True
+        self.send_response(401)
+        self.send_header("WWW-Authenticate", 'Basic realm="WorldBuilder"')
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+        return False
+
+    def _forbidden(self):
+        """Nothing outside the app: no .git, no .venv, no dotfiles."""
+        path = urllib.parse.urlparse(self.path).path
+        return any(seg.startswith(".") for seg in path.split("/") if seg)
+
+    # ------------------------------------------------------------------ routes
     def do_GET(self):
-        if self.path.startswith("/api/maps"):
+        if not self._authorised():
+            return
+        if self._forbidden():
+            return self._json({"error": "not found"}, 404)
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == "/api/maps":
             os.makedirs(MAPS, exist_ok=True)
             names = sorted(f[:-5] for f in os.listdir(MAPS) if f.endswith(".json"))
             return self._json({"maps": names})
+        if parsed.path == "/api/map":
+            return self._read_map(urllib.parse.parse_qs(parsed.query))
+        if parsed.path == "/api/download":
+            return self._download(urllib.parse.parse_qs(parsed.query))
         return super().do_GET()
+
+    def do_HEAD(self):
+        if not self._authorised():
+            return
+        return super().do_HEAD()
+
+    def do_POST(self):
+        if not self._authorised():
+            return
+        parsed = urllib.parse.urlparse(self.path)
+        q = urllib.parse.parse_qs(parsed.query)
+        if parsed.path == "/api/export":
+            return self._export(q)
+        if parsed.path == "/api/save":
+            return self._save(q)
+        return self._json({"error": "unknown endpoint"}, 404)
+
+    def _read_map(self, q):
+        name = q.get("name", [""])[0]
+        if not SAFE.match(name):
+            return self._json({"error": "bad map name"}, 400)
+        path = os.path.join(MAPS, f"{name}.json")
+        if not os.path.exists(path):
+            return self._json({"error": "no such map"}, 404)
+        return self._json(json.load(open(path)))
+
+    def _save(self, q):
+        name = q.get("name", [""])[0]
+        if not SAFE.match(name):
+            return self._json({"error": "bad map name"}, 400)
+        try:
+            n = int(self.headers.get("Content-Length", 0))
+            data = json.loads(self.rfile.read(n))
+        except Exception as e:
+            return self._json({"error": f"bad payload: {e}"}, 400)
+        os.makedirs(MAPS, exist_ok=True)
+        path = os.path.join(MAPS, f"{name}.json")
+        with open(path, "w") as f:
+            json.dump(data, f, indent=1)
+        return self._json({"saved": os.path.basename(path),
+                           "bytes": os.path.getsize(path)})
 
     def _export(self, q):
         """Build a portable bundle: atlas, Tiled JSON, character, manifest."""
@@ -48,7 +141,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         src = os.path.join(MAPS, f"{name}.json")
         if not os.path.exists(src):
             return self._json({"error": "save the map first"}, 400)
-        outdir = os.path.join(ROOT, "out", name)
+        # An empty map packs a zero-tile atlas, which Pillow refuses to save with a
+        # traceback -- and "export bundle" is a plausible first click on a blank map.
+        m = json.load(open(src))
+        used = any(any(row) for L in m.get("layers", []) for row in L.get("grid") or []) \
+            or any(L.get("placements") for L in m.get("layers", []))
+        if not used:
+            return self._json({"error": "nothing to export — paint something first"}, 400)
+
+        outdir = os.path.join(OUT, name)
         os.makedirs(outdir, exist_ok=True)
         r = subprocess.run([PY, os.path.join(ROOT, "tools", "export_atlas.py"),
                             src, outdir, "--name", name, "--profile", "watercooler"],
@@ -69,7 +170,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                     "framesPerDir": c["framesPerDir"], "rows": c["rows"],
                     "dirBlocks": c["dirBlocks"],
                 }
-        m = json.load(open(src))
         # animated placements need their frame layout to travel with the bundle,
         # otherwise the importing project sees a single frozen frame
         ap = os.path.join(ROOT, "editor", "animations.json")
@@ -99,32 +199,41 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 tiles = int(line.split("unique tiles")[0].split(",")[-1].strip())
         return self._json({"dir": os.path.relpath(outdir, ROOT), "tiles": tiles,
                            "kb": round(os.path.getsize(atlas) / 1024) if os.path.exists(atlas) else 0,
-                           "files": sorted(os.listdir(outdir))})
+                           "files": sorted(os.listdir(outdir)),
+                           "download": f"/api/download?name={urllib.parse.quote(name)}"})
 
-    def do_POST(self):
-        parsed = urllib.parse.urlparse(self.path)
-        q = urllib.parse.parse_qs(parsed.query)
-        if parsed.path == "/api/export":
-            return self._export(q)
-        if parsed.path != "/api/save":
-            return self._json({"error": "unknown endpoint"}, 404)
-        name = urllib.parse.parse_qs(parsed.query).get("name", [""])[0]
+    def _download(self, q):
+        """The bundle as a zip. Over the network there is no other way to reach it."""
+        name = q.get("name", [""])[0]
         if not SAFE.match(name):
             return self._json({"error": "bad map name"}, 400)
-        try:
-            n = int(self.headers.get("Content-Length", 0))
-            data = json.loads(self.rfile.read(n))
-        except Exception as e:
-            return self._json({"error": f"bad payload: {e}"}, 400)
-        os.makedirs(MAPS, exist_ok=True)
-        path = os.path.join(MAPS, f"{name}.json")
-        with open(path, "w") as f:
-            json.dump(data, f, indent=1)
-        return self._json({"saved": os.path.relpath(path, ROOT),
-                           "bytes": os.path.getsize(path)})
+        outdir = os.path.join(OUT, name)
+        if not os.path.isdir(outdir):
+            return self._json({"error": "export the map first"}, 404)
+        buf = io.BytesIO()
+        with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+            for f in sorted(os.listdir(outdir)):
+                p = os.path.join(outdir, f)
+                if os.path.isfile(p):
+                    z.write(p, f"{name}/{f}")
+        body = buf.getvalue()
+        self.send_response(200)
+        self.send_header("Content-Type", "application/zip")
+        self.send_header("Content-Disposition", f'attachment; filename="{name}.zip"')
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
 
+    # ------------------------------------------------------------------ output
     def end_headers(self):
-        self.send_header("Cache-Control", "no-store")
+        path = urllib.parse.urlparse(self.path).path
+        if path.startswith("/api/"):
+            self.send_header("Cache-Control", "no-store")
+        elif IMMUTABLE.match(path):
+            # 95 MB of art across 13k files: without this every click refetches
+            self.send_header("Cache-Control", "public, max-age=31536000, immutable")
+        else:
+            self.send_header("Cache-Control", "no-cache")
         super().end_headers()
 
     def log_message(self, fmt, *args):
@@ -133,10 +242,20 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             sys.stderr.write(msg + "\n")
 
 
-socketserver.TCPServer.allow_reuse_address = True
-with socketserver.TCPServer(("127.0.0.1", PORT),
-                            functools.partial(Handler, directory=ROOT)) as httpd:
-    print(f"WorldBuilder serving {ROOT} on http://127.0.0.1:{PORT}")
-    print(f"  editor  http://127.0.0.1:{PORT}/editor/")
-    print(f"  viewer  http://127.0.0.1:{PORT}/viewer/")
-    httpd.serve_forever()
+# Threaded: a single-threaded server stalls the whole app while one 40 MB sheet
+# streams, which is survivable on localhost and not over the internet.
+class Server(http.server.ThreadingHTTPServer):
+    allow_reuse_address = True
+    daemon_threads = True
+
+
+if __name__ == "__main__":
+    os.makedirs(MAPS, exist_ok=True)
+    with Server((HOST, PORT), functools.partial(Handler, directory=ROOT)) as httpd:
+        where = "127.0.0.1" if HOST == "127.0.0.1" else HOST
+        print(f"WorldBuilder serving {ROOT} on http://{where}:{PORT}")
+        print(f"  editor  http://{where}:{PORT}/editor/")
+        print(f"  viewer  http://{where}:{PORT}/viewer/")
+        print(f"  maps    {MAPS}")
+        print(f"  auth    {'on' if (USER and PASS) else 'OFF — set WB_USER/WB_PASS'}")
+        httpd.serve_forever()

@@ -953,7 +953,14 @@ async function doExport() {
                         "&character=" + encodeURIComponent(state.charId || ""),
                         { method: "POST" }).then(r => r.json());
   if (r.error) return toast(r.error, false);
-  toast(`exported → ${r.dir} (${r.tiles} tiles, ${r.kb} KB)`);
+  toast(`exported ${r.tiles} tiles, ${r.kb} KB — downloading…`);
+  // running on a server somewhere, out/ is not a folder you can open: send the
+  // bundle to the browser as a zip
+  if (r.download) {
+    const a = document.createElement("a");
+    a.href = r.download; a.download = name + ".zip";
+    document.body.appendChild(a); a.click(); a.remove();
+  }
 }
 
 /* ------------------------------------------------------------------- init */
@@ -1413,7 +1420,10 @@ function init() {
   $("#snapSel").onchange = e => { state.snap = +e.target.value; };
   $("#loadSel").onchange = async e => {
     if (!e.target.value) return;
-    const d = await fetch("/maps/" + e.target.value + ".json").then(r => r.json());
+    // through the API, not /maps/<name>.json: deployed, maps live on a mounted
+    // volume outside the served root
+    const d = await fetch("/api/map?name=" + encodeURIComponent(e.target.value))
+      .then(r => r.json());
     $("#mapName").value = e.target.value; snapshot(); deserialise(d);
     toast("loaded " + e.target.value);
   };

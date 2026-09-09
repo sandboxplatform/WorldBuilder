@@ -1,0 +1,9 @@
+images/
+.venv/
+.git/
+out/
+labelling/
+viewer/assets/
+__pycache__/
+*.pyc
+.DS_Store

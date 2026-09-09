@@ -54,6 +54,30 @@ the console:
 await import('./selftest.js').then(m => m.run())
 ```
 
+## Deploying
+
+The app runs the same program locally and hosted. Hosted, it reads its configuration
+from the environment:
+
+| variable | effect |
+|---|---|
+| `PORT` | bind port; its presence switches the bind to `0.0.0.0` |
+| `WB_USER` / `WB_PASS` | enable HTTP basic auth — **without both, anyone with the URL is in** |
+| `WB_MAPS` | where maps are saved (point at a mounted volume, or saves die with the container) |
+| `WB_OUT` | where export bundles land |
+
+`web_assets/` is the deploy payload: the 95 MB the editor actually references, built
+from the 677 MB tree by `tools/prune_assets.py`. The [Dockerfile](Dockerfile) copies it
+to `images/` so every path in the JSON indexes resolves unchanged. Rebuild it whenever
+the indexes change:
+
+```bash
+python3 tools/prune_assets.py
+```
+
+Exports are downloaded as a zip from `/api/download`, since `out/` is not a folder you
+can open when the app is on a server.
+
 ## The packs
 
 `images/` is excluded from the repo: it is 1 GB across 95k files, and two of the zips
