@@ -75,6 +75,15 @@ whole. Picking one gives a sprite stamp; it exports as an object placement.
 The three columns resize: drag either gutter, double click one to restore its default.
 The palette resizes on its own bottom edge. All three sizes persist per browser.
 
+## Saving and deleting
+
+**Save** writes the map into `maps/`; **load…** lists what is there. **Delete** removes
+the saved copy of the world named in `load…` (or the name box), along with any export
+bundle built from it — leaving that behind would keep a stale zip downloadable for a
+world that no longer exists. It asks first, naming the world, because it is the one
+action here with no undo. Whatever is on the canvas is left alone: losing the file you
+saved should not also lose what is on screen.
+
 ## Tools
 
 Each tool button carries an icon and, on hover, a one-line explanation with its
@@ -237,7 +246,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-26 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+27 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
@@ -245,7 +254,8 @@ collision, animation playback, tile-size switching, painting outside the map, th
 thumbnail picker (cell count matches the option list, every cell has a preview,
 choosing one moves the palette), picker search and its empty state, the theme toggle
 cycling system/light/dark and repainting both chrome and canvas, column resizing with its clamps and reset, and
-every tool having an icon, a tip and a shortcut that shows on hover.
+every tool having an icon, a tip and a shortcut that shows on hover, and
+deleting a saved world including the cancel path.
 
 ## Licensing
 

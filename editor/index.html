@@ -134,6 +134,7 @@
   dialog menu{display:flex;justify-content:flex-end;gap:8px;margin:0;padding:10px 16px;
     border-top:1px solid var(--line)}
   button.primary{background:var(--accent);color:var(--onAccent);border-color:var(--accent);font-weight:600}
+  button.danger{background:var(--danger);color:#fff;border-color:var(--danger);font-weight:600}
 </style>
 <div id="app">
   <header>
@@ -142,6 +143,7 @@
     <button id="btnNew" data-tip="Start a new map — set its size in tiles or pixels.">New</button>
     <select id="loadSel"><option value="">load…</option></select>
     <button id="btnSave" data-key="ctrl+s" data-tip="Save this map into maps/ on disk.">Save</button>
+    <button id="btnDelete" data-tip="Delete the saved copy of this world. What is on screen stays; the saved file and its export bundle go.">Delete</button>
     <span class="sp"></span>
     <label><small>size</small>
       <select id="tileSize"><option>16</option><option selected>32</option><option>48</option></select>
@@ -237,6 +239,19 @@
     </small>
   </aside>
 </div>
+<dialog id="delDlg">
+  <form method="dialog">
+    <h2>Delete world</h2>
+    <p id="delWhat"></p>
+    <p><small>This cannot be undone. Whatever is on the canvas stays there — only the
+    saved copy and its export bundle are removed.</small></p>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="delOk" value="ok" class="danger">Delete</button>
+    </menu>
+  </form>
+</dialog>
+
 <dialog id="newDlg">
   <form method="dialog">
     <h2>New map</h2>

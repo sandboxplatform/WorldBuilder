@@ -377,6 +377,28 @@ export async function run() {
     ok(tip.hidden, 'tip did not hide when the pointer left');
   });
 
+  await t('delete removes a saved world, and cancel does not', async () => {
+    const NAME = '__deltest';
+    const listed = async () => (await fetch('/api/maps').then(r => r.json())).maps;
+
+    await freshMap(8, 8); await grabTiles(RB, 11, 6, 1, 1);
+    layer('floor'); tool('paint'); down(at(2, 2)); up(); await sleep(60);
+    document.querySelector('#mapName').value = NAME;
+    document.querySelector('#btnSave').click(); await sleep(500);
+    ok((await listed()).includes(NAME), 'setup: map did not save');
+
+    const dlg = document.querySelector('#delDlg');
+    document.querySelector('#btnDelete').click(); await sleep(200);
+    ok(dlg.open, 'delete did not ask for confirmation');
+    dlg.close('cancel'); await sleep(300);
+    ok((await listed()).includes(NAME), 'cancel deleted it anyway');
+
+    document.querySelector('#btnDelete').click(); await sleep(200);
+    dlg.close('ok'); await sleep(500);
+    ok(!(await listed()).includes(NAME), 'map survived a confirmed delete');
+    ok(objs !== undefined && M.layers.length > 0, 'canvas was wiped by a delete');
+  });
+
   const pass = results.filter(r => r[0] === 'pass').length;
   console.log(results.map(r => `${r[0]}  ${r[1]}${r[2] ? '\n        ' + r[2] : ''}`).join('\n'));
   return { pass, fail: results.length - pass,

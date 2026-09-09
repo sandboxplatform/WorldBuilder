@@ -867,6 +867,27 @@ async function save() {
   r.error ? toast(r.error, false) : toast(`saved ${r.saved} (${(r.bytes/1024).toFixed(0)} KB)`);
   refreshMapList();
 }
+/*
+ * Deleting is the one action here with no undo, so it names the world in the prompt
+ * rather than asking "are you sure?" about nothing in particular. The canvas is left
+ * alone: losing the file you saved should not also lose what you have on screen.
+ */
+function deleteMapDialog() {
+  const name = $("#loadSel").value || $("#mapName").value.trim();
+  if (!name) return toast("no saved world selected", false);
+  const dlg = $("#delDlg");
+  $("#delWhat").textContent = `Delete “${name}”?`;
+  dlg.returnValue = "";
+  dlg.showModal();
+  dlg.onclose = async () => {
+    if (dlg.returnValue !== "ok") return;
+    const r = await fetch("/api/delete?name=" + encodeURIComponent(name),
+                          { method: "POST" }).then(r => r.json());
+    if (r.error) return toast(r.error, false);
+    toast(`deleted ${r.deleted}${r.bundle ? " and its export" : ""}`);
+    await refreshMapList();
+  };
+}
 async function refreshMapList() {
   const { maps } = await fetch("/api/maps").then(r => r.json());
   $("#loadSel").innerHTML = `<option value="">load…</option>` +
@@ -1424,6 +1445,7 @@ function init() {
   $("#btnPlay").onclick = () => state.playing ? stopPlay() : startPlay();
   $("#btnNew").onclick = newMapDialog;
   $("#btnSave").onclick = save;
+  $("#btnDelete").onclick = deleteMapDialog;
   $("#btnUndo").onclick = undo; $("#btnRedo").onclick = redo;
   $("#btnExport").onclick = doExport;
   $("#charSel").onchange = e => { state.charId = e.target.value; charImg(); draw(); };

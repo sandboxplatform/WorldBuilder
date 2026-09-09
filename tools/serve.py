@@ -113,6 +113,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return self._export(q)
         if parsed.path == "/api/save":
             return self._save(q)
+        if parsed.path == "/api/delete":
+            return self._delete(q)
         return self._json({"error": "unknown endpoint"}, 404)
 
     def _read_map(self, q):
@@ -139,6 +141,23 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             json.dump(data, f, indent=1)
         return self._json({"saved": os.path.basename(path),
                            "bytes": os.path.getsize(path)})
+
+    def _delete(self, q):
+        """Remove a saved map, and the export bundle built from it -- leaving that
+        behind would keep a stale zip downloadable for a world that no longer exists."""
+        import shutil
+        name = q.get("name", [""])[0]
+        if not SAFE.match(name):
+            return self._json({"error": "bad map name"}, 400)
+        path = os.path.join(MAPS, f"{name}.json")
+        if not os.path.exists(path):
+            return self._json({"error": "no such map"}, 404)
+        os.remove(path)
+        bundle = os.path.join(OUT, name)
+        had_bundle = os.path.isdir(bundle)
+        if had_bundle:
+            shutil.rmtree(bundle)
+        return self._json({"deleted": name, "bundle": had_bundle})
 
     def _export(self, q):
         """Build a portable bundle: atlas, Tiled JSON, character, manifest."""
