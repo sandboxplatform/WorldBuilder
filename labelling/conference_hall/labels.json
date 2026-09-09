@@ -1,0 +1,26 @@
+{
+ "theme": "conference_hall",
+ "method": "vision pass with theme-sheet context",
+ "labels": {
+  "1:1-13":  {"concept": "desk", "placement": "floor", "part": "modular", "material": ["wood"], "confidence": "high", "note": "curved conference desk sections"},
+  "1:14-17": {"concept": "lectern", "placement": "floor", "confidence": "medium", "note": "open book or binder on a stand"},
+  "1:18-24": {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high", "note": "flat and corner desk sections"},
+  "1:25-27": {"concept": "desk", "placement": "floor", "part": "modular", "colour": ["brown"], "confidence": "high"},
+  "1:28-32": {"concept": "monitor", "placement": "on_surface", "composite": true, "confidence": "high", "note": "screen on a desk"},
+  "1:33-35": {"concept": "dome_light", "placement": "mounted", "confidence": "low", "note": "smooth domes, could be ceiling lights or beanbags"},
+
+  "2:1-2":   {"concept": "av_equipment", "placement": "on_surface", "confidence": "medium"},
+  "2:3-5":   {"concept": "chair", "placement": "floor", "confidence": "high", "note": "auditorium seating"},
+  "2:6-7":   {"concept": "vending_machine", "placement": "floor", "confidence": "medium", "note": "screened unit, could be an information kiosk"},
+  "2:8-9":   {"concept": "dispenser", "placement": "wall", "confidence": "medium"},
+  "2:10-11": {"concept": "lectern", "placement": "floor", "confidence": "high"},
+  "2:12-14": {"concept": "light_strip", "placement": "wall", "confidence": "medium"},
+  "2:15-17": {"concept": "projector_screen", "placement": "wall", "confidence": "high"},
+  "2:18":    {"concept": "speaker", "placement": "floor", "confidence": "low"},
+  "2:19-20": {"concept": "portrait", "placement": "wall", "confidence": "high"},
+  "2:21-23": {"concept": "backpack", "placement": "on_surface", "confidence": "high"},
+  "2:24":    {"concept": "fire_extinguisher", "placement": "wall", "confidence": "high"},
+  "2:25-30": {"concept": "banner", "placement": "wall", "confidence": "high"},
+  "2:31-33": {"concept": "projector_screen", "placement": "wall", "state": ["lit"], "confidence": "high"}
+ }
+}

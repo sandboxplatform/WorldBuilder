@@ -1,0 +1,19 @@
+{
+ "theme": "kitchen",
+ "method": "second pass over low/medium-confidence assets, using theme-sheet context plus 6x zoom",
+ "_note": "cells here are page:cell in the ORIGINAL kitchen manifest (48/page)",
+ "labels": {
+  "4:28-32": {"concept": "sack", "placement": "on_surface", "confidence": "low",
+              "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible"},
+  "4:37-40": {"concept": "kettle", "placement": "on_surface", "confidence": "medium",
+              "note": "rounded body, spout and visible blue water; some paired with a tap on a stand"},
+  "4:47":    {"concept": "water_dispenser", "placement": "floor", "confidence": "medium"},
+  "4:48":    {"concept": "oven", "placement": "floor", "confidence": "medium",
+              "note": "two dark glass doors over a vent; double oven"},
+  "5:3-6":   {"concept": "kettle", "placement": "on_surface", "confidence": "medium"},
+  "7:12-20": {"concept": "bench", "placement": "floor", "facing": ["vertical"], "confidence": "high",
+              "note": "same slat pattern as the horizontal benches; these are the side-facing variant"},
+  "2:46":    {"concept": "counter", "placement": "wall", "confidence": "high",
+              "note": "context shows it among drawer units, not tables"}
+ }
+}

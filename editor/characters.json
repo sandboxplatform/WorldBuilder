@@ -1,0 +1,582 @@
+[
+ {
+  "id": "char.premade.0_premade_characters.premade_character_01",
+  "label": "premade \u00b7 premade_character_01",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_01.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_02",
+  "label": "premade \u00b7 premade_character_02",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_02.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_03",
+  "label": "premade \u00b7 premade_character_03",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_03.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_04",
+  "label": "premade \u00b7 premade_character_04",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_04.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_05",
+  "label": "premade \u00b7 premade_character_05",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_05.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_06",
+  "label": "premade \u00b7 premade_character_06",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_06.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_07",
+  "label": "premade \u00b7 premade_character_07",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_07.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_08",
+  "label": "premade \u00b7 premade_character_08",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_08.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_09",
+  "label": "premade \u00b7 premade_character_09",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_09.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_10",
+  "label": "premade \u00b7 premade_character_10",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_10.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_11",
+  "label": "premade \u00b7 premade_character_11",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_11.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_12",
+  "label": "premade \u00b7 premade_character_12",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_12.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_13",
+  "label": "premade \u00b7 premade_character_13",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_13.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_14",
+  "label": "premade \u00b7 premade_character_14",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_14.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_15",
+  "label": "premade \u00b7 premade_character_15",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_15.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_16",
+  "label": "premade \u00b7 premade_character_16",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_16.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_17",
+  "label": "premade \u00b7 premade_character_17",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_17.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_18",
+  "label": "premade \u00b7 premade_character_18",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_18.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_19",
+  "label": "premade \u00b7 premade_character_19",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_19.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.premade.0_premade_characters.premade_character_20",
+  "label": "premade \u00b7 premade_character_20",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/0_Premade_Characters/32x32/Premade_Character_32x32_20.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_01",
+  "label": "body \u00b7 body_01",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_01.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_02",
+  "label": "body \u00b7 body_02",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_02.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_03",
+  "label": "body \u00b7 body_03",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_03.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_04",
+  "label": "body \u00b7 body_04",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_04.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_05",
+  "label": "body \u00b7 body_05",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_05.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_06",
+  "label": "body \u00b7 body_06",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_06.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_07",
+  "label": "body \u00b7 body_07",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_07.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_08",
+  "label": "body \u00b7 body_08",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_08.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ },
+ {
+  "id": "char.layer.bodies.body_09",
+  "label": "body \u00b7 body_09",
+  "image": "images/extracted/moderninteriors-win/2_Characters/Character_Generator/Bodies/32x32/Body_32x32_09.png",
+  "frame": [
+   32,
+   64
+  ],
+  "framesPerDir": 6,
+  "rows": {
+   "idle": 1,
+   "walk": 2
+  },
+  "dirBlocks": {
+   "right": 0,
+   "up": 1,
+   "left": 2,
+   "down": 3
+  }
+ }
+]

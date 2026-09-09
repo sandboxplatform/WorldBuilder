@@ -1,0 +1,48 @@
+{
+ "theme": "office",
+ "method": "vision pass with theme-sheet context across all 10 pages",
+ "labels": {
+  "1:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium", "note": "modular workstation panels; the set mixes desk surfaces and cubicle partitions, which I could not separate reliably"},
+  "2:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium", "note": "as page 1, in olive and lilac finishes"},
+  "3:1-25":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium"},
+  "3:26-27": {"concept": "painting", "placement": "wall", "confidence": "high"},
+  "3:28-30": {"concept": "plant", "placement": "floor", "confidence": "medium", "note": "shown with shelving in context"},
+  "3:31-35": {"concept": "office_chair", "placement": "floor", "confidence": "high"},
+
+  "4:1-7":   {"concept": "office_chair", "placement": "floor", "confidence": "high"},
+  "4:8-11":  {"concept": "paperwork", "placement": "on_surface", "confidence": "high"},
+  "4:12-22": {"concept": "monitor", "placement": "on_surface", "state": ["off"], "confidence": "high"},
+  "4:23-31": {"concept": "monitor", "placement": "on_surface", "state": ["on"], "confidence": "high"},
+  "4:32-35": {"concept": "laptop", "placement": "on_surface", "confidence": "high"},
+
+  "5:1-6":   {"concept": "desk_lamp", "placement": "on_surface", "confidence": "high"},
+  "5:7-12":  {"concept": "printer", "placement": "on_surface", "confidence": "high"},
+  "5:13-16": {"concept": "desk_accessory", "placement": "on_surface", "confidence": "medium", "note": "photo frames, mugs and papers"},
+  "5:17-24": {"concept": "office_chair", "placement": "floor", "confidence": "high"},
+  "5:25-27": {"concept": "server_rack", "placement": "floor", "confidence": "medium"},
+  "5:28-29": {"concept": "printer", "placement": "floor", "confidence": "high"},
+  "5:30-33": {"concept": "presentation_screen", "placement": "wall", "confidence": "medium"},
+  "5:34-35": {"concept": "vending_machine", "placement": "floor", "confidence": "high"},
+
+  "6:1-3":   {"concept": "server_rack", "placement": "floor", "confidence": "medium"},
+  "6:4-20":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium"},
+  "6:21-24": {"concept": "office_chair", "placement": "floor", "confidence": "high"},
+  "6:25-31": {"concept": "filing_cabinet", "placement": "floor", "confidence": "medium"},
+  "6:32-35": {"concept": "whiteboard", "placement": "wall", "confidence": "medium"},
+
+  "7:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium"},
+
+  "8:1-24":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium"},
+  "8:25-28": {"concept": "plant", "placement": "floor", "confidence": "medium"},
+  "8:29-35": {"concept": "monitor", "placement": "on_surface", "confidence": "high"},
+
+  "9:1-25":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "medium"},
+  "9:26-28": {"concept": "office_chair", "placement": "floor", "confidence": "high"},
+  "9:29-35": {"concept": "monitor", "placement": "on_surface", "confidence": "high"},
+
+  "10:1-2":  {"concept": "monitor", "placement": "on_surface", "confidence": "high"},
+  "10:3-7":  {"concept": "coffee_machine", "placement": "on_surface", "composite": true, "confidence": "high"},
+  "10:8-13": {"concept": "cash_register", "placement": "on_surface", "composite": true, "confidence": "high"},
+  "10:14-24":{"concept": "backpack", "placement": "floor", "confidence": "high"}
+ }
+}

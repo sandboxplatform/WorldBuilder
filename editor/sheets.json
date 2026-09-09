@@ -1,0 +1,2657 @@
+{
+ "root": "images/extracted",
+ "sizes": {
+  "16": [
+   {
+    "id": "ext.sheet.additional_houses.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 additional houses",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/24_Additional_Houses_16x16.png",
+    "cols": 32,
+    "rows": 308,
+    "px": [
+     512,
+     4928
+    ]
+   },
+   {
+    "id": "ext.sheet.beach.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 beach",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/21_Beach_16x16.png",
+    "cols": 32,
+    "rows": 125,
+    "px": [
+     512,
+     2000
+    ]
+   },
+   {
+    "id": "ext.sheet.camping.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 camping",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/11_Camping_16x16.png",
+    "cols": 32,
+    "rows": 181,
+    "px": [
+     512,
+     2896
+    ]
+   },
+   {
+    "id": "ext.sheet.city_props.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city props",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/3_City_Props_16x16.png",
+    "cols": 32,
+    "rows": 224,
+    "px": [
+     512,
+     3584
+    ]
+   },
+   {
+    "id": "ext.sheet.city_terrains.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city terrains",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png",
+    "cols": 59,
+    "rows": 103,
+    "px": [
+     944,
+     1648
+    ]
+   },
+   {
+    "id": "ext.sheet.complete.complete",
+    "group": "Exteriors",
+    "label": "ext \u00b7 complete",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/Modern_Exteriors_Complete_Tileset.png",
+    "cols": 176,
+    "rows": 514,
+    "px": [
+     2816,
+     8224
+    ]
+   },
+   {
+    "id": "ext.sheet.fire_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 fire station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/18_Fire_Station_16x16.png",
+    "cols": 33,
+    "rows": 30,
+    "px": [
+     528,
+     480
+    ]
+   },
+   {
+    "id": "ext.sheet.floor_modular_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 floor modular buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/5_Floor_Modular_Buildings_16x16.png",
+    "cols": 32,
+    "rows": 259,
+    "px": [
+     512,
+     4144
+    ]
+   },
+   {
+    "id": "ext.sheet.garage_sales.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garage sales",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/6_Garage_Sales_16x16.png",
+    "cols": 32,
+    "rows": 38,
+    "px": [
+     512,
+     608
+    ]
+   },
+   {
+    "id": "ext.sheet.garden.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garden",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/17_Garden_16x16.png",
+    "cols": 32,
+    "rows": 196,
+    "px": [
+     512,
+     3136
+    ]
+   },
+   {
+    "id": "ext.sheet.generic_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 generic buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png",
+    "cols": 32,
+    "rows": 200,
+    "px": [
+     512,
+     3200
+    ]
+   },
+   {
+    "id": "ext.sheet.graveyard.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 graveyard",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/19_Graveyard_16x16.png",
+    "cols": 32,
+    "rows": 40,
+    "px": [
+     512,
+     640
+    ]
+   },
+   {
+    "id": "ext.sheet.hotel_and_hospital.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 hotel and hospital",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png",
+    "cols": 32,
+    "rows": 62,
+    "px": [
+     512,
+     992
+    ]
+   },
+   {
+    "id": "ext.sheet.military_base.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 military base",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/23_MIlitary_Base_16x16.png",
+    "cols": 32,
+    "rows": 285,
+    "px": [
+     512,
+     4575
+    ]
+   },
+   {
+    "id": "ext.sheet.office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/16_Office_16x16.png",
+    "cols": 32,
+    "rows": 95,
+    "px": [
+     512,
+     1520
+    ]
+   },
+   {
+    "id": "ext.sheet.police_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 police station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/15_Police_Station_16x16.png",
+    "cols": 32,
+    "rows": 69,
+    "px": [
+     512,
+     1104
+    ]
+   },
+   {
+    "id": "ext.sheet.post_office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 post office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/22_Post_Office_16x16.png",
+    "cols": 32,
+    "rows": 30,
+    "px": [
+     512,
+     480
+    ]
+   },
+   {
+    "id": "ext.sheet.school.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 school",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/13_School_16x16.png",
+    "cols": 32,
+    "rows": 116,
+    "px": [
+     512,
+     1856
+    ]
+   },
+   {
+    "id": "ext.sheet.shopping_center_and_markets.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 shopping center and markets",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/9_Shopping_Center_and_Markets_16x16.png",
+    "cols": 32,
+    "rows": 68,
+    "px": [
+     512,
+     1088
+    ]
+   },
+   {
+    "id": "ext.sheet.subway_and_train_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 subway and train station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/20_Subway_and_Train_Station_16x16.png",
+    "cols": 32,
+    "rows": 185,
+    "px": [
+     512,
+     2960
+    ]
+   },
+   {
+    "id": "ext.sheet.swimming_pool.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 swimming pool",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/14_Swimming_Pool_16x16.png",
+    "cols": 32,
+    "rows": 31,
+    "px": [
+     512,
+     496
+    ]
+   },
+   {
+    "id": "ext.sheet.terrains_and_fences.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 terrains and fences",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/1_Terrains_and_Fences_16x16.png",
+    "cols": 32,
+    "rows": 74,
+    "px": [
+     512,
+     1184
+    ]
+   },
+   {
+    "id": "ext.sheet.vehicles.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 vehicles",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/10_Vehicles_16x16.png",
+    "cols": 32,
+    "rows": 168,
+    "px": [
+     512,
+     2688
+    ]
+   },
+   {
+    "id": "ext.sheet.villas.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 villas",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/7_Villas_16x16.png",
+    "cols": 32,
+    "rows": 57,
+    "px": [
+     512,
+     912
+    ]
+   },
+   {
+    "id": "ext.sheet.worksite.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 worksite",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/8_Worksite_16x16.png",
+    "cols": 32,
+    "rows": 20,
+    "px": [
+     512,
+     320
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.game_maker_studio_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 game maker studio autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/Autotiles_16x16/Game_Maker_Studio_Autotiles_16x16.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     192,
+     1664
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.godot_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 godot autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_16x16/Autotiles_16x16/Godot_Autotiles_16x16.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     192,
+     1664
+    ]
+   },
+   {
+    "id": "int.sheet.art.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 art",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/7_Art_16x16.png",
+    "cols": 16,
+    "rows": 7,
+    "px": [
+     256,
+     112
+    ]
+   },
+   {
+    "id": "int.sheet.basement.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 basement",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/14_Basement_16x16.png",
+    "cols": 16,
+    "rows": 50,
+    "px": [
+     256,
+     800
+    ]
+   },
+   {
+    "id": "int.sheet.bathroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bathroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/3_Bathroom_16x16.png",
+    "cols": 16,
+    "rows": 56,
+    "px": [
+     256,
+     896
+    ]
+   },
+   {
+    "id": "int.sheet.bedroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bedroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/4_Bedroom_16x16.png",
+    "cols": 16,
+    "rows": 107,
+    "px": [
+     256,
+     1712
+    ]
+   },
+   {
+    "id": "int.sheet.birthday_party.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 birthday party",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/10_Birthday_party_16x16.png",
+    "cols": 12,
+    "rows": 7,
+    "px": [
+     192,
+     112
+    ]
+   },
+   {
+    "id": "int.sheet.christmas.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 christmas",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/15_Christmas_16x16.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     256,
+     272
+    ]
+   },
+   {
+    "id": "int.sheet.classroom_and_library.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 classroom and library",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/5_Classroom_and_library_16x16.png",
+    "cols": 16,
+    "rows": 34,
+    "px": [
+     256,
+     544
+    ]
+   },
+   {
+    "id": "int.sheet.clothing_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 clothing store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/21_Clothing_Store.png",
+    "cols": 16,
+    "rows": 67,
+    "px": [
+     256,
+     1072
+    ]
+   },
+   {
+    "id": "int.sheet.complete.complete",
+    "group": "Interiors",
+    "label": "int \u00b7 complete",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Interiors_16x16.png",
+    "cols": 16,
+    "rows": 1064,
+    "px": [
+     256,
+     17024
+    ]
+   },
+   {
+    "id": "int.sheet.condominium.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 condominium",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/26_Condominium.png",
+    "cols": 16,
+    "rows": 19,
+    "px": [
+     256,
+     304
+    ]
+   },
+   {
+    "id": "int.sheet.conference_hall.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 conference hall",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/13_Conference_Hall_16x16.png",
+    "cols": 16,
+    "rows": 12,
+    "px": [
+     256,
+     192
+    ]
+   },
+   {
+    "id": "int.sheet.fishing.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 fishing",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/9_Fishing_16x16.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     256,
+     432
+    ]
+   },
+   {
+    "id": "int.sheet.generic.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 generic",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/1_Generic_16x16.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     256,
+     1248
+    ]
+   },
+   {
+    "id": "int.sheet.grocery_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 grocery store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/16_Grocery_store_16x16.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     256,
+     1248
+    ]
+   },
+   {
+    "id": "int.sheet.gym.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 gym",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/8_Gym_16x16.png",
+    "cols": 16,
+    "rows": 33,
+    "px": [
+     256,
+     528
+    ]
+   },
+   {
+    "id": "int.sheet.halloween.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 halloween",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/11_Halloween_16x16.png",
+    "cols": 16,
+    "rows": 61,
+    "px": [
+     256,
+     976
+    ]
+   },
+   {
+    "id": "int.sheet.hospital.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 hospital",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/19_Hospital_16x16.png",
+    "cols": 16,
+    "rows": 110,
+    "px": [
+     256,
+     1760
+    ]
+   },
+   {
+    "id": "int.sheet.ice_cream_shop.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 ice cream shop",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/24_Ice_Cream_Shop.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     256,
+     272
+    ]
+   },
+   {
+    "id": "int.sheet.jail.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 jail",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/18_Jail_16x16.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     256,
+     720
+    ]
+   },
+   {
+    "id": "int.sheet.japanese_interiors.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 japanese interiors",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/20_Japanese_interiors.png",
+    "cols": 16,
+    "rows": 32,
+    "px": [
+     256,
+     512
+    ]
+   },
+   {
+    "id": "int.sheet.kitchen.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 kitchen",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/12_Kitchen_16x16.png",
+    "cols": 16,
+    "rows": 49,
+    "px": [
+     256,
+     784
+    ]
+   },
+   {
+    "id": "int.sheet.livingroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 livingroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/2_LivingRoom_16x16.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     256,
+     720
+    ]
+   },
+   {
+    "id": "int.sheet.museum.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 museum",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/22_Museum.png",
+    "cols": 16,
+    "rows": 122,
+    "px": [
+     256,
+     1952
+    ]
+   },
+   {
+    "id": "int.sheet.music_and_sport.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 music and sport",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/6_Music_and_sport_16x16.png",
+    "cols": 16,
+    "rows": 48,
+    "px": [
+     256,
+     768
+    ]
+   },
+   {
+    "id": "int.sheet.shooting_range.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 shooting range",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/25_Shooting_Range.png",
+    "cols": 16,
+    "rows": 5,
+    "px": [
+     256,
+     80
+    ]
+   },
+   {
+    "id": "int.sheet.television_and_film_studio.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 television and film studio",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/23_Television_and_Film_Studio.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     256,
+     224
+    ]
+   },
+   {
+    "id": "int.sheet.visibile_upstairs_system.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 visibile upstairs system",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Theme_Sorter/17_Visibile_Upstairs_System_16x16.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     256,
+     432
+    ]
+   },
+   {
+    "id": "int.roombuilder.complete.complete",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 complete (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/16x16/Room_Builder_16x16.png",
+    "cols": 76,
+    "rows": 113,
+    "px": [
+     1216,
+     1808
+    ]
+   },
+   {
+    "id": "office.sheet.office.sheet",
+    "group": "Modern Office",
+    "label": "office \u00b7 office",
+    "pack": "office",
+    "kind": "sheet",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/Modern_Office_16x16.png",
+    "cols": 16,
+    "rows": 53,
+    "px": [
+     256,
+     848
+    ]
+   },
+   {
+    "id": "office.roombuilder.office.room_builder_office",
+    "group": "Modern Office \u00b7 room builder",
+    "label": "office \u00b7 office \u00b7 room builder office (roombuilder)",
+    "pack": "office",
+    "kind": "roombuilder",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_16x16.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     256,
+     224
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_gamepad",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui gamepad",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/16x16/Modern_UI_Gamepad.png",
+    "cols": 51,
+    "rows": 51,
+    "px": [
+     816,
+     816
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_1",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 1",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/16x16/Modern_UI_Style_1.png",
+    "cols": 61,
+    "rows": 43,
+    "px": [
+     976,
+     688
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_2",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 2",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/16x16/Modern_UI_Style_2.png",
+    "cols": 49,
+    "rows": 34,
+    "px": [
+     784,
+     544
+    ]
+   }
+  ],
+  "32": [
+   {
+    "id": "ext.sheet.additional_houses.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 additional houses",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/24_Additional_Houses_32x32.png",
+    "cols": 32,
+    "rows": 308,
+    "px": [
+     1024,
+     9856
+    ]
+   },
+   {
+    "id": "ext.sheet.beach.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 beach",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/21_Beach_32x32.png",
+    "cols": 32,
+    "rows": 125,
+    "px": [
+     1024,
+     4000
+    ]
+   },
+   {
+    "id": "ext.sheet.camping.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 camping",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/11_Camping_32x32.png",
+    "cols": 32,
+    "rows": 181,
+    "px": [
+     1024,
+     5792
+    ]
+   },
+   {
+    "id": "ext.sheet.city_props.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city props",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/3_City_Props_32x32.png",
+    "cols": 32,
+    "rows": 224,
+    "px": [
+     1024,
+     7168
+    ]
+   },
+   {
+    "id": "ext.sheet.city_terrains.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city terrains",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/2_City_Terrains_32x32.png",
+    "cols": 59,
+    "rows": 103,
+    "px": [
+     1888,
+     3296
+    ]
+   },
+   {
+    "id": "ext.sheet.complete.complete",
+    "group": "Exteriors",
+    "label": "ext \u00b7 complete",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/Modern_Exteriors_Complete_Tileset_32x32.png",
+    "cols": 176,
+    "rows": 514,
+    "px": [
+     5632,
+     16448
+    ]
+   },
+   {
+    "id": "ext.sheet.fire_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 fire station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/18_Fire_Station_32x32.png",
+    "cols": 33,
+    "rows": 30,
+    "px": [
+     1056,
+     960
+    ]
+   },
+   {
+    "id": "ext.sheet.floor_modular_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 floor modular buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/5_Floor_Modular_Buildings_32x32.png",
+    "cols": 32,
+    "rows": 259,
+    "px": [
+     1024,
+     8288
+    ]
+   },
+   {
+    "id": "ext.sheet.garage_sales.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garage sales",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/6_Garage_Sales_32x32.png",
+    "cols": 32,
+    "rows": 38,
+    "px": [
+     1024,
+     1216
+    ]
+   },
+   {
+    "id": "ext.sheet.garden.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garden",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/17_Garden_32x32.png",
+    "cols": 32,
+    "rows": 196,
+    "px": [
+     1024,
+     6272
+    ]
+   },
+   {
+    "id": "ext.sheet.generic_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 generic buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/4_Generic_Buildings_32x32.png",
+    "cols": 32,
+    "rows": 200,
+    "px": [
+     1024,
+     6400
+    ]
+   },
+   {
+    "id": "ext.sheet.graveyard.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 graveyard",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/19_Graveyard_32x32.png",
+    "cols": 32,
+    "rows": 40,
+    "px": [
+     1024,
+     1280
+    ]
+   },
+   {
+    "id": "ext.sheet.hotel_and_hospital.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 hotel and hospital",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/12_Hotel_and_Hospital_32x32.png",
+    "cols": 32,
+    "rows": 62,
+    "px": [
+     1024,
+     1984
+    ]
+   },
+   {
+    "id": "ext.sheet.military_base.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 military base",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/23_MIlitary_Base_32x32.png",
+    "cols": 32,
+    "rows": 285,
+    "px": [
+     1024,
+     9150
+    ]
+   },
+   {
+    "id": "ext.sheet.office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/16_Office_32x32.png",
+    "cols": 32,
+    "rows": 95,
+    "px": [
+     1024,
+     3040
+    ]
+   },
+   {
+    "id": "ext.sheet.police_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 police station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/15_Police_Station_32x32.png",
+    "cols": 32,
+    "rows": 69,
+    "px": [
+     1024,
+     2208
+    ]
+   },
+   {
+    "id": "ext.sheet.post_office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 post office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/22_Post_Office_32x32.png",
+    "cols": 32,
+    "rows": 30,
+    "px": [
+     1024,
+     960
+    ]
+   },
+   {
+    "id": "ext.sheet.school.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 school",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/13_School_32x32.png",
+    "cols": 32,
+    "rows": 116,
+    "px": [
+     1024,
+     3712
+    ]
+   },
+   {
+    "id": "ext.sheet.shopping_center_and_markets.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 shopping center and markets",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/9_Shopping_Center_and_Markets_32x32.png",
+    "cols": 32,
+    "rows": 68,
+    "px": [
+     1024,
+     2176
+    ]
+   },
+   {
+    "id": "ext.sheet.subway_and_train_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 subway and train station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/20_Subway_and_Train_Station_32x32.png",
+    "cols": 32,
+    "rows": 185,
+    "px": [
+     1024,
+     5920
+    ]
+   },
+   {
+    "id": "ext.sheet.swimming_pool.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 swimming pool",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/14_Swimming_Pool_32x32.png",
+    "cols": 32,
+    "rows": 31,
+    "px": [
+     1024,
+     992
+    ]
+   },
+   {
+    "id": "ext.sheet.terrains_and_fences.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 terrains and fences",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/1_Terrains_and_Fences_32x32.png",
+    "cols": 32,
+    "rows": 74,
+    "px": [
+     1024,
+     2368
+    ]
+   },
+   {
+    "id": "ext.sheet.vehicles.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 vehicles",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/10_Vehicles_32x32.png",
+    "cols": 32,
+    "rows": 168,
+    "px": [
+     1024,
+     5376
+    ]
+   },
+   {
+    "id": "ext.sheet.villas.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 villas",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/7_Villas_32x32.png",
+    "cols": 32,
+    "rows": 57,
+    "px": [
+     1024,
+     1824
+    ]
+   },
+   {
+    "id": "ext.sheet.worksite.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 worksite",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/ME_Theme_Sorter_32x32/8_Worksite_32x32.png",
+    "cols": 32,
+    "rows": 20,
+    "px": [
+     1024,
+     640
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.game_maker_studio_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 game maker studio autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/Autotiles_32x32/Game_Maker_Studio_Autotiles_32x32.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     384,
+     3328
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.godot_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 godot autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_32x32/Autotiles_32x32/Godot_Autotiles_32x32.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     384,
+     3328
+    ]
+   },
+   {
+    "id": "int.sheet.art.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 art",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/7_Art_32x32.png",
+    "cols": 16,
+    "rows": 7,
+    "px": [
+     512,
+     224
+    ]
+   },
+   {
+    "id": "int.sheet.basement.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 basement",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/14_Basement_32x32.png",
+    "cols": 16,
+    "rows": 50,
+    "px": [
+     512,
+     1600
+    ]
+   },
+   {
+    "id": "int.sheet.bathroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bathroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/3_Bathroom_32x32.png",
+    "cols": 16,
+    "rows": 56,
+    "px": [
+     512,
+     1792
+    ]
+   },
+   {
+    "id": "int.sheet.bedroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bedroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/4_Bedroom_32x32.png",
+    "cols": 16,
+    "rows": 107,
+    "px": [
+     512,
+     3424
+    ]
+   },
+   {
+    "id": "int.sheet.birthday_party.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 birthday party",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/10_Birthday_party_32x32.png",
+    "cols": 12,
+    "rows": 7,
+    "px": [
+     384,
+     224
+    ]
+   },
+   {
+    "id": "int.sheet.christmas.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 christmas",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/15_Christmas_32x32.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     512,
+     544
+    ]
+   },
+   {
+    "id": "int.sheet.classroom_and_library.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 classroom and library",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/5_Classroom_and_library_32x32.png",
+    "cols": 16,
+    "rows": 34,
+    "px": [
+     512,
+     1088
+    ]
+   },
+   {
+    "id": "int.sheet.clothing_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 clothing store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/21_Clothing_Store_32x32.png",
+    "cols": 16,
+    "rows": 67,
+    "px": [
+     512,
+     2144
+    ]
+   },
+   {
+    "id": "int.sheet.complete.complete",
+    "group": "Interiors",
+    "label": "int \u00b7 complete",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Interiors_32x32.png",
+    "cols": 16,
+    "rows": 1064,
+    "px": [
+     512,
+     34048
+    ]
+   },
+   {
+    "id": "int.sheet.condominium.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 condominium",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/26_Condominium_32x32.png",
+    "cols": 16,
+    "rows": 19,
+    "px": [
+     512,
+     608
+    ]
+   },
+   {
+    "id": "int.sheet.conference_hall.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 conference hall",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/13_Conference_Hall_32x32.png",
+    "cols": 16,
+    "rows": 12,
+    "px": [
+     512,
+     384
+    ]
+   },
+   {
+    "id": "int.sheet.fishing.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 fishing",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/9_Fishing_32x32.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     512,
+     864
+    ]
+   },
+   {
+    "id": "int.sheet.generic.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 generic",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/1_Generic_32x32.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     512,
+     2496
+    ]
+   },
+   {
+    "id": "int.sheet.grocery_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 grocery store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/16_Grocery_store_32x32.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     512,
+     2496
+    ]
+   },
+   {
+    "id": "int.sheet.gym.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 gym",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/8_Gym_32x32.png",
+    "cols": 16,
+    "rows": 33,
+    "px": [
+     512,
+     1056
+    ]
+   },
+   {
+    "id": "int.sheet.halloween.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 halloween",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/11_Halloween_32x32.png",
+    "cols": 16,
+    "rows": 61,
+    "px": [
+     512,
+     1952
+    ]
+   },
+   {
+    "id": "int.sheet.hospital.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 hospital",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/19_Hospital_32x32.png",
+    "cols": 16,
+    "rows": 110,
+    "px": [
+     512,
+     3520
+    ]
+   },
+   {
+    "id": "int.sheet.ice_cream_shop.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 ice cream shop",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/24_Ice_Cream_Shop_32x32.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     512,
+     544
+    ]
+   },
+   {
+    "id": "int.sheet.jail.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 jail",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/18_Jail_32x32.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     512,
+     1440
+    ]
+   },
+   {
+    "id": "int.sheet.japanese_interiors.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 japanese interiors",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/20_Japanese_interiors_32x32.png",
+    "cols": 16,
+    "rows": 32,
+    "px": [
+     512,
+     1024
+    ]
+   },
+   {
+    "id": "int.sheet.kitchen.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 kitchen",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/12_Kitchen_32x32.png",
+    "cols": 16,
+    "rows": 49,
+    "px": [
+     512,
+     1568
+    ]
+   },
+   {
+    "id": "int.sheet.livingroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 livingroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/2_LivingRoom_32x32.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     512,
+     1440
+    ]
+   },
+   {
+    "id": "int.sheet.museum.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 museum",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/22_Museum_32x32.png",
+    "cols": 16,
+    "rows": 122,
+    "px": [
+     512,
+     3904
+    ]
+   },
+   {
+    "id": "int.sheet.music_and_sport.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 music and sport",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/6_Music_and_sport_32x32.png",
+    "cols": 16,
+    "rows": 48,
+    "px": [
+     512,
+     1536
+    ]
+   },
+   {
+    "id": "int.sheet.shooting_range.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 shooting range",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/25_Shooting_Range_32x32.png",
+    "cols": 16,
+    "rows": 5,
+    "px": [
+     512,
+     160
+    ]
+   },
+   {
+    "id": "int.sheet.television_and_film_studio.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 television and film studio",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/23_Television_and_Film_Studio_32x32.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     512,
+     448
+    ]
+   },
+   {
+    "id": "int.sheet.visibile_upstairs_system.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 visibile upstairs system",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Theme_Sorter_32x32/17_Visibile_Upstairs_System_32x32.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     512,
+     864
+    ]
+   },
+   {
+    "id": "int.roombuilder.3d_walls.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 3d walls \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_3d_walls_32x32.png",
+    "cols": 24,
+    "rows": 59,
+    "px": [
+     768,
+     1888
+    ]
+   },
+   {
+    "id": "int.roombuilder.arched_entryways.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 arched entryways \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Arched_Entryways_32x32.png",
+    "cols": 10,
+    "rows": 32,
+    "px": [
+     320,
+     1040
+    ]
+   },
+   {
+    "id": "int.roombuilder.baseboards.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 baseboards \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_baseboards_32x32.png",
+    "cols": 6,
+    "rows": 6,
+    "px": [
+     192,
+     192
+    ]
+   },
+   {
+    "id": "int.roombuilder.borders.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 borders \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_borders_32x32.png",
+    "cols": 45,
+    "rows": 10,
+    "px": [
+     1440,
+     320
+    ]
+   },
+   {
+    "id": "int.roombuilder.complete.complete",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 complete (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Builder_32x32.png",
+    "cols": 76,
+    "rows": 113,
+    "px": [
+     2432,
+     3616
+    ]
+   },
+   {
+    "id": "int.roombuilder.floor_connectors.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 floor connectors \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Floor_Connectors_32x32.png",
+    "cols": 7,
+    "rows": 36,
+    "px": [
+     224,
+     1152
+    ]
+   },
+   {
+    "id": "int.roombuilder.floor_paths.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 floor paths \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Floor_Paths_32x32.png",
+    "cols": 42,
+    "rows": 12,
+    "px": [
+     1344,
+     384
+    ]
+   },
+   {
+    "id": "int.roombuilder.floor_shadows.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 floor shadows \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Floor_Shadows_32x32.png",
+    "cols": 16,
+    "rows": 5,
+    "px": [
+     512,
+     160
+    ]
+   },
+   {
+    "id": "int.roombuilder.floors.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 floors \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Floors_32x32.png",
+    "cols": 15,
+    "rows": 40,
+    "px": [
+     480,
+     1280
+    ]
+   },
+   {
+    "id": "int.roombuilder.walls.part",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 walls \u00b7 part (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/32x32/Room_Bulder_subfiles_32x32/Room_Builder_Walls_32x32.png",
+    "cols": 32,
+    "rows": 40,
+    "px": [
+     1024,
+     1280
+    ]
+   },
+   {
+    "id": "office.sheet.office.sheet",
+    "group": "Modern Office",
+    "label": "office \u00b7 office",
+    "pack": "office",
+    "kind": "sheet",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/Modern_Office_32x32.png",
+    "cols": 16,
+    "rows": 53,
+    "px": [
+     512,
+     1696
+    ]
+   },
+   {
+    "id": "office.roombuilder.office.room_builder_office",
+    "group": "Modern Office \u00b7 room builder",
+    "label": "office \u00b7 office \u00b7 room builder office (roombuilder)",
+    "pack": "office",
+    "kind": "roombuilder",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_32x32.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     512,
+     448
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_gamepad",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui gamepad",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/32x32/Modern_UI_Gamepad_32x32.png",
+    "cols": 51,
+    "rows": 51,
+    "px": [
+     1632,
+     1632
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_1",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 1",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/32x32/Modern_UI_Style_1_32x32.png",
+    "cols": 61,
+    "rows": 43,
+    "px": [
+     1952,
+     1376
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_2",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 2",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/32x32/Modern_UI_Style_2_32x32.png",
+    "cols": 49,
+    "rows": 34,
+    "px": [
+     1568,
+     1088
+    ]
+   }
+  ],
+  "48": [
+   {
+    "id": "ext.sheet.additional_houses.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 additional houses",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/24_Additional_Houses_48x48.png",
+    "cols": 32,
+    "rows": 308,
+    "px": [
+     1536,
+     14784
+    ]
+   },
+   {
+    "id": "ext.sheet.beach.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 beach",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/21_Beach_48x48.png",
+    "cols": 32,
+    "rows": 125,
+    "px": [
+     1536,
+     6000
+    ]
+   },
+   {
+    "id": "ext.sheet.camping.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 camping",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/11_Camping_48x48.png",
+    "cols": 32,
+    "rows": 181,
+    "px": [
+     1536,
+     8688
+    ]
+   },
+   {
+    "id": "ext.sheet.city_props.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city props",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/3_City_Props_48x48.png",
+    "cols": 32,
+    "rows": 224,
+    "px": [
+     1536,
+     10752
+    ]
+   },
+   {
+    "id": "ext.sheet.city_terrains.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 city terrains",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/2_City_Terrains_48x48.png",
+    "cols": 59,
+    "rows": 103,
+    "px": [
+     2832,
+     4944
+    ]
+   },
+   {
+    "id": "ext.sheet.complete.complete",
+    "group": "Exteriors",
+    "label": "ext \u00b7 complete",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/Modern_Exteriors_Complete_Tileset_48x48.png",
+    "cols": 176,
+    "rows": 514,
+    "px": [
+     8448,
+     24672
+    ]
+   },
+   {
+    "id": "ext.sheet.fire_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 fire station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/18_Fire_Station_48x48.png",
+    "cols": 33,
+    "rows": 30,
+    "px": [
+     1584,
+     1440
+    ]
+   },
+   {
+    "id": "ext.sheet.floor_modular_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 floor modular buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/5_Floor_Modular_Buildings_48x48.png",
+    "cols": 32,
+    "rows": 259,
+    "px": [
+     1536,
+     12432
+    ]
+   },
+   {
+    "id": "ext.sheet.garage_sales.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garage sales",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/6_Garage_Sales_48x48.png",
+    "cols": 32,
+    "rows": 38,
+    "px": [
+     1536,
+     1824
+    ]
+   },
+   {
+    "id": "ext.sheet.garden.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 garden",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/17_Garden_48xx48.png",
+    "cols": 32,
+    "rows": 196,
+    "px": [
+     1536,
+     9408
+    ]
+   },
+   {
+    "id": "ext.sheet.generic_buildings.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 generic buildings",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/4_Generic_Buildings_48x48.png",
+    "cols": 32,
+    "rows": 200,
+    "px": [
+     1536,
+     9600
+    ]
+   },
+   {
+    "id": "ext.sheet.graveyard.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 graveyard",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/19_Graveyard_48x48.png",
+    "cols": 32,
+    "rows": 40,
+    "px": [
+     1536,
+     1920
+    ]
+   },
+   {
+    "id": "ext.sheet.hotel_and_hospital.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 hotel and hospital",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/12_Hotel_and_Hospital_48x48.png",
+    "cols": 32,
+    "rows": 62,
+    "px": [
+     1536,
+     2976
+    ]
+   },
+   {
+    "id": "ext.sheet.military_base.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 military base",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/23_MIlitary_Base_48x48.png",
+    "cols": 32,
+    "rows": 285,
+    "px": [
+     1536,
+     13725
+    ]
+   },
+   {
+    "id": "ext.sheet.office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/16_Office_48x48.png",
+    "cols": 32,
+    "rows": 95,
+    "px": [
+     1536,
+     4560
+    ]
+   },
+   {
+    "id": "ext.sheet.police_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 police station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/15_Police_Station_48x48.png",
+    "cols": 32,
+    "rows": 69,
+    "px": [
+     1536,
+     3312
+    ]
+   },
+   {
+    "id": "ext.sheet.post_office.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 post office",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/22_Post_Office_48x48.png",
+    "cols": 32,
+    "rows": 30,
+    "px": [
+     1536,
+     1440
+    ]
+   },
+   {
+    "id": "ext.sheet.school.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 school",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/13_School_48x48.png",
+    "cols": 32,
+    "rows": 116,
+    "px": [
+     1536,
+     5568
+    ]
+   },
+   {
+    "id": "ext.sheet.shopping_center_and_markets.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 shopping center and markets",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/9_Shopping_Center_and_Markets_48x48.png",
+    "cols": 32,
+    "rows": 68,
+    "px": [
+     1536,
+     3264
+    ]
+   },
+   {
+    "id": "ext.sheet.subway_and_train_station.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 subway and train station",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/20_Subway_and_Train_Station_48x48.png",
+    "cols": 32,
+    "rows": 185,
+    "px": [
+     1536,
+     8880
+    ]
+   },
+   {
+    "id": "ext.sheet.swimming_pool.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 swimming pool",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/14_Swimming_Pool_48x48.png",
+    "cols": 32,
+    "rows": 31,
+    "px": [
+     1536,
+     1488
+    ]
+   },
+   {
+    "id": "ext.sheet.terrains_and_fences.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 terrains and fences",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/1_Terrains_and_Fences_48x48.png",
+    "cols": 32,
+    "rows": 74,
+    "px": [
+     1536,
+     3552
+    ]
+   },
+   {
+    "id": "ext.sheet.vehicles.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 vehicles",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/10_Vehicles_48x48.png",
+    "cols": 32,
+    "rows": 168,
+    "px": [
+     1536,
+     8064
+    ]
+   },
+   {
+    "id": "ext.sheet.villas.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 villas",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/7_Villas_48x48.png",
+    "cols": 32,
+    "rows": 57,
+    "px": [
+     1536,
+     2736
+    ]
+   },
+   {
+    "id": "ext.sheet.worksite.sheet",
+    "group": "Exteriors",
+    "label": "ext \u00b7 worksite",
+    "pack": "ext",
+    "kind": "sheet",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/8_Worksite_48x48.png",
+    "cols": 32,
+    "rows": 20,
+    "px": [
+     1536,
+     960
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.game_maker_studio_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 game maker studio autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/Autotiles_48x48/Game_Maker_Studio_Autotiles_48x48.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     576,
+     4992
+    ]
+   },
+   {
+    "id": "ext.autotile.gms.godot_autotiles",
+    "group": "Exteriors \u00b7 autotiles",
+    "label": "ext \u00b7 gms \u00b7 godot autotiles (autotile)",
+    "pack": "ext",
+    "kind": "autotile",
+    "image": "images/extracted/modernexteriors-win/Modern_Exteriors_48x48/Autotiles_48x48/Godot_Autotiles_48x48.png",
+    "cols": 12,
+    "rows": 104,
+    "px": [
+     576,
+     4992
+    ]
+   },
+   {
+    "id": "int.sheet.art.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 art",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/7_Art_48x48.png",
+    "cols": 16,
+    "rows": 7,
+    "px": [
+     768,
+     336
+    ]
+   },
+   {
+    "id": "int.sheet.basement.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 basement",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/14_Basement_48x48.png",
+    "cols": 16,
+    "rows": 50,
+    "px": [
+     768,
+     2400
+    ]
+   },
+   {
+    "id": "int.sheet.bathroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bathroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/3_Bathroom_48x48.png",
+    "cols": 16,
+    "rows": 56,
+    "px": [
+     768,
+     2688
+    ]
+   },
+   {
+    "id": "int.sheet.bedroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 bedroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/4_Bedroom_48x48.png",
+    "cols": 16,
+    "rows": 107,
+    "px": [
+     768,
+     5136
+    ]
+   },
+   {
+    "id": "int.sheet.birthday_party.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 birthday party",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/10_Birthday_party_48x48.png",
+    "cols": 12,
+    "rows": 7,
+    "px": [
+     576,
+     336
+    ]
+   },
+   {
+    "id": "int.sheet.christmas.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 christmas",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/15_Christmas_48x48.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     768,
+     816
+    ]
+   },
+   {
+    "id": "int.sheet.classroom_and_library.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 classroom and library",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/5_Classroom_and_library_48x48.png",
+    "cols": 16,
+    "rows": 34,
+    "px": [
+     768,
+     1632
+    ]
+   },
+   {
+    "id": "int.sheet.clothing_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 clothing store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/21_Clothing_Store_48x48.png",
+    "cols": 16,
+    "rows": 67,
+    "px": [
+     768,
+     3216
+    ]
+   },
+   {
+    "id": "int.sheet.complete.complete",
+    "group": "Interiors",
+    "label": "int \u00b7 complete",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Interiors_48x48.png",
+    "cols": 16,
+    "rows": 859,
+    "px": [
+     768,
+     41232
+    ]
+   },
+   {
+    "id": "int.sheet.condominium.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 condominium",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/26_Condominium_48x48.png",
+    "cols": 16,
+    "rows": 19,
+    "px": [
+     768,
+     912
+    ]
+   },
+   {
+    "id": "int.sheet.conference_hall.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 conference hall",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/13_Conference_Hall_48x48.png",
+    "cols": 16,
+    "rows": 12,
+    "px": [
+     768,
+     576
+    ]
+   },
+   {
+    "id": "int.sheet.fishing.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 fishing",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/9_Fishing_48x48.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     768,
+     1296
+    ]
+   },
+   {
+    "id": "int.sheet.generic.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 generic",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/1_Generic_48x48.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     768,
+     3744
+    ]
+   },
+   {
+    "id": "int.sheet.grocery_store.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 grocery store",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/16_Grocery_store_48x48.png",
+    "cols": 16,
+    "rows": 78,
+    "px": [
+     768,
+     3744
+    ]
+   },
+   {
+    "id": "int.sheet.gym.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 gym",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/8_Gym_48x48.png",
+    "cols": 16,
+    "rows": 33,
+    "px": [
+     768,
+     1584
+    ]
+   },
+   {
+    "id": "int.sheet.halloween.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 halloween",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/11_Halloween_48x48.png",
+    "cols": 16,
+    "rows": 61,
+    "px": [
+     768,
+     2928
+    ]
+   },
+   {
+    "id": "int.sheet.hospital.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 hospital",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/19_Hospital_48x48.png",
+    "cols": 16,
+    "rows": 110,
+    "px": [
+     768,
+     5280
+    ]
+   },
+   {
+    "id": "int.sheet.ice_cream_shop.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 ice cream shop",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/24_Ice_Cream_Shop_48x48.png",
+    "cols": 16,
+    "rows": 17,
+    "px": [
+     768,
+     816
+    ]
+   },
+   {
+    "id": "int.sheet.jail.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 jail",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/18_Jail_48x48.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     768,
+     2160
+    ]
+   },
+   {
+    "id": "int.sheet.japanese_interiors.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 japanese interiors",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/20_Japanese_interiors_48x48.png",
+    "cols": 16,
+    "rows": 32,
+    "px": [
+     768,
+     1536
+    ]
+   },
+   {
+    "id": "int.sheet.kitchen.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 kitchen",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/12_Kitchen_48x48.png",
+    "cols": 16,
+    "rows": 49,
+    "px": [
+     768,
+     2352
+    ]
+   },
+   {
+    "id": "int.sheet.livingroom.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 livingroom",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/2_LivingRoom_48x48.png",
+    "cols": 16,
+    "rows": 45,
+    "px": [
+     768,
+     2160
+    ]
+   },
+   {
+    "id": "int.sheet.museum.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 museum",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/22_Museum_48x48.png",
+    "cols": 16,
+    "rows": 122,
+    "px": [
+     768,
+     5856
+    ]
+   },
+   {
+    "id": "int.sheet.music_and_sport.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 music and sport",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/6_Music_and_sport_48x48.png",
+    "cols": 16,
+    "rows": 48,
+    "px": [
+     768,
+     2304
+    ]
+   },
+   {
+    "id": "int.sheet.shooting_range.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 shooting range",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/25_Shooting_Range_48x48.png",
+    "cols": 16,
+    "rows": 5,
+    "px": [
+     768,
+     240
+    ]
+   },
+   {
+    "id": "int.sheet.television_and_film_studio.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 television and film studio",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/23_Television_and_Film_Studio_48x48.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     768,
+     672
+    ]
+   },
+   {
+    "id": "int.sheet.visibile_upstairs_system.sheet",
+    "group": "Interiors",
+    "label": "int \u00b7 visibile upstairs system",
+    "pack": "int",
+    "kind": "sheet",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Theme_Sorter_48x48/17_Visibile_Upstairs_System_48x48.png",
+    "cols": 16,
+    "rows": 27,
+    "px": [
+     768,
+     1296
+    ]
+   },
+   {
+    "id": "int.roombuilder.complete.complete",
+    "group": "Interiors \u00b7 room builder",
+    "label": "int \u00b7 complete (roombuilder)",
+    "pack": "int",
+    "kind": "roombuilder",
+    "image": "images/extracted/moderninteriors-win/1_Interiors/48x48/Room_Builder_48x48.png",
+    "cols": 76,
+    "rows": 113,
+    "px": [
+     3648,
+     5424
+    ]
+   },
+   {
+    "id": "office.sheet.office.sheet",
+    "group": "Modern Office",
+    "label": "office \u00b7 office",
+    "pack": "office",
+    "kind": "sheet",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/Modern_Office_48x48.png",
+    "cols": 16,
+    "rows": 53,
+    "px": [
+     768,
+     2544
+    ]
+   },
+   {
+    "id": "office.roombuilder.office.room_builder_office",
+    "group": "Modern Office \u00b7 room builder",
+    "label": "office \u00b7 office \u00b7 room builder office (roombuilder)",
+    "pack": "office",
+    "kind": "roombuilder",
+    "image": "images/extracted/Modern_Office_Revamped_v1.2/1_Room_Builder_Office/Room_Builder_Office_48x48.png",
+    "cols": 16,
+    "rows": 14,
+    "px": [
+     768,
+     672
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_gamepad",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui gamepad",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/48x48/Modern_UI_Gamepad_48x48.png",
+    "cols": 51,
+    "rows": 51,
+    "px": [
+     2448,
+     2448
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_1",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 1",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/48x48/Modern_UI_Style_1_48x48.png",
+    "cols": 61,
+    "rows": 43,
+    "px": [
+     2928,
+     2064
+    ]
+   },
+   {
+    "id": "ui.sheet.ui.modern_ui_style_2",
+    "group": "User Interface",
+    "label": "ui \u00b7 ui \u00b7 modern ui style 2",
+    "pack": "ui",
+    "kind": "sheet",
+    "image": "images/extracted/modernuserinterface-win/48x48/Modern_UI_Style_2_48x48.png",
+    "cols": 49,
+    "rows": 34,
+    "px": [
+     2352,
+     1632
+    ]
+   }
+  ]
+ }
+}

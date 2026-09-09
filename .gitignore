@@ -1,0 +1,22 @@
+# The LimeZu packs themselves: 1 GB across 95k files, and two zips exceed GitHub's
+# 100 MB per-file limit. Re-download from itch.io and run tools/build_catalog.py.
+# The packs are licensed for use, not for redistribution -- keep this repo private.
+images/
+.venv/
+
+# catalog.json is derivable from images/ via tools/build_catalog.py
+catalog/catalog.json
+
+# generated bundles, rebuilt by tools/build_viewer.py and the exporters
+viewer/assets/
+out/
+
+# test artifacts, rewritten by the suites
+maps/__selftest.json
+maps/editor_test.json
+maps/sprite_test.json
+maps/subtile_test.json
+
+__pycache__/
+*.pyc
+.DS_Store

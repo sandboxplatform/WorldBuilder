@@ -1,0 +1,4510 @@
+{
+ "note": "Canonical concepts derived from pack filenames. The vision pass selects from this list; add terms only when nothing fits.",
+ "concepts": [
+  {
+   "concept": "tree",
+   "class": "vegetation",
+   "assets": 425,
+   "aliases": [
+    "tree",
+    "palm_tree"
+   ]
+  },
+  {
+   "concept": "sidewalk",
+   "class": "terrain",
+   "assets": 324,
+   "aliases": [
+    "sidewalk"
+   ]
+  },
+  {
+   "concept": "sign",
+   "class": "signage",
+   "assets": 307,
+   "aliases": [
+    "traffic_sign",
+    "traffic_light_sign",
+    "sign",
+    "danger_sign",
+    "dormitory_sign",
+    "warning_sign",
+    "info_sign",
+    "haunted_house_sign",
+    "arrow_sign",
+    "bus_stop_sign",
+    "building_sign",
+    "badge_sign",
+    "street_food_sign",
+    "beach_sign",
+    "hydrant_sign",
+    "condo_sign",
+    "hardware_store_roof_sign",
+    "hospital_sign",
+    "dormitory_sign_ruined",
+    "police_station_roof_no_sign",
+    "police_station_roof_sign",
+    "stop_sign"
+   ]
+  },
+  {
+   "concept": "fence",
+   "class": "structure",
+   "assets": 221,
+   "aliases": [
+    "fence",
+    "dormitory_fence",
+    "haunted_house_fence",
+    "pergola_fence",
+    "pergola_support_fence",
+    "pergola_entrance_fence",
+    "watch_tower_roof_fence"
+   ]
+  },
+  {
+   "concept": "grass",
+   "class": "vegetation",
+   "assets": 221,
+   "aliases": [
+    "grass",
+    "grass_fenced"
+   ]
+  },
+  {
+   "concept": "door",
+   "class": "structure",
+   "assets": 185,
+   "aliases": [
+    "animated_door",
+    "animated_door_locked",
+    "subway_train_door",
+    "subway_train_door_see_through",
+    "building_door",
+    "bus_door",
+    "condo_door",
+    "garden_tool_shack_door",
+    "storage_door",
+    "greenhouse_door",
+    "mall_door",
+    "floor_buildings_door",
+    "garden_villa_door",
+    "police_station_door",
+    "door",
+    "animated_hospital_door",
+    "military_base_dormitory_door",
+    "additional_houses_door",
+    "metropolis_building_door",
+    "post_office_door",
+    "shopping_door",
+    "haunted_house_basement_door",
+    "container_door",
+    "delivery_truck_door",
+    "haunted_house_door",
+    "police_box_door",
+    "power_house_door",
+    "watchtower_door",
+    "worksite_door",
+    "lighthouse_door",
+    "dormitory_entrance_door",
+    "dormitory_entrance_no_door",
+    "animated_hospital_xraycabin_door",
+    "animated_museum_ticket_office_door",
+    "ambulance_rear_door",
+    "beach_lighthouse_door",
+    "condo_garage_door",
+    "condo_roof_door",
+    "container_house_door",
+    "gas_station_door",
+    "hardware_store_door",
+    "helicopter_door",
+    "junk_shack_door",
+    "market_door",
+    "military_bunker_door",
+    "office_door",
+    "parking_booth_door",
+    "phone_box_door",
+    "police_post_door",
+    "police_station_compact_door",
+    "rv_door",
+    "school_door",
+    "trailer_door",
+    "japanese_house_door",
+    "modern_house_door",
+    "one_story_house_door",
+    "post_apocalyptic_house_door",
+    "terraced_house_roof_door",
+    "condo_roof_door_opened",
+    "animated_door_sliding",
+    "animated_grocery_store_butchershop_cool_room_door",
+    "animated_hospital_surgery_door",
+    "animated_japanese_sliding_door",
+    "animated_morgue_freezer_door",
+    "animated_public_toilet_door"
+   ]
+  },
+  {
+   "concept": "wall",
+   "class": "structure",
+   "assets": 179,
+   "aliases": [
+    "wall",
+    "grass_wall",
+    "grass_wall_flowered",
+    "external_wall",
+    "tree_wall",
+    "animated_security_camera_wall",
+    "hangar_wall",
+    "animated_trap_flipping_floor_generic_wall",
+    "animated_trap_flipping_floor_wall"
+   ]
+  },
+  {
+   "concept": "condo",
+   "class": "structure",
+   "assets": 157,
+   "aliases": [
+    "condo",
+    "ground_floor_condo"
+   ]
+  },
+  {
+   "concept": "roof",
+   "class": "structure",
+   "assets": 134,
+   "aliases": [
+    "roof",
+    "greenhouse_roof",
+    "terraced_house_roof_styling",
+    "structure_roof",
+    "storage_roof",
+    "terraced_house_view_roof_styling",
+    "terraced_house_view_roof",
+    "air_duct_roof",
+    "pergola_roof",
+    "floor_buildings_door_roof",
+    "metropolis_building_door_roof",
+    "office_door_roof",
+    "lighthouse_roof_decorated",
+    "watch_tower_roof",
+    "cabin_entrance_roof",
+    "shutter_dish_roof",
+    "solar_panel_roof"
+   ]
+  },
+  {
+   "concept": "car",
+   "class": "vehicle",
+   "assets": 114,
+   "aliases": [
+    "car",
+    "gas_station_car",
+    "police_car"
+   ]
+  },
+  {
+   "concept": "shop",
+   "class": "premises",
+   "assets": 112,
+   "aliases": [
+    "ground_floor_shop",
+    "ground_floor_bait_shop",
+    "ground_floor_ice_cream_shop",
+    "floor_buildings_door_bait_shop"
+   ]
+  },
+  {
+   "concept": "building",
+   "class": "structure",
+   "assets": 95,
+   "aliases": [
+    "building",
+    "balcony_building",
+    "roof_building",
+    "fire_truck_building",
+    "fire_truck_hood_building"
+   ]
+  },
+  {
+   "concept": "pool",
+   "class": "water",
+   "assets": 88,
+   "aliases": [
+    "pool"
+   ]
+  },
+  {
+   "concept": "floor",
+   "class": "terrain",
+   "assets": 84,
+   "aliases": [
+    "floor",
+    "greenhouse_floor",
+    "animated_floating_floor",
+    "country_house_banister_ground_floor",
+    "radio_tower_floor",
+    "animated_trap_flipping_floor"
+   ]
+  },
+  {
+   "concept": "graffiti",
+   "class": "signage",
+   "assets": 83,
+   "aliases": [
+    "graffiti",
+    "arrow_graffiti",
+    "writing_graffiti",
+    "wolf_graffiti",
+    "spray_graffiti",
+    "drop_graffiti",
+    "tentacle_graffiti",
+    "fns_writing_graffiti",
+    "subway_train_door_graffiti",
+    "subway_train_door_graffiti_see_through",
+    "angry_face_graffiti",
+    "little_writing_graffiti",
+    "frog_graffiti",
+    "little_graffiti",
+    "cloud_graffiti",
+    "crown_graffiti",
+    "little_word_graffiti",
+    "drawing_graffiti",
+    "flower_graffiti",
+    "hew_graffiti",
+    "meh_graffiti",
+    "multicolor_drawing_graffiti",
+    "smile_graffiti",
+    "little_drawing_graffiti",
+    "worm_graffiti"
+   ]
+  },
+  {
+   "concept": "light",
+   "class": "lighting",
+   "assets": 81,
+   "aliases": [
+    "traffic_light",
+    "traffic_lights",
+    "stadium_light",
+    "elevator_lights",
+    "elevator_opened_lights",
+    "beach_concert_laser_machine_light",
+    "structure_light",
+    "traffic_lights_frontal",
+    "watch_tower_light",
+    "binary_light",
+    "led_light",
+    "spotlight_head_only_light",
+    "spotlight_light",
+    "lighthouse_roof_light",
+    "structure_roof_light",
+    "animated_christmas_tree_lights"
+   ]
+  },
+  {
+   "concept": "structure",
+   "class": "structure",
+   "assets": 81,
+   "aliases": [
+    "greenhouse_structure_see_through",
+    "greenhouse_structure",
+    "stage_structure",
+    "stairs_structure",
+    "structure",
+    "radio_tower_structure",
+    "pergola_structure",
+    "hangar_wall_stairs_structure",
+    "stairs_base_structure"
+   ]
+  },
+  {
+   "concept": "seat",
+   "class": "furniture",
+   "assets": 79,
+   "aliases": [
+    "train_seat",
+    "wait_seat",
+    "train_control_seat",
+    "couple_wait_seat",
+    "train_couple_seats"
+   ]
+  },
+  {
+   "concept": "flower",
+   "class": "vegetation",
+   "assets": 77,
+   "aliases": [
+    "villa_yard_flowers",
+    "flower",
+    "hanging_flowers",
+    "flowers",
+    "potted_flowers",
+    "vase_four_flowers",
+    "vase_flowers",
+    "vase_three_flowers",
+    "vase_two_flowers",
+    "group_flowers",
+    "light_flower",
+    "bordeaux_group_flowers",
+    "multicolor_flowers",
+    "violet_group_flowers"
+   ]
+  },
+  {
+   "concept": "house",
+   "class": "structure",
+   "assets": 76,
+   "aliases": [
+    "mobile_house",
+    "terraced_house",
+    "toy_house",
+    "victorian_house",
+    "bird_house",
+    "little_bird_house",
+    "post_apocalyptic_house",
+    "additional_houses_door_japanese_suburban_house",
+    "additional_houses_door_modern_house",
+    "additional_houses_door_one_story_house",
+    "additional_houses_door_post_apocalyptic_house",
+    "additional_houses_door_victorian_house",
+    "country_house",
+    "haunted_house",
+    "japanese_house",
+    "modern_house",
+    "modern_house_unadorned",
+    "one_story_house",
+    "container_house",
+    "power_house",
+    "tree_house",
+    "tree_house_house"
+   ]
+  },
+  {
+   "concept": "box",
+   "class": "container",
+   "assets": 75,
+   "aliases": [
+    "villa_yard_toy_box",
+    "box",
+    "military_tent_box",
+    "tool_box",
+    "music_box",
+    "electric_box",
+    "police_box",
+    "bottles_box",
+    "control_box",
+    "sos_box",
+    "animated_christmas_jack_in_the_box"
+   ]
+  },
+  {
+   "concept": "tube",
+   "class": "amenity",
+   "assets": 70,
+   "aliases": [
+    "school_yard_tube",
+    "tube",
+    "fire_hydrant_tube",
+    "waterfall_drain_tube"
+   ]
+  },
+  {
+   "concept": "train",
+   "class": "vehicle",
+   "assets": 62,
+   "aliases": [
+    "train",
+    "exterior_train",
+    "interior_train",
+    "graffiti_train"
+   ]
+  },
+  {
+   "concept": "toy",
+   "class": "decor",
+   "assets": 61,
+   "aliases": [
+    "school_yard_toy",
+    "toy",
+    "toy_floating",
+    "villa_yard_toy_rocking"
+   ]
+  },
+  {
+   "concept": "window",
+   "class": "structure",
+   "assets": 60,
+   "aliases": [
+    "condo_window",
+    "window",
+    "balcony_window",
+    "villa_roof_window",
+    "villa_window",
+    "building_window",
+    "roof_window",
+    "train_control_window",
+    "greenhouse_window",
+    "condo_roof_window"
+   ]
+  },
+  {
+   "concept": "bench",
+   "class": "furniture",
+   "assets": 55,
+   "aliases": [
+    "bench",
+    "three_seats_bench_frontal",
+    "three_seats_bench",
+    "two_seats_bench_frontal",
+    "two_seats_bench",
+    "flowers_bench",
+    "vase_tools_bench",
+    "plants_bench",
+    "flower_bench",
+    "sprout_bench",
+    "sunflower_bench",
+    "vase_bench",
+    "vase_sprout_bench"
+   ]
+  },
+  {
+   "concept": "table",
+   "class": "furniture",
+   "assets": 51,
+   "aliases": [
+    "table",
+    "tiny_table",
+    "street_food_table",
+    "ship_bar_table",
+    "ship_bar_bottle_table",
+    "benched_table",
+    "modern_house_tiny_table",
+    "ship_bar_cocktail_table",
+    "military_tent_table"
+   ]
+  },
+  {
+   "concept": "cart",
+   "class": "vehicle",
+   "assets": 49,
+   "aliases": [
+    "hot_dog_cart",
+    "animated_shopping_cart",
+    "cart",
+    "street_food_cart",
+    "fruit_flowers_cart",
+    "candies_cart",
+    "shopping_carts",
+    "animated_shopping_carts"
+   ]
+  },
+  {
+   "concept": "vase",
+   "class": "container",
+   "assets": 49,
+   "aliases": [
+    "sprout_vase",
+    "flower_vase",
+    "vase",
+    "light_flower_vase",
+    "sunflower_vase",
+    "plant_vase"
+   ]
+  },
+  {
+   "concept": "rock",
+   "class": "nature",
+   "assets": 47,
+   "aliases": [
+    "sea_rock",
+    "beach_floating_rock",
+    "arch_sea_rock",
+    "rock"
+   ]
+  },
+  {
+   "concept": "pile",
+   "class": "waste",
+   "assets": 45,
+   "aliases": [
+    "trash_pile",
+    "sandbag_pile",
+    "tires_pile",
+    "scrap_pile"
+   ]
+  },
+  {
+   "concept": "pier",
+   "class": "marine",
+   "assets": 43,
+   "aliases": [
+    "pier"
+   ]
+  },
+  {
+   "concept": "wire",
+   "class": null,
+   "assets": 41,
+   "aliases": [
+    "barbed_wire",
+    "external_wall_barbed_wire"
+   ]
+  },
+  {
+   "concept": "mountain",
+   "class": "nature",
+   "assets": 40,
+   "aliases": [
+    "mountain",
+    "four_mountains",
+    "sprout_mountain",
+    "base_mountain"
+   ]
+  },
+  {
+   "concept": "sprout",
+   "class": "vegetation",
+   "assets": 40,
+   "aliases": [
+    "sprout",
+    "little_sprout",
+    "vase_sprout",
+    "animated_sprout"
+   ]
+  },
+  {
+   "concept": "can",
+   "class": "container",
+   "assets": 40,
+   "aliases": [
+    "trash_can",
+    "watering_can",
+    "pressed_can"
+   ]
+  },
+  {
+   "concept": "bush",
+   "class": "vegetation",
+   "assets": 39,
+   "aliases": [
+    "bush",
+    "bush_potted",
+    "flower_bush"
+   ]
+  },
+  {
+   "concept": "rail",
+   "class": "transport",
+   "assets": 39,
+   "aliases": [
+    "rail",
+    "rail_crossed",
+    "v_rail"
+   ]
+  },
+  {
+   "concept": "water",
+   "class": "water",
+   "assets": 38,
+   "aliases": [
+    "water"
+   ]
+  },
+  {
+   "concept": "fountain",
+   "class": "water",
+   "assets": 37,
+   "aliases": [
+    "fountain",
+    "garden_fountain_turn",
+    "garden_fountain",
+    "drinking_fountain_loop",
+    "drinking_fountain"
+   ]
+  },
+  {
+   "concept": "shell",
+   "class": "nature",
+   "assets": 35,
+   "aliases": [
+    "shell",
+    "gold_shell",
+    "ice_shell"
+   ]
+  },
+  {
+   "concept": "dirt",
+   "class": "terrain",
+   "assets": 35,
+   "aliases": [
+    "dirt",
+    "pile_of_dirt",
+    "cross_pile_of_dirt",
+    "shovel_pile_of_dirt",
+    "shovel_little_pile_of_dirt"
+   ]
+  },
+  {
+   "concept": "barrier",
+   "class": "structure",
+   "assets": 34,
+   "aliases": [
+    "stage_barrier",
+    "traffic_barrier",
+    "automatic_barrier",
+    "stop_barrier",
+    "barrier"
+   ]
+  },
+  {
+   "concept": "pumpkin",
+   "class": null,
+   "assets": 34,
+   "aliases": [
+    "pumpkin",
+    "lights_pumpkin",
+    "blood_pumpkin",
+    "little_pumpkin",
+    "little_lights_pumpkin",
+    "tiny_pumpkin",
+    "tiny_lights_pumpkin",
+    "graveyard_haunted_tree_pumpkins",
+    "tree_pumpkins",
+    "little_blood_pumpkin",
+    "tiny_blood_pumpkin",
+    "tree_trunk_pumpkin",
+    "animated_glowing_pumpkin"
+   ]
+  },
+  {
+   "concept": "bucket",
+   "class": "prop",
+   "assets": 33,
+   "aliases": [
+    "bucket",
+    "fish_bucket",
+    "emerald_bucket",
+    "ice_bucket",
+    "crabs_bucket"
+   ]
+  },
+  {
+   "concept": "shutter",
+   "class": "surface",
+   "assets": 32,
+   "aliases": [
+    "shutter",
+    "window_with_shutter",
+    "hospital_emergency_shutter",
+    "kiosk_coffee_cup_shutter",
+    "kiosk_mushroom_shutter",
+    "hospital_shutter",
+    "kiosk_ice_cream_shutter",
+    "kiosk_information_shutter",
+    "kiosk_icecream_shutter",
+    "kiosk_infopoint_shutter"
+   ]
+  },
+  {
+   "concept": "store",
+   "class": "premises",
+   "assets": 30,
+   "aliases": [
+    "ground_floor_music_store",
+    "ground_floor_gun_store",
+    "hardware_store",
+    "floor_buildings_door_clothing_stores"
+   ]
+  },
+  {
+   "concept": "truck",
+   "class": "vehicle",
+   "assets": 30,
+   "aliases": [
+    "trash_truck",
+    "truck",
+    "ice_cream_truck",
+    "tacos_truck",
+    "fire_truck"
+   ]
+  },
+  {
+   "concept": "pillar",
+   "class": "structure",
+   "assets": 30,
+   "aliases": [
+    "pillar",
+    "external_wall_barbed_wire_pillar",
+    "external_wall_pillar"
+   ]
+  },
+  {
+   "concept": "market",
+   "class": "premises",
+   "assets": 30,
+   "aliases": [
+    "market"
+   ]
+  },
+  {
+   "concept": "villa",
+   "class": "structure",
+   "assets": 30,
+   "aliases": [
+    "villa"
+   ]
+  },
+  {
+   "concept": "buoy",
+   "class": "marine",
+   "assets": 28,
+   "aliases": [
+    "buoy",
+    "floating_separation_buoys",
+    "beach_buoy",
+    "life_buoy"
+   ]
+  },
+  {
+   "concept": "chair",
+   "class": "furniture",
+   "assets": 28,
+   "aliases": [
+    "chair",
+    "lifeguard_chair",
+    "modern_house_deck_chair",
+    "ship_bar_chair",
+    "military_tent_chair",
+    "military_tent_table_with_chair",
+    "street_food_chair"
+   ]
+  },
+  {
+   "concept": "greenhouse",
+   "class": "structure",
+   "assets": 28,
+   "aliases": [
+    "greenhouse",
+    "greenhouse_see_through"
+   ]
+  },
+  {
+   "concept": "boat",
+   "class": "marine",
+   "assets": 27,
+   "aliases": [
+    "boat",
+    "fishing_boat"
+   ]
+  },
+  {
+   "concept": "asphalt",
+   "class": "terrain",
+   "assets": 27,
+   "aliases": [
+    "asphalt"
+   ]
+  },
+  {
+   "concept": "candle",
+   "class": "lighting",
+   "assets": 26,
+   "aliases": [
+    "graveyard_candle",
+    "candle",
+    "consumed_candle",
+    "animated_candle",
+    "wall_candle",
+    "graveyard_candle_standing",
+    "graveyard_wall_candle",
+    "animated_wall_candle"
+   ]
+  },
+  {
+   "concept": "coffin",
+   "class": "memorial",
+   "assets": 26,
+   "aliases": [
+    "coffin",
+    "dirt_ditch_coffin",
+    "dirt_ditch_skull_coffin",
+    "skull_coffin",
+    "squared_coffin",
+    "squared_uncovered_coffin",
+    "squared_bones_and_ribcage_coffin",
+    "squared_bones_coffin",
+    "squared_ribcage_coffin",
+    "squared_skeleton_coffin",
+    "squared_skull_coffin"
+   ]
+  },
+  {
+   "concept": "pot",
+   "class": "prop",
+   "assets": 24,
+   "aliases": [
+    "pot",
+    "hanging_cooking_pot",
+    "flowers_pot",
+    "japanese_house_pot",
+    "modern_house_pot",
+    "terraced_house_pot",
+    "bordeaux_flowers_pot",
+    "violet_flowers_pot"
+   ]
+  },
+  {
+   "concept": "cross",
+   "class": "memorial",
+   "assets": 24,
+   "aliases": [
+    "cross",
+    "military_tent_cross"
+   ]
+  },
+  {
+   "concept": "tombstone",
+   "class": "memorial",
+   "assets": 24,
+   "aliases": [
+    "tombstone"
+   ]
+  },
+  {
+   "concept": "gun",
+   "class": "weapon",
+   "assets": 24,
+   "aliases": [
+    "tank_gun"
+   ]
+  },
+  {
+   "concept": "binary",
+   "class": "transport",
+   "assets": 24,
+   "aliases": [
+    "binary"
+   ]
+  },
+  {
+   "concept": "bus",
+   "class": "vehicle",
+   "assets": 24,
+   "aliases": [
+    "bus"
+   ]
+  },
+  {
+   "concept": "shovel",
+   "class": "tool",
+   "assets": 23,
+   "aliases": [
+    "shovel",
+    "multicolor_shovel",
+    "ground_shovel",
+    "bucket_with_shovel"
+   ]
+  },
+  {
+   "concept": "trash",
+   "class": "waste",
+   "assets": 23,
+   "aliases": [
+    "trash",
+    "cardboard_trash",
+    "can_trash",
+    "box_trash",
+    "milk_trash",
+    "juice_trash",
+    "paper_trash",
+    "pizza_trash"
+   ]
+  },
+  {
+   "concept": "stretcher",
+   "class": "equipment",
+   "assets": 23,
+   "aliases": [
+    "stretcher_injured",
+    "stretcher"
+   ]
+  },
+  {
+   "concept": "dumpster",
+   "class": "waste",
+   "assets": 22,
+   "aliases": [
+    "dumpster",
+    "dumpster_smeared"
+   ]
+  },
+  {
+   "concept": "shadow",
+   "class": "effect",
+   "assets": 22,
+   "aliases": [
+    "tunnel_shadow",
+    "tunnel_rail_shadow",
+    "high_tunnel_rail_shadow",
+    "tunnel_cornice_shadow",
+    "high_tunnel_shadow",
+    "modern_house_umbrella_shadow",
+    "binary_shadow"
+   ]
+  },
+  {
+   "concept": "mailbox",
+   "class": "prop",
+   "assets": 22,
+   "aliases": [
+    "mailbox",
+    "terraced_house_mailbox"
+   ]
+  },
+  {
+   "concept": "barrel",
+   "class": "prop",
+   "assets": 22,
+   "aliases": [
+    "barrel",
+    "pier_barrel",
+    "stacked_barrels"
+   ]
+  },
+  {
+   "concept": "number",
+   "class": null,
+   "assets": 22,
+   "aliases": [
+    "binary_number"
+   ]
+  },
+  {
+   "concept": "tile",
+   "class": "surface",
+   "assets": 22,
+   "aliases": [
+    "lilac_tile",
+    "tile"
+   ]
+  },
+  {
+   "concept": "picnic",
+   "class": "amenity",
+   "assets": 21,
+   "aliases": [
+    "picnic"
+   ]
+  },
+  {
+   "concept": "yard",
+   "class": "amenity",
+   "assets": 21,
+   "aliases": [
+    "villa_yard"
+   ]
+  },
+  {
+   "concept": "stage",
+   "class": "amenity",
+   "assets": 20,
+   "aliases": [
+    "stage"
+   ]
+  },
+  {
+   "concept": "container",
+   "class": null,
+   "assets": 20,
+   "aliases": [
+    "container"
+   ]
+  },
+  {
+   "concept": "bed",
+   "class": "furniture",
+   "assets": 20,
+   "aliases": [
+    "bed",
+    "bunk_bed",
+    "stairs_bunk_bed",
+    "cardboard_bed"
+   ]
+  },
+  {
+   "concept": "bakery",
+   "class": "premises",
+   "assets": 19,
+   "aliases": [
+    "ground_floor_bakery",
+    "floor_buildings_door_bakery"
+   ]
+  },
+  {
+   "concept": "gym",
+   "class": "premises",
+   "assets": 19,
+   "aliases": [
+    "ground_floor_gym",
+    "floor_buildings_door_gym"
+   ]
+  },
+  {
+   "concept": "base",
+   "class": null,
+   "assets": 19,
+   "aliases": [
+    "tank_base",
+    "helicopter_base",
+    "terraced_house_view_base",
+    "barrier_base",
+    "train_seat_base",
+    "bunker_base",
+    "radio_tower_base",
+    "train_control_base",
+    "tree_house_base"
+   ]
+  },
+  {
+   "concept": "mushroom",
+   "class": "nature",
+   "assets": 19,
+   "aliases": [
+    "mushrooms",
+    "kiosk_mushroom",
+    "little_mushrooms"
+   ]
+  },
+  {
+   "concept": "grave",
+   "class": "memorial",
+   "assets": 19,
+   "aliases": [
+    "grave",
+    "dirt_ditch_grave"
+   ]
+  },
+  {
+   "concept": "stick",
+   "class": "prop",
+   "assets": 18,
+   "aliases": [
+    "tree_stick",
+    "floating_ice_cream_stick"
+   ]
+  },
+  {
+   "concept": "character",
+   "class": null,
+   "assets": 18,
+   "aliases": [
+    "hospital_stretcher_character"
+   ]
+  },
+  {
+   "concept": "pole",
+   "class": "prop",
+   "assets": 18,
+   "aliases": [
+    "haunted_house_pole",
+    "electric_pole",
+    "direction_pole",
+    "pier_pole",
+    "light_pole",
+    "warning_sign_pole",
+    "pole"
+   ]
+  },
+  {
+   "concept": "umbrella",
+   "class": "prop",
+   "assets": 18,
+   "aliases": [
+    "umbrella",
+    "beach_umbrella",
+    "beach_umbrella_opened",
+    "modern_house_umbrella",
+    "lightblue_beach_umbrella",
+    "lightblue_beach_umbrella_opened"
+   ]
+  },
+  {
+   "concept": "stairs",
+   "class": "structure",
+   "assets": 18,
+   "aliases": [
+    "stairs",
+    "stage_stairs",
+    "bunk_bed_with_stairs",
+    "roof_stairs",
+    "hangar_wall_stairs"
+   ]
+  },
+  {
+   "concept": "butchery",
+   "class": "premises",
+   "assets": 18,
+   "aliases": [
+    "ground_floor_butchery"
+   ]
+  },
+  {
+   "concept": "clothes",
+   "class": null,
+   "assets": 17,
+   "aliases": [
+    "pier_clothes",
+    "hanging_clothes",
+    "clothes_hanging"
+   ]
+  },
+  {
+   "concept": "unit",
+   "class": null,
+   "assets": 17,
+   "aliases": [
+    "air_conditioner_unit",
+    "condo_roof_air_unit",
+    "hardware_store_air_unit",
+    "japanese_ac_unit",
+    "terraced_house_ac_unit",
+    "condo_air_unit",
+    "gas_station_air_conditioner_unit"
+   ]
+  },
+  {
+   "concept": "panel",
+   "class": "surface",
+   "assets": 17,
+   "aliases": [
+    "train_control_panel",
+    "villa_solar_panel",
+    "post_apocalyptic_house_solar_panels",
+    "solar_panel"
+   ]
+  },
+  {
+   "concept": "entrance",
+   "class": "amenity",
+   "assets": 17,
+   "aliases": [
+    "palace_entrance",
+    "condo_entrance",
+    "animated_elevator_door_entrance",
+    "victorian_house_entrance",
+    "bunker_base_entrance",
+    "bunker_entrance",
+    "watch_tower_entrance",
+    "entrance"
+   ]
+  },
+  {
+   "concept": "tower",
+   "class": "structure",
+   "assets": 17,
+   "aliases": [
+    "castle_tower",
+    "tower",
+    "watch_tower",
+    "clock_tower",
+    "light_tower",
+    "radio_tower"
+   ]
+  },
+  {
+   "concept": "worm",
+   "class": "nature",
+   "assets": 16,
+   "aliases": [
+    "worm"
+   ]
+  },
+  {
+   "concept": "ladder",
+   "class": "tool",
+   "assets": 16,
+   "aliases": [
+    "fire_truck_ladder",
+    "condo_fire_escape_ladder",
+    "tree_house_ladder",
+    "villa_ladder",
+    "ladder"
+   ]
+  },
+  {
+   "concept": "moss",
+   "class": "nature",
+   "assets": 15,
+   "aliases": [
+    "beach_floating_rock_moss",
+    "moss"
+   ]
+  },
+  {
+   "concept": "machine",
+   "class": null,
+   "assets": 15,
+   "aliases": [
+    "coffee_machine",
+    "drink_machine",
+    "beach_stage_fog_machine_turn",
+    "beach_stage_laser_machine",
+    "beach_stage_fog_machine_loop",
+    "animated_grocery_store_ticket_machine",
+    "animated_hospital_resonance_machine"
+   ]
+  },
+  {
+   "concept": "ball",
+   "class": "prop",
+   "assets": 15,
+   "aliases": [
+    "ball",
+    "floating_ball",
+    "soccer_ball",
+    "basketball_ball"
+   ]
+  },
+  {
+   "concept": "crate",
+   "class": "prop",
+   "assets": 15,
+   "aliases": [
+    "fish_crate",
+    "pier_crates",
+    "military_crate"
+   ]
+  },
+  {
+   "concept": "net",
+   "class": "marine",
+   "assets": 15,
+   "aliases": [
+    "basketball_net",
+    "soccer_net",
+    "villa_yard_basketball_net",
+    "beach_volley_net"
+   ]
+  },
+  {
+   "concept": "bag",
+   "class": "prop",
+   "assets": 15,
+   "aliases": [
+    "animated_punching_bag",
+    "sleeping_bag",
+    "bag"
+   ]
+  },
+  {
+   "concept": "post",
+   "class": "prop",
+   "assets": 15,
+   "aliases": [
+    "pedestrian_barrier_post"
+   ]
+  },
+  {
+   "concept": "trashbin",
+   "class": "waste",
+   "assets": 15,
+   "aliases": [
+    "trashbin"
+   ]
+  },
+  {
+   "concept": "shelf",
+   "class": "furniture",
+   "assets": 14,
+   "aliases": [
+    "military_tent_shelf",
+    "japanese_house_shelf",
+    "flowers_shelf",
+    "liana_shelf",
+    "shelf",
+    "sprout_tools_shelf"
+   ]
+  },
+  {
+   "concept": "spot",
+   "class": null,
+   "assets": 14,
+   "aliases": [
+    "ground_tile_spot",
+    "fishing_spot"
+   ]
+  },
+  {
+   "concept": "tent",
+   "class": "prop",
+   "assets": 14,
+   "aliases": [
+    "tent",
+    "shop_tent",
+    "hardware_store_tent",
+    "military_tent"
+   ]
+  },
+  {
+   "concept": "bubble",
+   "class": "effect",
+   "assets": 13,
+   "aliases": [
+    "fire_bubble",
+    "bubbles"
+   ]
+  },
+  {
+   "concept": "lantern",
+   "class": "lighting",
+   "assets": 13,
+   "aliases": [
+    "camping_lantern",
+    "lantern",
+    "haunted_house_no_lantern"
+   ]
+  },
+  {
+   "concept": "turnstile",
+   "class": null,
+   "assets": 13,
+   "aliases": [
+    "turnstile",
+    "animated_museum_ticket_turnstile",
+    "subway_turnstile",
+    "turnstile_opened"
+   ]
+  },
+  {
+   "concept": "hole",
+   "class": null,
+   "assets": 13,
+   "aliases": [
+    "holes",
+    "hole"
+   ]
+  },
+  {
+   "concept": "bottle",
+   "class": null,
+   "assets": 13,
+   "aliases": [
+    "bottle",
+    "military_tent_bottle",
+    "bag_bottles"
+   ]
+  },
+  {
+   "concept": "wreck",
+   "class": null,
+   "assets": 13,
+   "aliases": [
+    "car_wreck"
+   ]
+  },
+  {
+   "concept": "support",
+   "class": null,
+   "assets": 13,
+   "aliases": [
+    "train_support",
+    "train_add_support",
+    "train_main_support"
+   ]
+  },
+  {
+   "concept": "fridge",
+   "class": "appliance",
+   "assets": 13,
+   "aliases": [
+    "animated_fridge",
+    "animated_canteen_fridge",
+    "animated_grocery_store_bakery_industrial_fridge",
+    "animated_grocery_store_fridge"
+   ]
+  },
+  {
+   "concept": "spotlight",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "spotlight",
+    "stage_structure_spotlight",
+    "stage_spotlight",
+    "police_station_roof_no_spotlights"
+   ]
+  },
+  {
+   "concept": "towel",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "beach_towel",
+    "multicolor_beach_towel"
+   ]
+  },
+  {
+   "concept": "backpack",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "backpack"
+   ]
+  },
+  {
+   "concept": "cone",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "cone",
+    "pine_cone",
+    "kiosk_icecream_just_a_giant_cone"
+   ]
+  },
+  {
+   "concept": "signboard",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "gas_station_price_signboard",
+    "signboard",
+    "mall_signboard",
+    "hotel_signboard"
+   ]
+  },
+  {
+   "concept": "station",
+   "class": "transport",
+   "assets": 12,
+   "aliases": [
+    "police_station",
+    "gas_station",
+    "ev_charging_station"
+   ]
+  },
+  {
+   "concept": "grate",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "grate"
+   ]
+  },
+  {
+   "concept": "rake",
+   "class": "tool",
+   "assets": 12,
+   "aliases": [
+    "ground_rake",
+    "rake"
+   ]
+  },
+  {
+   "concept": "internal",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "external_wall_barbed_wire_internal",
+    "external_wall_internal"
+   ]
+  },
+  {
+   "concept": "helicopter",
+   "class": "vehicle",
+   "assets": 12,
+   "aliases": [
+    "helicopter"
+   ]
+  },
+  {
+   "concept": "crack",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "crack"
+   ]
+  },
+  {
+   "concept": "block",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "starting_block"
+   ]
+  },
+  {
+   "concept": "butterfly",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "animated_butterfly",
+    "animated_butterfly_idle"
+   ]
+  },
+  {
+   "concept": "full1",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "animated_shopping_cart_full1"
+   ]
+  },
+  {
+   "concept": "full2",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "animated_shopping_cart_full2"
+   ]
+  },
+  {
+   "concept": "full3",
+   "class": null,
+   "assets": 12,
+   "aliases": [
+    "animated_shopping_cart_full3"
+   ]
+  },
+  {
+   "concept": "trapdoor",
+   "class": null,
+   "assets": 11,
+   "aliases": [
+    "animated_trapdoor",
+    "condo_roof_trapdoor",
+    "bunker_base_trapdoor",
+    "roof_trapdoor",
+    "military_bunker_roof_trapdoor",
+    "lighthouse_roof_trapdoor"
+   ]
+  },
+  {
+   "concept": "gate",
+   "class": "structure",
+   "assets": 11,
+   "aliases": [
+    "gate",
+    "mausoleum_gate",
+    "railing_gate",
+    "grace_chapel_with_gate",
+    "high_gate"
+   ]
+  },
+  {
+   "concept": "railing",
+   "class": "structure",
+   "assets": 11,
+   "aliases": [
+    "condo_balcony_railing",
+    "modern_house_railing",
+    "stairs_railing",
+    "school_railing",
+    "railing"
+   ]
+  },
+  {
+   "concept": "shrub",
+   "class": null,
+   "assets": 11,
+   "aliases": [
+    "shrub"
+   ]
+  },
+  {
+   "concept": "statue",
+   "class": "decor",
+   "assets": 11,
+   "aliases": [
+    "grass_statue",
+    "angel_statue",
+    "statue",
+    "light_statue"
+   ]
+  },
+  {
+   "concept": "complete",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "stairs_complete",
+    "haunted_house_door_complete",
+    "beach_seagull_complete",
+    "beach_stage_fog_machine_complete",
+    "beach_stage_fog_machine_fog_only_complete",
+    "the_possessed_complete"
+   ]
+  },
+  {
+   "concept": "lamp",
+   "class": "lighting",
+   "assets": 10,
+   "aliases": [
+    "street_lamp"
+   ]
+  },
+  {
+   "concept": "pass",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "fence_pass",
+    "haunted_house_fence_pass"
+   ]
+  },
+  {
+   "concept": "insert",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "shovel_to_insert",
+    "baggage_to_insert",
+    "multicolor_shovel_to_insert"
+   ]
+  },
+  {
+   "concept": "armchair",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "armchair"
+   ]
+  },
+  {
+   "concept": "mark",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "brake_marks"
+   ]
+  },
+  {
+   "concept": "court",
+   "class": "amenity",
+   "assets": 10,
+   "aliases": [
+    "basketball_court",
+    "soccer_court"
+   ]
+  },
+  {
+   "concept": "other",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "others"
+   ]
+  },
+  {
+   "concept": "camper",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "camper"
+   ]
+  },
+  {
+   "concept": "digit",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "gas_station_price_digit"
+   ]
+  },
+  {
+   "concept": "chimney",
+   "class": null,
+   "assets": 10,
+   "aliases": [
+    "villa_chimney",
+    "animated_chimney",
+    "animated_christmas_chimney"
+   ]
+  },
+  {
+   "concept": "billboard",
+   "class": "signage",
+   "assets": 9,
+   "aliases": [
+    "billboard"
+   ]
+  },
+  {
+   "concept": "crow",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "crow_idle",
+    "crow"
+   ]
+  },
+  {
+   "concept": "drone",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "drone",
+    "drone_flying"
+   ]
+  },
+  {
+   "concept": "plant",
+   "class": "vegetation",
+   "assets": 9,
+   "aliases": [
+    "terraced_house_potted_plant",
+    "potted_plant",
+    "modern_house_potted_plant",
+    "modern_house_potted_plant_bloomed"
+   ]
+  },
+  {
+   "concept": "stone",
+   "class": "nature",
+   "assets": 9,
+   "aliases": [
+    "stone"
+   ]
+  },
+  {
+   "concept": "tank",
+   "class": "equipment",
+   "assets": 9,
+   "aliases": [
+    "tank",
+    "animated_fishmonger_fish_tank"
+   ]
+  },
+  {
+   "concept": "package",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "package",
+    "multiple_packages"
+   ]
+  },
+  {
+   "concept": "mall",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "mall"
+   ]
+  },
+  {
+   "concept": "monitor",
+   "class": "appliance",
+   "assets": 9,
+   "aliases": [
+    "control_monitor",
+    "train_control_monitor",
+    "train_monitor",
+    "map_monitor",
+    "monitor",
+    "animated_clothing_store_advertising_monitor"
+   ]
+  },
+  {
+   "concept": "button",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "train_control_buttons",
+    "elevator_button",
+    "train_buttons",
+    "train_button"
+   ]
+  },
+  {
+   "concept": "mound",
+   "class": null,
+   "assets": 9,
+   "aliases": [
+    "mound"
+   ]
+  },
+  {
+   "concept": "sink",
+   "class": "appliance",
+   "assets": 9,
+   "aliases": [
+    "animated_kitchen_sink",
+    "animated_bathroom_sink_loop",
+    "animated_fishcuttingtable_sink",
+    "animated_fishmonger_sink",
+    "animated_hospital_sink_loop",
+    "animated_sink"
+   ]
+  },
+  {
+   "concept": "seagull",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "beach_seagull_idle",
+    "seagull"
+   ]
+  },
+  {
+   "concept": "waterfall",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "waterfall"
+   ]
+  },
+  {
+   "concept": "drink",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "modern_house_tiny_table_with_drinks"
+   ]
+  },
+  {
+   "concept": "line",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "beach_volley_field_line"
+   ]
+  },
+  {
+   "concept": "starfish",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "starfish"
+   ]
+  },
+  {
+   "concept": "hollow",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "kiosk_coffee_cup_hollow",
+    "kiosk_icecream_hollow",
+    "kiosk_infopoint_hollow",
+    "kiosk_mushroom_hollow"
+   ]
+  },
+  {
+   "concept": "manhole",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "manhole"
+   ]
+  },
+  {
+   "concept": "scrap",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "scrap"
+   ]
+  },
+  {
+   "concept": "mod",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "traffic_lights_mod",
+    "traffic_lights_colours_mod"
+   ]
+  },
+  {
+   "concept": "putto",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "statue_putto"
+   ]
+  },
+  {
+   "concept": "flyer",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "condo_flyers",
+    "condo_flyer"
+   ]
+  },
+  {
+   "concept": "trolley",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "trolley",
+    "luggage_trolley"
+   ]
+  },
+  {
+   "concept": "angle",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "binary_angle"
+   ]
+  },
+  {
+   "concept": "ambulance",
+   "class": "vehicle",
+   "assets": 8,
+   "aliases": [
+    "ambulance"
+   ]
+  },
+  {
+   "concept": "pump",
+   "class": "equipment",
+   "assets": 8,
+   "aliases": [
+    "gas_station_petrol_pump"
+   ]
+  },
+  {
+   "concept": "bathtub",
+   "class": null,
+   "assets": 8,
+   "aliases": [
+    "animated_bathtub_loop",
+    "animated_bathtub"
+   ]
+  },
+  {
+   "concept": "hydrant",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "firefighter_fire_hydrant",
+    "hydrant",
+    "fire_hydrant"
+   ]
+  },
+  {
+   "concept": "counter",
+   "class": "furniture",
+   "assets": 7,
+   "aliases": [
+    "bar_counter",
+    "ship_bar_counter",
+    "animated_canteen_counter"
+   ]
+  },
+  {
+   "concept": "tire",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "tire"
+   ]
+  },
+  {
+   "concept": "junk",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "junk"
+   ]
+  },
+  {
+   "concept": "hospital",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "hospital",
+    "animated_tv_reportage_hospital"
+   ]
+  },
+  {
+   "concept": "target",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "target"
+   ]
+  },
+  {
+   "concept": "and",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "building_and",
+    "roof_building_and",
+    "poster_and"
+   ]
+  },
+  {
+   "concept": "stand",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "stands",
+    "lemonade_stand",
+    "guitarist_stand",
+    "musician_stand"
+   ]
+  },
+  {
+   "concept": "material",
+   "class": null,
+   "assets": 7,
+   "aliases": [
+    "stacked_material"
+   ]
+  },
+  {
+   "concept": "flame",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "flame"
+   ]
+  },
+  {
+   "concept": "balcony",
+   "class": "structure",
+   "assets": 6,
+   "aliases": [
+    "garden_villa_door_balcony",
+    "office_door_balcony",
+    "country_house_banister_balcony",
+    "modern_house_banister_balcony"
+   ]
+  },
+  {
+   "concept": "toilet",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "portable_toilet"
+   ]
+  },
+  {
+   "concept": "flag",
+   "class": "signage",
+   "assets": 6,
+   "aliases": [
+    "school_flag",
+    "castle_flag",
+    "flag"
+   ]
+  },
+  {
+   "concept": "trampoline",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "trampoline",
+    "villa_yard_toy_trampoline"
+   ]
+  },
+  {
+   "concept": "plate",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "electric_plate",
+    "plate"
+   ]
+  },
+  {
+   "concept": "antenna",
+   "class": "equipment",
+   "assets": 6,
+   "aliases": [
+    "antenna",
+    "bunker_base_antenna"
+   ]
+  },
+  {
+   "concept": "booth",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "phone_booth",
+    "parking_booth"
+   ]
+  },
+  {
+   "concept": "storage",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "storage"
+   ]
+  },
+  {
+   "concept": "poster",
+   "class": "signage",
+   "assets": 6,
+   "aliases": [
+    "poster",
+    "condo_poster",
+    "consumed_poster",
+    "three_posters"
+   ]
+  },
+  {
+   "concept": "holder",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "lifesaver_holder",
+    "candle_holder",
+    "wall_candle_holder"
+   ]
+  },
+  {
+   "concept": "hotel",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "hotel"
+   ]
+  },
+  {
+   "concept": "locker",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "military_tent_locker",
+    "animated_jail_locker",
+    "hangar_locker",
+    "locker"
+   ]
+  },
+  {
+   "concept": "cornice",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "tunnel_cornice",
+    "high_tunnel_cornice"
+   ]
+  },
+  {
+   "concept": "tunnel",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "tunnel"
+   ]
+  },
+  {
+   "concept": "fallen",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "ice_cream_fallen"
+   ]
+  },
+  {
+   "concept": "tuk",
+   "class": null,
+   "assets": 6,
+   "aliases": [
+    "pizza_tuk_tuk"
+   ]
+  },
+  {
+   "concept": "ground",
+   "class": "terrain",
+   "assets": 6,
+   "aliases": [
+    "ground"
+   ]
+  },
+  {
+   "concept": "blade",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "helicopter_blade",
+    "additional_houses_wind_mill_blades",
+    "animated_trap_falling_blade"
+   ]
+  },
+  {
+   "concept": "only",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "beach_stage_fog_machine_fog_only_turn",
+    "beach_stage_fog_machine_fog_only_loop",
+    "spotlight_head_only",
+    "spotlight_light_only"
+   ]
+  },
+  {
+   "concept": "campfire",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "campfire"
+   ]
+  },
+  {
+   "concept": "flap",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "crow_flap"
+   ]
+  },
+  {
+   "concept": "stop",
+   "class": "transport",
+   "assets": 5,
+   "aliases": [
+    "bus_stop",
+    "haunted_house_sign_stop"
+   ]
+  },
+  {
+   "concept": "brick",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "brick"
+   ]
+  },
+  {
+   "concept": "clover",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "group_four_leaf_clover",
+    "group_leaf_clover"
+   ]
+  },
+  {
+   "concept": "interior",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "hangar_interior",
+    "military_tent_interior"
+   ]
+  },
+  {
+   "concept": "corridor",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "corridor"
+   ]
+  },
+  {
+   "concept": "baggage",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "baggage"
+   ]
+  },
+  {
+   "concept": "cake",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "animated_canteen_fridge_cake"
+   ]
+  },
+  {
+   "concept": "corpse",
+   "class": null,
+   "assets": 5,
+   "aliases": [
+    "animated_morgue_freezer_corpse",
+    "animated_morgue_freezer_door_corpse",
+    "animated_morgue_freezer_door_no_corpse"
+   ]
+  },
+  {
+   "concept": "hover",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "crow_hover"
+   ]
+  },
+  {
+   "concept": "playhouse",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "door_playhouse"
+   ]
+  },
+  {
+   "concept": "jet",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "fire_hydrant_jet"
+   ]
+  },
+  {
+   "concept": "ghost",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "graveyard_ghosts"
+   ]
+  },
+  {
+   "concept": "swing",
+   "class": "amenity",
+   "assets": 4,
+   "aliases": [
+    "park_swing",
+    "spring_swing"
+   ]
+  },
+  {
+   "concept": "pigeon",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "pigeon"
+   ]
+  },
+  {
+   "concept": "busker",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "subway_busker"
+   ]
+  },
+  {
+   "concept": "generator",
+   "class": "equipment",
+   "assets": 4,
+   "aliases": [
+    "post_apocalyptic_house_generator"
+   ]
+  },
+  {
+   "concept": "chiar",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "bar_chiar"
+   ]
+  },
+  {
+   "concept": "loudspeaker",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "loudspeaker"
+   ]
+  },
+  {
+   "concept": "castle",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "castle"
+   ]
+  },
+  {
+   "concept": "tool",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "stage_tool",
+    "vase_tools"
+   ]
+  },
+  {
+   "concept": "basket",
+   "class": "container",
+   "assets": 4,
+   "aliases": [
+    "basket",
+    "animated_moldy_fruit_basket"
+   ]
+  },
+  {
+   "concept": "board",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "board"
+   ]
+  },
+  {
+   "concept": "controller",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "drone_controller"
+   ]
+  },
+  {
+   "concept": "cloth",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "cloth"
+   ]
+  },
+  {
+   "concept": "arch",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "grass_arch"
+   ]
+  },
+  {
+   "concept": "exit",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "condo_roof_exit",
+    "animated_elevator_door_exit",
+    "animated_emergency_exit"
+   ]
+  },
+  {
+   "concept": "orb",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "gate_orb",
+    "high_gate_orb"
+   ]
+  },
+  {
+   "concept": "pebble",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "pebbles"
+   ]
+  },
+  {
+   "concept": "dormitory",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "dormitory"
+   ]
+  },
+  {
+   "concept": "crossing",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "rail_crossing"
+   ]
+  },
+  {
+   "concept": "case",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "travel_case",
+    "guitar_case"
+   ]
+  },
+  {
+   "concept": "doormat",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "gas_station_doormat",
+    "villa_doormat"
+   ]
+  },
+  {
+   "concept": "excavator",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "excavator"
+   ]
+  },
+  {
+   "concept": "cabinet",
+   "class": "furniture",
+   "assets": 4,
+   "aliases": [
+    "animated_bathroom_cabinet"
+   ]
+  },
+  {
+   "concept": "frog",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "animated_frog_idle"
+   ]
+  },
+  {
+   "concept": "person",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "animated_mirror_person_approaching",
+    "animeted_mirror_person_approaching"
+   ]
+  },
+  {
+   "concept": "laser",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "animated_museum_laser"
+   ]
+  },
+  {
+   "concept": "balloon",
+   "class": "prop",
+   "assets": 4,
+   "aliases": [
+    "animated_party_balloon"
+   ]
+  },
+  {
+   "concept": "toybox",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "animated_toybox"
+   ]
+  },
+  {
+   "concept": "piano",
+   "class": null,
+   "assets": 4,
+   "aliases": [
+    "animated_wall_piano"
+   ]
+  },
+  {
+   "concept": "hose",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "firefighter_holding_hose"
+   ]
+  },
+  {
+   "concept": "dragon",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "floating_dragon"
+   ]
+  },
+  {
+   "concept": "elevator",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "subway_elevator_going",
+    "subway_elevator"
+   ]
+  },
+  {
+   "concept": "homeless",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "subway_homeless"
+   ]
+  },
+  {
+   "concept": "height",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "waterfall_tiles_height"
+   ]
+  },
+  {
+   "concept": "diagonal",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "sea_tileset_diagonals",
+    "sea_tileset_no_diagonals",
+    "tileset_diagonals"
+   ]
+  },
+  {
+   "concept": "corner",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "sea_tileset_no_corners",
+    "sea_tileset_corners",
+    "tileset_corners"
+   ]
+  },
+  {
+   "concept": "propeller",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "post_apocalyptic_house_wind_mill_no_propeller",
+    "post_apocalyptic_house_wind_mill_propeller",
+    "drone_helix_propeller"
+   ]
+  },
+  {
+   "concept": "cartel",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "cartel"
+   ]
+  },
+  {
+   "concept": "float",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "float"
+   ]
+  },
+  {
+   "concept": "apple",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "apples"
+   ]
+  },
+  {
+   "concept": "barbecue",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "barbecue"
+   ]
+  },
+  {
+   "concept": "wood",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "wood"
+   ]
+  },
+  {
+   "concept": "bridge",
+   "class": "structure",
+   "assets": 3,
+   "aliases": [
+    "pier_bridge"
+   ]
+  },
+  {
+   "concept": "cup",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "kiosk_coffee_cup"
+   ]
+  },
+  {
+   "concept": "icecream",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "kiosk_icecream"
+   ]
+  },
+  {
+   "concept": "parking",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "underground_parking"
+   ]
+  },
+  {
+   "concept": "sunflower",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "sunflower"
+   ]
+  },
+  {
+   "concept": "pipe",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "condo_pipe",
+    "bunker_base_pipe"
+   ]
+  },
+  {
+   "concept": "skeleton",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "building_skeleton",
+    "skeleton"
+   ]
+  },
+  {
+   "concept": "exterior",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "hangar_exterior"
+   ]
+  },
+  {
+   "concept": "paper",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "ground_paper",
+    "military_tent_table_paper"
+   ]
+  },
+  {
+   "concept": "mine",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "mine"
+   ]
+  },
+  {
+   "concept": "helmet",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "helmet",
+    "soldier_helmet"
+   ]
+  },
+  {
+   "concept": "ramp",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "school_entrance_ramp"
+   ]
+  },
+  {
+   "concept": "mattress",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "mattress"
+   ]
+  },
+  {
+   "concept": "blanket",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "folded_blanket"
+   ]
+  },
+  {
+   "concept": "fragment",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "rail_fragment"
+   ]
+  },
+  {
+   "concept": "section",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "tunnel_cornice_section"
+   ]
+  },
+  {
+   "concept": "truth",
+   "class": null,
+   "assets": 3,
+   "aliases": [
+    "poster_truth"
+   ]
+  },
+  {
+   "concept": "palm",
+   "class": "vegetation",
+   "assets": 3,
+   "aliases": [
+    "palm"
+   ]
+  },
+  {
+   "concept": "oven",
+   "class": "appliance",
+   "assets": 3,
+   "aliases": [
+    "animated_grocery_store_bakery_industrial_oven",
+    "animated_kitchen_oven"
+   ]
+  },
+  {
+   "concept": "painting",
+   "class": "decor",
+   "assets": 3,
+   "aliases": [
+    "animated_haunted_doll_painting"
+   ]
+  },
+  {
+   "concept": "drawer",
+   "class": "furniture",
+   "assets": 3,
+   "aliases": [
+    "animated_kitchen_drawer"
+   ]
+  },
+  {
+   "concept": "mill",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "additional_houses_wind_mill",
+    "post_apocalyptic_house_wind_mill"
+   ]
+  },
+  {
+   "concept": "gif",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "beach_floating_rock_gif",
+    "fishes_gif"
+   ]
+  },
+  {
+   "concept": "blind",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "fire_station_blind"
+   ]
+  },
+  {
+   "concept": "fishe",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "fishes"
+   ]
+  },
+  {
+   "concept": "donut",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "floating_donut"
+   ]
+  },
+  {
+   "concept": "ring",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "floating_ring"
+   ]
+  },
+  {
+   "concept": "swirl",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "haunted_house_door_close_swirl",
+    "haunted_house_door_swirl"
+   ]
+  },
+  {
+   "concept": "medicine",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "military_crate_medicines"
+   ]
+  },
+  {
+   "concept": "corp",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "office_door_balcony_lime_corp",
+    "office_door_lime_corp"
+   ]
+  },
+  {
+   "concept": "turbine",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "wind_turbine"
+   ]
+  },
+  {
+   "concept": "toolbox",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "worksite_toolbox"
+   ]
+  },
+  {
+   "concept": "tileset",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "sea_tileset",
+    "tileset"
+   ]
+  },
+  {
+   "concept": "basic",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "sea_tileset_basic",
+    "sea_tileset_no_basic"
+   ]
+  },
+  {
+   "concept": "out",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "haunted_house_sign_get_out"
+   ]
+  },
+  {
+   "concept": "composition",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "modern_house_umbrella_composition",
+    "fire_hydrant_tube_composition"
+   ]
+  },
+  {
+   "concept": "shadowless",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "modern_house_umbrella_shadowless"
+   ]
+  },
+  {
+   "concept": "canopy",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "terraced_house_canopy",
+    "terraced_house_view_canopy"
+   ]
+  },
+  {
+   "concept": "cable",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "loudspeaker_cable"
+   ]
+  },
+  {
+   "concept": "mixer",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "mixer"
+   ]
+  },
+  {
+   "concept": "binocular",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "binoculars"
+   ]
+  },
+  {
+   "concept": "marshmallow",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "campfire_marshmallow"
+   ]
+  },
+  {
+   "concept": "rope",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "rope"
+   ]
+  },
+  {
+   "concept": "stump",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "stump"
+   ]
+  },
+  {
+   "concept": "atm",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "atm"
+   ]
+  },
+  {
+   "concept": "stake",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "stake"
+   ]
+  },
+  {
+   "concept": "infopoint",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "kiosk_infopoint"
+   ]
+  },
+  {
+   "concept": "palace",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "palace"
+   ]
+  },
+  {
+   "concept": "angel",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "statue_angel"
+   ]
+  },
+  {
+   "concept": "ditch",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "dirt_ditch"
+   ]
+  },
+  {
+   "concept": "cage",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "grave_cage",
+    "animated_iron_cage"
+   ]
+  },
+  {
+   "concept": "brunch",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "pumpikin_brunch"
+   ]
+  },
+  {
+   "concept": "ribcage",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "ribcage"
+   ]
+  },
+  {
+   "concept": "lid",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "squared_coffin_lid"
+   ]
+  },
+  {
+   "concept": "external",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "dormitory_fence_external"
+   ]
+  },
+  {
+   "concept": "kit",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "military_tent_first_aid_kit"
+   ]
+  },
+  {
+   "concept": "whiteboard",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "military_tent_whiteboard"
+   ]
+  },
+  {
+   "concept": "sandbag",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "sandbag"
+   ]
+  },
+  {
+   "concept": "pad",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "landing_pad",
+    "helicopter_landing_pad"
+   ]
+  },
+  {
+   "concept": "highlight",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "police_station_highlight"
+   ]
+  },
+  {
+   "concept": "obstacle",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "sidewalk_obstacle"
+   ]
+  },
+  {
+   "concept": "letter",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "letter"
+   ]
+  },
+  {
+   "concept": "money",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "guitar_case_money",
+    "homeless_ground_money"
+   ]
+  },
+  {
+   "concept": "path",
+   "class": "terrain",
+   "assets": 2,
+   "aliases": [
+    "loges_path"
+   ]
+  },
+  {
+   "concept": "armrest",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "train_seat_armrest"
+   ]
+  },
+  {
+   "concept": "phone",
+   "class": "appliance",
+   "assets": 2,
+   "aliases": [
+    "public_phone"
+   ]
+  },
+  {
+   "concept": "stomp",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "villa_yard_stomp"
+   ]
+  },
+  {
+   "concept": "lifter",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "scissor_lifter"
+   ]
+  },
+  {
+   "concept": "amplifier",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_amplifier"
+   ]
+  },
+  {
+   "concept": "whiteblue",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_bathroom_cabinet_whiteblue"
+   ]
+  },
+  {
+   "concept": "screen",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_control_room_screens",
+    "animated_hospital_xraymachine_screen"
+   ]
+  },
+  {
+   "concept": "clock",
+   "class": "decor",
+   "assets": 2,
+   "aliases": [
+    "animated_cuckoo_clock",
+    "animated_pendulum_clock"
+   ]
+  },
+  {
+   "concept": "condominium",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_door_condominium"
+   ]
+  },
+  {
+   "concept": "escalator",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_escalator"
+   ]
+  },
+  {
+   "concept": "fishtank",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_fishtank"
+   ]
+  },
+  {
+   "concept": "generic",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_floating_floor_generic",
+    "animated_trap_flipping_floor_generic"
+   ]
+  },
+  {
+   "concept": "both",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_grocery_store_bakery_industrial_fridge_both",
+    "animated_grocery_store_fridge_both"
+   ]
+  },
+  {
+   "concept": "fridge2",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_grocery_store_fridge2"
+   ]
+  },
+  {
+   "concept": "bookcase",
+   "class": "furniture",
+   "assets": 2,
+   "aliases": [
+    "animated_haunted_bookcase",
+    "animated_trap_falling_bookcase"
+   ]
+  },
+  {
+   "concept": "mirror",
+   "class": "decor",
+   "assets": 2,
+   "aliases": [
+    "animated_haunted_mirror"
+   ]
+  },
+  {
+   "concept": "receptionist",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_receptionist"
+   ]
+  },
+  {
+   "concept": "textbox",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_receptionist_with_textbox"
+   ]
+  },
+  {
+   "concept": "camera",
+   "class": null,
+   "assets": 2,
+   "aliases": [
+    "animated_security_camera"
+   ]
+  },
+  {
+   "concept": "dj",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "beach_concert_dj"
+   ]
+  },
+  {
+   "concept": "umbreall",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "beach_umbreall"
+   ]
+  },
+  {
+   "concept": "crab",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "crabs"
+   ]
+  },
+  {
+   "concept": "treehouse",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "door_treehouse"
+   ]
+  },
+  {
+   "concept": "helix",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "drone_helix"
+   ]
+  },
+  {
+   "concept": "flamingo",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "floating_flamingo"
+   ]
+  },
+  {
+   "concept": "trunk",
+   "class": "vegetation",
+   "assets": 1,
+   "aliases": [
+    "floating_trunk"
+   ]
+  },
+  {
+   "concept": "butcher",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "floor_buildings_door_butcher"
+   ]
+  },
+  {
+   "concept": "cream",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "floor_buildings_door_ice_cream"
+   ]
+  },
+  {
+   "concept": "friendly",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "ghost_friendly"
+   ]
+  },
+  {
+   "concept": "blink",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "graveyard_haunted_tree_blink"
+   ]
+  },
+  {
+   "concept": "laugh",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "graveyard_haunted_tree_laugh"
+   ]
+  },
+  {
+   "concept": "close",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "haunted_house_door_close"
+   ]
+  },
+  {
+   "concept": "opening",
+   "class": "structure",
+   "assets": 1,
+   "aliases": [
+    "haunted_house_door_opening"
+   ]
+  },
+  {
+   "concept": "unlock",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "haunted_house_door_unlock"
+   ]
+  },
+  {
+   "concept": "vfx",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "landmine_explosion_vfx"
+   ]
+  },
+  {
+   "concept": "landmine",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "landmine_idle"
+   ]
+  },
+  {
+   "concept": "hour",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "school_clock_tower_hand_hours"
+   ]
+  },
+  {
+   "concept": "minute",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "school_clock_tower_hand_minutes"
+   ]
+  },
+  {
+   "concept": "stoplight",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "stoplight"
+   ]
+  },
+  {
+   "concept": "banister",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "country_house_no_banisters"
+   ]
+  },
+  {
+   "concept": "danger",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "haunted_house_sign_danger"
+   ]
+  },
+  {
+   "concept": "set",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "dj_set"
+   ]
+  },
+  {
+   "concept": "lighthouse",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "lighthouse"
+   ]
+  },
+  {
+   "concept": "central",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "four_mountains_central"
+   ]
+  },
+  {
+   "concept": "decorate",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "lighthouse_to_decorate"
+   ]
+  },
+  {
+   "concept": "bar",
+   "class": "premises",
+   "assets": 1,
+   "aliases": [
+    "ship_bar"
+   ]
+  },
+  {
+   "concept": "archor",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "ship_bar_archor"
+   ]
+  },
+  {
+   "concept": "logo",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "ship_bar_logo"
+   ]
+  },
+  {
+   "concept": "bin",
+   "class": "waste",
+   "assets": 1,
+   "aliases": [
+    "pier_bin"
+   ]
+  },
+  {
+   "concept": "shack",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "junk_shack"
+   ]
+  },
+  {
+   "concept": "export",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "kiosk_mushroom_export"
+   ]
+  },
+  {
+   "concept": "meter",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "parking_meter"
+   ]
+  },
+  {
+   "concept": "mouth",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "tube_mouth"
+   ]
+  },
+  {
+   "concept": "pergola",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "pergola"
+   ]
+  },
+  {
+   "concept": "scissor",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "scissors"
+   ]
+  },
+  {
+   "concept": "bone",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "bones"
+   ]
+  },
+  {
+   "concept": "chapel",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "grace_chapel"
+   ]
+  },
+  {
+   "concept": "tuft",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "grass_tufts"
+   ]
+  },
+  {
+   "concept": "skull",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "skull"
+   ]
+  },
+  {
+   "concept": "bunker",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "bunker"
+   ]
+  },
+  {
+   "concept": "hangar",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "hangar"
+   ]
+  },
+  {
+   "concept": "dark",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "military_tent_first_aid_kit_dark"
+   ]
+  },
+  {
+   "concept": "blank",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "military_tent_whiteboard_blank"
+   ]
+  },
+  {
+   "concept": "badge",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "badge"
+   ]
+  },
+  {
+   "concept": "cabin",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "police_station_roof_cabin"
+   ]
+  },
+  {
+   "concept": "handrail",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "police_station_roof_handrail"
+   ]
+  },
+  {
+   "concept": "siren",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "siren"
+   ]
+  },
+  {
+   "concept": "decoration",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "roof_decoration"
+   ]
+  },
+  {
+   "concept": "school",
+   "class": "premises",
+   "assets": 1,
+   "aliases": [
+    "school"
+   ]
+  },
+  {
+   "concept": "cardboard",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "cardboard"
+   ]
+  },
+  {
+   "concept": "pc",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "control_pc"
+   ]
+  },
+  {
+   "concept": "drum",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "drum"
+   ]
+  },
+  {
+   "concept": "gallery",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "gallery"
+   ]
+  },
+  {
+   "concept": "pillow",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "pillow"
+   ]
+  },
+  {
+   "concept": "dot",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "train_little_dot"
+   ]
+  },
+  {
+   "concept": "pattern",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "tile_pattern"
+   ]
+  },
+  {
+   "concept": "duck",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_bathtub_with_duck"
+   ]
+  },
+  {
+   "concept": "altar",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_blood_altar"
+   ]
+  },
+  {
+   "concept": "wax",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_candle_wax"
+   ]
+  },
+  {
+   "concept": "cat",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_cat"
+   ]
+  },
+  {
+   "concept": "carousel",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_christmas_carousel"
+   ]
+  },
+  {
+   "concept": "globe",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_christmas_snowball_globe"
+   ]
+  },
+  {
+   "concept": "coffee",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_coffee"
+   ]
+  },
+  {
+   "concept": "facebook",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_control_room_facebook_scrolling"
+   ]
+  },
+  {
+   "concept": "server",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_control_room_server"
+   ]
+  },
+  {
+   "concept": "bathroom",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_door_bathroom"
+   ]
+  },
+  {
+   "concept": "prison",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_door_prison"
+   ]
+  },
+  {
+   "concept": "cell",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_door_prison_cell"
+   ]
+  },
+  {
+   "concept": "curtain",
+   "class": "decor",
+   "assets": 1,
+   "aliases": [
+    "animated_fitting_room_curtain"
+   ]
+  },
+  {
+   "concept": "carcass",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_grocery_store_butchershop_carcass"
+   ]
+  },
+  {
+   "concept": "stale",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_grocery_store_butchershop_carcass_stale"
+   ]
+  },
+  {
+   "concept": "roller",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_grocery_store_checkout_roller"
+   ]
+  },
+  {
+   "concept": "color",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_hospital_screen_color"
+   ]
+  },
+  {
+   "concept": "xraymachine",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_hospital_xraymachine"
+   ]
+  },
+  {
+   "concept": "arm",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_hospital_xrayscreen_arm"
+   ]
+  },
+  {
+   "concept": "head",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_hospital_xrayscreen_head"
+   ]
+  },
+  {
+   "concept": "burner",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_incense_burner_loop"
+   ]
+  },
+  {
+   "concept": "l",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_iron_cage_dol_l"
+   ]
+  },
+  {
+   "concept": "shower",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_jail_shower_loop"
+   ]
+  },
+  {
+   "concept": "shrine",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_japanese_shrine"
+   ]
+  },
+  {
+   "concept": "bbq",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_bbq"
+   ]
+  },
+  {
+   "concept": "kneader",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_kneader"
+   ]
+  },
+  {
+   "concept": "microwave",
+   "class": "appliance",
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_microwave"
+   ]
+  },
+  {
+   "concept": "1cooker",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_oven_1cooker"
+   ]
+  },
+  {
+   "concept": "2cooker",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_oven_2cookers"
+   ]
+  },
+  {
+   "concept": "3cooker",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_oven_3cookers"
+   ]
+  },
+  {
+   "concept": "4cooker",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_oven_4cookers"
+   ]
+  },
+  {
+   "concept": "omelette",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_kitchen_pan_with_omelette"
+   ]
+  },
+  {
+   "concept": "tv",
+   "class": "appliance",
+   "assets": 1,
+   "aliases": [
+    "animated_tv"
+   ]
+  },
+  {
+   "concept": "tv2",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_tv2"
+   ]
+  },
+  {
+   "concept": "pentacle",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_pentacle"
+   ]
+  },
+  {
+   "concept": "sheet",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_receptionist_with_textbox_sheet"
+   ]
+  },
+  {
+   "concept": "buck",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_safe_bucks"
+   ]
+  },
+  {
+   "concept": "gold",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_safe_gold"
+   ]
+  },
+  {
+   "concept": "book",
+   "class": "decor",
+   "assets": 1,
+   "aliases": [
+    "animated_spell_book"
+   ]
+  },
+  {
+   "concept": "spider",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_spider"
+   ]
+  },
+  {
+   "concept": "roulant",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_tapis_roulant"
+   ]
+  },
+  {
+   "concept": "toaster",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_toaster"
+   ]
+  },
+  {
+   "concept": "toytrain",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_toytrain"
+   ]
+  },
+  {
+   "concept": "treadmill",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_treadmill"
+   ]
+  },
+  {
+   "concept": "reportage",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_tv_reportage"
+   ]
+  },
+  {
+   "concept": "cauldron",
+   "class": null,
+   "assets": 1,
+   "aliases": [
+    "animated_witch_cauldron"
+   ]
+  }
+ ],
+ "unclassed": [
+  "wire",
+  "pumpkin",
+  "number",
+  "container",
+  "base",
+  "character",
+  "clothes",
+  "unit",
+  "machine",
+  "spot",
+  "turnstile",
+  "hole",
+  "bottle",
+  "wreck",
+  "support",
+  "spotlight",
+  "towel",
+  "backpack",
+  "cone",
+  "signboard",
+  "grate",
+  "internal",
+  "crack",
+  "block",
+  "butterfly",
+  "full1",
+  "full2",
+  "full3",
+  "trapdoor",
+  "shrub",
+  "complete",
+  "pass",
+  "insert",
+  "armchair",
+  "mark",
+  "other",
+  "camper",
+  "digit",
+  "chimney",
+  "crow",
+  "drone",
+  "package",
+  "mall",
+  "button",
+  "mound",
+  "seagull",
+  "waterfall",
+  "drink",
+  "line",
+  "starfish",
+  "hollow",
+  "manhole",
+  "scrap",
+  "mod",
+  "putto",
+  "flyer",
+  "trolley",
+  "angle",
+  "bathtub",
+  "hydrant",
+  "tire",
+  "junk",
+  "hospital",
+  "target",
+  "and",
+  "stand",
+  "material",
+  "flame",
+  "toilet",
+  "trampoline",
+  "plate",
+  "booth",
+  "storage",
+  "holder",
+  "hotel",
+  "locker",
+  "cornice",
+  "tunnel",
+  "fallen",
+  "tuk",
+  "blade",
+  "only",
+  "campfire",
+  "flap",
+  "brick",
+  "clover",
+  "interior",
+  "corridor",
+  "baggage",
+  "cake",
+  "corpse",
+  "hover",
+  "playhouse",
+  "jet",
+  "ghost",
+  "pigeon",
+  "busker",
+  "chiar",
+  "loudspeaker",
+  "castle",
+  "tool",
+  "board",
+  "controller",
+  "cloth",
+  "arch",
+  "exit",
+  "orb",
+  "pebble",
+  "dormitory",
+  "crossing",
+  "case",
+  "doormat",
+  "excavator",
+  "frog",
+  "person",
+  "laser",
+  "toybox",
+  "piano",
+  "hose",
+  "dragon",
+  "elevator",
+  "homeless",
+  "height",
+  "diagonal",
+  "corner",
+  "propeller",
+  "cartel",
+  "float",
+  "apple",
+  "barbecue",
+  "wood",
+  "cup",
+  "icecream",
+  "parking",
+  "sunflower",
+  "pipe",
+  "skeleton",
+  "exterior",
+  "paper",
+  "mine",
+  "helmet",
+  "ramp",
+  "mattress",
+  "blanket",
+  "fragment",
+  "section",
+  "truth",
+  "mill",
+  "gif",
+  "blind",
+  "fishe",
+  "donut",
+  "ring",
+  "swirl",
+  "medicine",
+  "corp",
+  "turbine",
+  "toolbox",
+  "tileset",
+  "basic",
+  "out",
+  "composition",
+  "shadowless",
+  "canopy",
+  "cable",
+  "mixer",
+  "binocular",
+  "marshmallow",
+  "rope",
+  "stump",
+  "atm",
+  "stake",
+  "infopoint",
+  "palace",
+  "angel",
+  "ditch",
+  "cage",
+  "brunch",
+  "ribcage",
+  "lid",
+  "external",
+  "kit",
+  "whiteboard",
+  "sandbag",
+  "pad",
+  "highlight",
+  "obstacle",
+  "letter",
+  "money",
+  "armrest",
+  "stomp",
+  "lifter",
+  "amplifier",
+  "whiteblue",
+  "screen",
+  "condominium",
+  "escalator",
+  "fishtank",
+  "generic",
+  "both",
+  "fridge2",
+  "receptionist",
+  "textbox",
+  "camera",
+  "dj",
+  "umbreall",
+  "crab",
+  "treehouse",
+  "helix",
+  "flamingo",
+  "butcher",
+  "cream",
+  "friendly",
+  "blink",
+  "laugh",
+  "close",
+  "unlock",
+  "vfx",
+  "landmine",
+  "hour",
+  "minute",
+  "stoplight",
+  "banister",
+  "danger",
+  "set",
+  "lighthouse",
+  "central",
+  "decorate",
+  "archor",
+  "logo",
+  "shack",
+  "export",
+  "meter",
+  "mouth",
+  "pergola",
+  "scissor",
+  "bone",
+  "chapel",
+  "tuft",
+  "skull",
+  "bunker",
+  "hangar",
+  "dark",
+  "blank",
+  "badge",
+  "cabin",
+  "handrail",
+  "siren",
+  "decoration",
+  "cardboard",
+  "pc",
+  "drum",
+  "gallery",
+  "pillow",
+  "dot",
+  "pattern",
+  "duck",
+  "altar",
+  "wax",
+  "cat",
+  "carousel",
+  "globe",
+  "coffee",
+  "facebook",
+  "server",
+  "bathroom",
+  "prison",
+  "cell",
+  "carcass",
+  "stale",
+  "roller",
+  "color",
+  "xraymachine",
+  "arm",
+  "head",
+  "burner",
+  "l",
+  "shower",
+  "shrine",
+  "bbq",
+  "kneader",
+  "1cooker",
+  "2cooker",
+  "3cooker",
+  "4cooker",
+  "omelette",
+  "tv2",
+  "pentacle",
+  "sheet",
+  "buck",
+  "gold",
+  "spider",
+  "roulant",
+  "toaster",
+  "toytrain",
+  "treadmill",
+  "reportage",
+  "cauldron"
+ ]
+}

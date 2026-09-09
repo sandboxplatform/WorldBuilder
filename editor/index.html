@@ -1,0 +1,271 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>WorldBuilder — map editor</title>
+<style>
+  /*
+   * Two themes off one set of variables. Everything that is chrome -- panels,
+   * controls, the backdrop behind the palette -- reads a var, so the toggle is a
+   * single attribute on <html>. The map canvas keeps its own background: that is
+   * map data, not chrome, and a map authored on a dark ground should not change
+   * appearance because the editor did.
+   */
+  :root{
+    color-scheme: dark;
+    --bg:#0f1014; --panel:#171922; --line:#272b38; --ink:#d8dbe6; --dim:#8d93a6;
+    --accent:#ffc65c; --accent2:#6aa9ff; --danger:#ff7a7a; --ok:#6ade9a;
+    --ctl:#212533; --ctlHi:#414861; --void:#0b0c10; --selBg:#232838; --selLine:#3b445c;
+    --onAccent:#191203; --accentBg:#3a2f12; --pickOn:#2a2418; --optBg:#1b1f2b;
+    --grid:rgba(255,255,255,.07); --overlay:#12141ce8; --backdrop:#05060acc;
+    --canvas:#12131a; --gridMinor:rgba(150,175,255,.20); --gridMajor:rgba(150,175,255,.45);
+    --mapEdge:#4a5170;
+    --shadow:0 14px 40px rgba(0,0,0,.6);
+  }
+  html[data-theme="light"]{
+    color-scheme: light;
+    --bg:#f3f4f9; --panel:#ffffff; --line:#d8dce6; --ink:#1b1e28; --dim:#5f6779;
+    --accent:#d98a00; --accent2:#1f66d0; --danger:#c4362c; --ok:#1a8a52;
+    --ctl:#eef0f6; --ctlHi:#aeb6c8; --void:#e7eaf2; --selBg:#e5ecfa; --selLine:#9cb3df;
+    --onAccent:#241800; --accentBg:#fff2d6; --pickOn:#fff3da; --optBg:#f0f2f7;
+    --grid:rgba(0,0,0,.10); --overlay:#ffffffe8; --backdrop:#2a2f3caa;
+    --canvas:#fbfbfe; --gridMinor:rgba(40,70,140,.16); --gridMajor:rgba(40,70,140,.38);
+    --mapEdge:#94a0bd;
+    --shadow:0 14px 34px rgba(25,35,65,.20);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+    font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:hidden}
+  #app{display:grid;grid-template-columns:var(--colL,280px) 6px 1fr 6px var(--colR,210px);
+    grid-template-rows:42px 1fr;height:100%}
+  /* drag handles between the three columns; the palette resizes on its own edge */
+  .gutter{background:var(--panel);border-left:1px solid var(--line);border-right:1px solid var(--line);
+    cursor:col-resize;position:relative}
+  .gutter::after{content:"";position:absolute;left:50%;top:50%;width:2px;height:26px;
+    transform:translate(-50%,-50%);background:var(--line);border-radius:1px}
+  .gutter:hover::after,.gutter.drag::after{background:var(--accent)}
+  body.resizing{cursor:col-resize;user-select:none}
+  header{grid-column:1/-1;display:flex;align-items:center;gap:8px;padding:0 10px;
+    background:var(--panel);border-bottom:1px solid var(--line)}
+  header b{color:var(--accent);letter-spacing:.4px}
+  .sp{flex:1}
+  button,select,input{background:var(--ctl);color:var(--ink);border:1px solid var(--line);
+    border-radius:5px;padding:4px 8px;font:inherit}
+  button{cursor:pointer}
+  button:hover{border-color:var(--ctlHi)}
+  button.on{background:var(--accent);color:var(--onAccent);border-color:var(--accent);font-weight:600}
+  /* thumbnail picker -- a native select cannot show images */
+  .th{display:block;width:24px;height:24px;flex:0 0 24px;border-radius:3px;
+    background:var(--void);image-rendering:pixelated}
+  #pickBtn{display:flex;align-items:center;gap:7px;width:100%;text-align:left;padding:4px 6px}
+  #pickBtn span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #pickBtn b{color:var(--dim);font-weight:400}
+  #pickPop{position:fixed;z-index:60;width:392px;max-height:70vh;display:flex;flex-direction:column;
+    background:var(--panel);border:1px solid var(--selLine);border-radius:8px;
+    box-shadow:var(--shadow);overflow:hidden}
+  #pickPop[hidden]{display:none}
+  #pickSearch{margin:8px;width:calc(100% - 16px)}
+  #pickList{overflow:auto;padding:0 8px 8px}
+  #pickList h4{margin:8px 2px 4px;font-size:10px;color:var(--accent);letter-spacing:.8px;
+    text-transform:uppercase;font-weight:600;position:sticky;top:0;background:var(--panel);
+    padding:3px 0;z-index:1}
+  .pgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+  .pcell{border:1px solid transparent;border-radius:5px;padding:3px 1px;cursor:pointer;
+    background:none;color:var(--ink);font:inherit;display:flex;flex-direction:column;
+    align-items:center;gap:2px;overflow:hidden}
+  .pcell:hover{background:var(--selBg);border-color:var(--selLine)}
+  .pcell.on{border-color:var(--accent);background:var(--pickOn)}
+  .pcell .th{width:48px;height:48px;flex:0 0 48px}
+  .pcell em{font-style:normal;font-size:9px;line-height:1.2;color:var(--dim);text-align:center;
+    max-width:56px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .pcell.on em{color:var(--ink)}
+  #pickNone{color:var(--dim);padding:10px 4px}
+  optgroup{color:var(--accent);font-style:normal;font-weight:600;background:var(--optBg)}
+  optgroup option{color:var(--ink);font-weight:400;padding-left:10px}
+  aside{background:var(--panel);overflow:auto;padding:8px;border-right:1px solid var(--line)}
+  aside.right{border-right:0;border-left:1px solid var(--line)}
+  h3{margin:10px 0 6px;font-size:11px;color:var(--dim);text-transform:uppercase;
+    letter-spacing:.9px;font-weight:600}
+  #stage{position:relative;overflow:hidden;background:var(--void)}
+  #map{position:absolute;left:0;top:0;image-rendering:pixelated;cursor:crosshair}
+  #palWrap{position:relative;border:1px solid var(--line);border-radius:5px;overflow:auto;
+    height:var(--palH,52vh);background:var(--void);resize:vertical;min-height:120px;max-height:80vh}
+  #palSpacer{position:absolute;left:0;top:0;width:1px;height:1px}
+  #pal{position:sticky;top:0;left:0;display:block;image-rendering:pixelated;cursor:crosshair}
+  .row{display:flex;gap:5px;align-items:center;margin:4px 0;flex-wrap:wrap}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+  /* icon over label: the words alone ("rect", "pick") did not say what they do */
+  .tools button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px}
+  .tools button em{font-style:normal;font-size:10px;letter-spacing:.2px}
+  .tools svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.3;
+    stroke-linecap:round;stroke-linejoin:round}
+  .tools button.on svg{stroke-width:1.5}
+  button:hover{background:var(--selBg)}
+  /* one shared tooltip, positioned in JS: the panels scroll, so an ::after tip
+     anchored to the button would be clipped by the panel edge */
+  #tip{position:fixed;z-index:90;max-width:230px;padding:6px 8px;border-radius:6px;
+    background:var(--panel);border:1px solid var(--selLine);box-shadow:var(--shadow);
+    color:var(--ink);font-size:11px;line-height:1.4;pointer-events:none}
+  #tip[hidden]{display:none}
+  #tip kbd{margin-left:5px}
+  .layer{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:5px;cursor:pointer;
+    border:1px solid transparent}
+  .layer.sel{background:var(--selBg);border-color:var(--selLine)}
+  .layer input{margin:0}
+  .layer span{flex:1}
+  #status{position:absolute;left:8px;bottom:8px;background:var(--overlay);border:1px solid var(--line);
+    border-radius:5px;padding:5px 8px;color:var(--dim);pointer-events:none}
+  #toast{position:absolute;right:10px;bottom:10px;background:var(--overlay);border:1px solid var(--line);
+    border-left:3px solid var(--ok);border-radius:5px;padding:7px 10px;opacity:0;transition:.25s}
+  #toast.show{opacity:1}
+  small{color:var(--dim)}
+  kbd{background:var(--selBg);border:1px solid var(--line);border-radius:3px;padding:0 4px}
+  dialog{background:var(--panel);color:var(--ink);border:1px solid var(--line);
+    border-radius:10px;padding:0;min-width:340px;font:inherit}
+  dialog::backdrop{background:var(--backdrop)}
+  dialog h2{margin:0;padding:12px 16px;font-size:13px;border-bottom:1px solid var(--line);
+    color:var(--accent);letter-spacing:.4px}
+  dialog form{margin:0}
+  .field{display:flex;align-items:center;gap:8px;padding:6px 16px}
+  .field label{width:70px;color:var(--dim)}
+  .field input[type=number]{width:80px}
+  .field input{flex:0 1 auto}
+  .field span{display:flex;gap:5px;flex-wrap:wrap}
+  .preset{font-size:11px;padding:3px 7px}
+  dialog p{margin:2px 16px 10px;color:var(--dim);font-size:11px}
+  dialog menu{display:flex;justify-content:flex-end;gap:8px;margin:0;padding:10px 16px;
+    border-top:1px solid var(--line)}
+  button.primary{background:var(--accent);color:var(--onAccent);border-color:var(--accent);font-weight:600}
+</style>
+<div id="app">
+  <header>
+    <b>WorldBuilder</b>
+    <input id="mapName" value="untitled" size="12" title="map name">
+    <button id="btnNew" data-tip="Start a new map — set its size in tiles or pixels.">New</button>
+    <select id="loadSel"><option value="">load…</option></select>
+    <button id="btnSave" data-key="ctrl+s" data-tip="Save this map into maps/ on disk.">Save</button>
+    <span class="sp"></span>
+    <label><small>size</small>
+      <select id="tileSize"><option>16</option><option selected>32</option><option>48</option></select>
+    </label>
+    <button id="btnGrid" class="on" data-key="g" data-tip="Show the tile grid over the map.">grid</button>
+    <button id="btnColl" data-key="c" data-tip="Tint every tile a character cannot walk through.">collision</button>
+    <button id="btnPlay" data-tip="Drop the character in and walk the map, obeying collision.">▶ walk</button>
+    <button id="btnTheme" data-tip="Switch between light and dark.">☾</button>
+    <button id="selBadge" hidden
+      style="background:var(--accentBg);border-color:var(--accent);color:var(--accent)"
+      title="editing is restricted to the selection — click to clear"></button>
+    <small id="zoomLbl">2x</small>
+  </header>
+
+  <aside>
+    <h3>Tiles</h3>
+    <div class="row">
+      <button id="modeSheets" class="on" style="flex:1">sheets</button>
+      <button id="modeSingles" style="flex:1">singles</button>
+    </div>
+    <button id="pickBtn" title="choose a sheet or category">
+      <i class="th"></i><span id="pickLbl">…</span><b>▾</b></button>
+    <select id="sheetSel" hidden></select>
+    <div id="pickPop" hidden>
+      <input id="pickSearch" placeholder="search…" autocomplete="off">
+      <div id="pickList"></div>
+    </div>
+    <div class="row"><small id="sheetInfo"></small>
+      <span class="sp"></span><small id="palPage"></small></div>
+    <div id="palWrap"><div id="palSpacer"></div><canvas id="pal"></canvas></div>
+    <div class="row"><small>drag to grab a block · <kbd>alt</kbd>+click map = eyedropper</small></div>
+    <h3>Stamp</h3>
+    <div class="row"><canvas id="stamp" width="96" height="96"
+      style="image-rendering:pixelated;border:1px solid var(--line);border-radius:4px"></canvas>
+      <small id="stampInfo">none</small></div>
+  </aside>
+
+  <div class="gutter" id="gutL" data-tip="Drag to resize. Double click to reset."></div>
+
+  <div id="stage">
+    <canvas id="map"></canvas>
+    <div id="status"></div>
+    <div id="toast"></div>
+  </div>
+
+  <div class="gutter" id="gutR" data-tip="Drag to resize. Double click to reset."></div>
+
+  <aside class="right">
+    <h3>Tool</h3>
+    <div class="tools">
+      <button data-tool="paint" data-key="b" data-tip="Paint the stamp onto the current layer. Drag to keep painting."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 13.5c0-1.7.8-2.6 1.8-2.6s1.8.9 1.8 2c0 1-.9 1.6-3.6 1.6z"/><path d="M6.2 11.2 12.4 3.6l2 1.8-6.6 6.9"/></svg><em>paint</em></button>
+      <button data-tool="erase" data-key="e" data-tip="Erase what you click. Removes the whole multi-tile group it belongs to."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 13.5h11"/><path d="M5.2 11.4 9.6 4.6l4 2.6-3.2 4.2z"/></svg><em>erase</em></button>
+      <button data-tool="rect" data-key="r" data-tip="Drag a rectangle and fill the whole area with the stamp."><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="9" rx="1"/><path d="M2.5 8.5h11M8 3.5v9"/></svg><em>rect</em></button>
+      <button data-tool="fill" data-key="f" data-tip="Flood fill — replaces every connected matching tile with the stamp."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M7 2.2 12.8 8 7.8 13 2 7.2z"/><path d="M13.2 10.6c.9 1.3 1.3 2 1.3 2.6a1.3 1.3 0 0 1-2.6 0c0-.6.4-1.3 1.3-2.6z"/></svg><em>fill</em></button>
+      <button data-tool="pick" data-key="i" data-tip="Eyedropper — click the map to make what is there your stamp. alt+click does this from any tool."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.2 12.8 6l-6.1 6.1-3.3 1.2 1.2-3.3z"/><path d="M11.4 1.6 14.4 4.6"/></svg><em>pick</em></button>
+      <button data-tool="pan" data-key="h" data-tip="Drag to scroll the view. wasd or the arrow keys do the same; space also holds pan."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8v12.4M1.8 8h12.4M8 1.8 6 4M8 1.8 10 4M8 14.2 6 12M8 14.2 10 12M1.8 8 4 6M1.8 8 4 10M14.2 8 12 6M14.2 8 12 10"/></svg><em>pan</em></button>
+      <button data-tool="move" data-key="m" data-tip="Drag a placed sprite to reposition it. Arrow keys nudge the selected one."><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="2.5" width="7" height="7" rx="1"/><path d="M9.5 9.5 14 14M14 14v-3.6M14 14h-3.6"/></svg><em>move</em></button>
+      <button data-tool="select" data-key="v" data-tip="Drag a box to select. Delete clears it, and while a box is up all editing is confined to it."><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="9" rx="1" stroke-dasharray="3 2.2"/></svg><em>select</em></button>
+    </div>
+    <div class="row"><small>snap</small>
+      <select id="snapSel" style="flex:1">
+        <option value="32" selected>tile</option>
+        <option value="16">half tile</option>
+      </select></div>
+    <h3>Layers</h3>
+    <div id="layers"></div>
+    <div class="row"><button id="btnAddLayer">+ layer</button></div>
+    <h3>Character</h3>
+    <select id="charSel" style="width:100%"></select>
+    <div class="row"><button data-tool="spawn" data-tip="Then click the map to set where the character starts in walk mode.">set spawn</button></div>
+    <h3>Export</h3>
+    <div class="row"><button id="btnExport">export bundle</button></div>
+    <div class="row"><small>writes an atlas + Tiled JSON + character to <code>out/</code></small></div>
+    <h3>Collision</h3>
+    <div class="row"><button data-tool="coll+" data-tip="Mark tiles solid by hand. Overrides what auto worked out.">paint</button><button data-tool="coll-" data-tip="Clear solid tiles by hand. Overrides what auto worked out.">erase</button></div>
+    <div class="row"><button id="btnAuto" class="on">auto</button><button id="btnCollAuto">rebuild</button><button id="btnCollClear">clear</button></div>
+    <div class="row"><small>auto sets collision from each object's type; paint/erase overrides it</small></div>
+    <h3>Map</h3>
+    <div class="row"><small id="mapInfo"></small></div>
+    <div class="row"><button id="btnUndo">undo</button><button id="btnRedo">redo</button></div>
+    <h3>Keys</h3>
+    <small>
+      <kbd>wasd</kbd>/<kbd>arrows</kbd> pan · <kbd>shift</kbd> faster<br>
+      <kbd>b</kbd> paint <kbd>e</kbd> erase <kbd>r</kbd> rect<br>
+      <kbd>f</kbd> fill <kbd>i</kbd> pick <kbd>h</kbd>/<kbd>space</kbd> pan<br>
+      <kbd>c</kbd> collision view <kbd>g</kbd> grid<br>
+      <kbd>[</kbd> <kbd>]</kbd> layer · <kbd>ctrl+z</kbd> undo<br>
+      <kbd>v</kbd> select area · <kbd>del</kbd> delete selection<br>
+      <kbd>esc</kbd> clear selection<br>
+      <kbd>m</kbd> move object · <kbd>arrows</kbd> nudge when selected<br>
+      <kbd>del</kbd> remove selected<br>
+      <kbd>-</kbd> <kbd>=</kbd> zoom · <kbd>ctrl+s</kbd> save
+    </small>
+  </aside>
+</div>
+<dialog id="newDlg">
+  <form method="dialog">
+    <h2>New map</h2>
+    <div class="field"><label>name</label>
+      <input id="nmName" value="untitled" maxlength="64"></div>
+    <div class="field"><label>width</label>
+      <input id="nmW" type="number" min="4" max="512" value="48"> <small>tiles</small>
+      <input id="nmWpx" type="number" min="64" step="16" value="1536"> <small>px</small></div>
+    <div class="field"><label>height</label>
+      <input id="nmH" type="number" min="4" max="512" value="33"> <small>tiles</small>
+      <input id="nmHpx" type="number" min="64" step="16" value="1056"> <small>px</small></div>
+    <div class="field"><label>tile size</label>
+      <select id="nmT"><option>16</option><option selected>32</option><option>48</option></select>
+      <small>px</small></div>
+    <div class="field"><label>presets</label>
+      <span>
+        <button type="button" class="preset" data-w="30" data-h="20">room 30&times;20</button>
+        <button type="button" class="preset" data-w="48" data-h="33">floor 48&times;33</button>
+        <button type="button" class="preset" data-w="80" data-h="60">large 80&times;60</button>
+        <button type="button" id="nmDrag">drag on canvas…</button>
+      </span></div>
+    <p id="nmInfo"></p>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="nmOk" value="ok" class="primary">Create</button>
+    </menu>
+  </form>
+</dialog>
+
+<div id="tip" hidden></div>
+
+<script src="editor.js"></script>

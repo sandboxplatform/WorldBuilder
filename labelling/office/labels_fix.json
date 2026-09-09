@@ -1,0 +1,12 @@
+{
+ "theme": "office",
+ "method": "verification-render fixes",
+ "labels": {
+  "4:12-22": {"concept": "monitor", "placement": "on_surface", "state": ["off"], "composite": true, "confidence": "high",
+              "note": "these sprites include the desk beneath the monitor"},
+  "4:23-31": {"concept": "monitor", "placement": "on_surface", "state": ["on"], "composite": true, "confidence": "high",
+              "note": "these sprites include the desk beneath the monitor"},
+  "10:16":   {"concept": "pc_tower", "placement": "floor", "confidence": "medium",
+              "note": "was swept into the backpack range; it is a tower unit"}
+ }
+}

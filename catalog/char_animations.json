@@ -1,0 +1,139 @@
+{
+ "source": "Measured from the Dec-2024 Modern Interiors character sheets",
+ "labels_from": "the pack's own Spritesheet_animations_GUIDE.png",
+ "frame_px": [
+  32,
+  64
+ ],
+ "grid_cols": 56,
+ "grid_rows": 20,
+ "direction_order": [
+  "right",
+  "up",
+  "left",
+  "down"
+ ],
+ "rows": [
+  {
+   "row": 0,
+   "name": "base_4dir",
+   "frames": 4,
+   "per_direction": 1
+  },
+  {
+   "row": 1,
+   "name": "idle",
+   "frames": 24,
+   "per_direction": 6
+  },
+  {
+   "row": 2,
+   "name": "walk",
+   "frames": 24,
+   "per_direction": 6
+  },
+  {
+   "row": 3,
+   "name": "sleep",
+   "frames": 13,
+   "per_direction": null
+  },
+  {
+   "row": 4,
+   "name": "sit_a",
+   "frames": 12,
+   "per_direction": 3
+  },
+  {
+   "row": 5,
+   "name": "sit_b",
+   "frames": 12,
+   "per_direction": 3
+  },
+  {
+   "row": 6,
+   "name": "phone",
+   "frames": 14,
+   "per_direction": null
+  },
+  {
+   "row": 7,
+   "name": "read",
+   "frames": 26,
+   "per_direction": null
+  },
+  {
+   "row": 8,
+   "name": "push_cart",
+   "frames": 48,
+   "per_direction": 12
+  },
+  {
+   "row": 9,
+   "name": "pick_up",
+   "frames": 48,
+   "per_direction": 12
+  },
+  {
+   "row": 10,
+   "name": "gift",
+   "frames": 46,
+   "per_direction": null
+  },
+  {
+   "row": 11,
+   "name": "lift",
+   "frames": 56,
+   "per_direction": 14
+  },
+  {
+   "row": 12,
+   "name": "throw",
+   "frames": 56,
+   "per_direction": 14
+  },
+  {
+   "row": 13,
+   "name": "hit",
+   "frames": 24,
+   "per_direction": 6
+  },
+  {
+   "row": 14,
+   "name": "punch",
+   "frames": 24,
+   "per_direction": 6
+  },
+  {
+   "row": 15,
+   "name": "stab",
+   "frames": 48,
+   "per_direction": 12
+  },
+  {
+   "row": 16,
+   "name": "grab_gun",
+   "frames": 16,
+   "per_direction": 4
+  },
+  {
+   "row": 17,
+   "name": "gun_idle",
+   "frames": 24,
+   "per_direction": 6
+  },
+  {
+   "row": 18,
+   "name": "shoot",
+   "frames": 13,
+   "per_direction": null
+  },
+  {
+   "row": 19,
+   "name": "hurt",
+   "frames": 13,
+   "per_direction": null
+  }
+ ],
+ "direction_note": "Verified, not assumed: block 2 is an exact horizontal mirror of block 0 (0.0% pixel difference across walk frames 0-2), and block 0's face points right. Blocks are 6 frames each, left to right."
+}

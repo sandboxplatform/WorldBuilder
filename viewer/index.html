@@ -1,0 +1,196 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>WorldBuilder — walkthrough</title>
+<style>
+  :root { color-scheme: dark; }
+  html,body { margin:0; height:100%; background:#0e0f14; color:#d7d9e3;
+              font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; overflow:hidden; }
+  #wrap { position:fixed; inset:0; display:grid; place-items:center; }
+  canvas { image-rendering:pixelated; box-shadow:0 0 0 1px #262a36; }
+  #hud { position:fixed; left:12px; top:12px; background:#171a22cc; border:1px solid #2b3040;
+         border-radius:6px; padding:8px 10px; pointer-events:none; }
+  #hud b { color:#ffd27f; font-weight:600; }
+  kbd { background:#232838; border:1px solid #39405480; border-radius:3px; padding:0 4px; }
+  #err { position:fixed; inset:0; display:none; place-items:center; padding:2rem;
+         background:#0e0f14; color:#ff9d9d; white-space:pre-wrap; }
+</style>
+<div id="wrap"><canvas id="c"></canvas></div>
+<div id="hud">
+  <div><b>WorldBuilder</b> walkthrough</div>
+  <div><kbd>WASD</kbd>/<kbd>arrows</kbd> move · <kbd>shift</kbd> run · <kbd>g</kbd> collision · <kbd>-</kbd>/<kbd>=</kbd> zoom</div>
+  <div id="pos"></div>
+</div>
+<div id="err"></div>
+<script>
+const TILE = 32, FW = 32, FH = 64;
+const $ = s => document.querySelector(s);
+const fail = m => { $('#err').style.display='grid'; $('#err').textContent = m; };
+
+async function load() {
+  const [map, meta, chr] = await Promise.all([
+    fetch('assets/scene.json').then(r=>r.json()),
+    fetch('assets/scene_meta.json').then(r=>r.json()),
+    fetch('assets/character.json').then(r=>r.json()),
+  ]);
+  const img = src => new Promise((res, rej) => {
+    const i = new Image(); i.onload = () => res(i);
+    i.onerror = () => rej(new Error('could not load ' + src)); i.src = src;
+  });
+  const [atlas, charSheet] = await Promise.all([
+    img('assets/' + map.tilesets[0].image), img('assets/character.png')
+  ]);
+  return { map, meta, chr, atlas, charSheet };
+}
+
+load().then(({map, meta, chr, atlas, charSheet}) => {
+  const W = map.width, H = map.height;
+  const ts = map.tilesets[0], acols = ts.columns;
+
+  // collision runs -> a flat lookup
+  const solid = new Uint8Array(W * H);
+  for (const [x, y, w, h] of meta.collisions)
+    for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+      const px = x+i, py = y+j;
+      if (px>=0 && px<W && py>=0 && py<H) solid[py*W + px] = 1;
+    }
+
+  const tileLayers = map.layers.filter(l => l.type === 'tilelayer');
+  // floor and walls sit under the character; everything else is depth-sorted
+  const under = tileLayers.filter(l => l.name === 'floor' || l.name === 'walls');
+  // "overhead" draws above the character -- treetops, ceiling fittings, upper walls
+  const over = tileLayers.filter(l => l.name === 'overhead');
+  const sorted = tileLayers.filter(l =>
+    !(l.name === 'floor' || l.name === 'walls' || l.name === 'overhead'));
+
+  const cv = $('#c'), ctx = cv.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  let zoom = 2;
+
+  // direction -> frame block, read from the bundle rather than hardcoded
+  const DIR = chr.dirBlocks || { right: 0, up: 1, left: 2, down: 3 };
+  const spawn = (meta.spawns && meta.spawns[0] && meta.spawns[0].at) || [2,2];
+  const P = { x: spawn[0]*TILE + TILE/2, y: spawn[1]*TILE + TILE/2,
+              dir: 'down', t: 0, moving: false };
+
+  const keys = new Set();
+  addEventListener('keydown', e => {
+    if (e.key === 'g') showGrid = !showGrid;
+    if (e.key === '-') zoom = Math.max(1, zoom - 1);
+    if (e.key === '=' || e.key === '+') zoom = Math.min(5, zoom + 1);
+    keys.add(e.key.toLowerCase());
+    if (['arrowup','arrowdown','arrowleft','arrowright',' '].includes(e.key.toLowerCase()))
+      e.preventDefault();
+  });
+  addEventListener('keyup', e => keys.delete(e.key.toLowerCase()));
+  let showGrid = false;
+
+  // the character's feet occupy a small box, so you can tuck under desks
+  const FOOT_W = 14, FOOT_H = 10;
+  function blocked(px, py) {
+    const x0 = Math.floor((px - FOOT_W/2) / TILE), x1 = Math.floor((px + FOOT_W/2 - 1) / TILE);
+    const y0 = Math.floor((py - FOOT_H) / TILE),   y1 = Math.floor((py - 1) / TILE);
+    for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
+      if (x < 0 || y < 0 || x >= W || y >= H) return true;
+      if (solid[y*W + x]) return true;
+    }
+    return false;
+  }
+
+  function drawTile(gid, dx, dy) {
+    if (!gid) return;
+    const l = (gid & 0x1FFFFFFF) - ts.firstgid;
+    ctx.drawImage(atlas, (l % acols)*TILE, ((l / acols)|0)*TILE, TILE, TILE, dx, dy, TILE, TILE);
+  }
+
+  function frame() {
+    // ---- input
+    let dx = 0, dy = 0;
+    if (keys.has('a') || keys.has('arrowleft'))  dx -= 1;
+    if (keys.has('d') || keys.has('arrowright')) dx += 1;
+    if (keys.has('w') || keys.has('arrowup'))    dy -= 1;
+    if (keys.has('s') || keys.has('arrowdown'))  dy += 1;
+    const speed = (keys.has('shift') ? 3.4 : 1.7);
+    P.moving = (dx || dy) !== 0;
+    if (P.moving) {
+      const len = Math.hypot(dx, dy) || 1;
+      const nx = P.x + dx/len*speed, ny = P.y + dy/len*speed;
+      if (!blocked(nx, P.y)) P.x = nx;
+      if (!blocked(P.x, ny)) P.y = ny;
+      if (dy > 0) P.dir = 'down'; else if (dy < 0) P.dir = 'up';
+      else if (dx < 0) P.dir = 'left'; else if (dx > 0) P.dir = 'right';
+      P.t += 0.18;
+    } else { P.t = 0; }
+
+    // ---- camera
+    const vw = Math.ceil(cv.width / zoom), vh = Math.ceil(cv.height / zoom);
+    let cx = Math.round(P.x - vw/2), cy = Math.round(P.y - vh/2);
+    cx = Math.max(0, Math.min(cx, W*TILE - vw));
+    cy = Math.max(0, Math.min(cy, H*TILE - vh));
+
+    ctx.setTransform(zoom, 0, 0, zoom, 0, 0);
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = '#12131a';
+    ctx.fillRect(0, 0, vw, vh);
+    ctx.translate(-cx, -cy);
+
+    const x0 = Math.max(0, (cx/TILE|0)), x1 = Math.min(W-1, ((cx+vw)/TILE|0));
+    const y0 = Math.max(0, (cy/TILE|0)), y1 = Math.min(H-1, ((cy+vh)/TILE|0));
+
+    for (const L of under)
+      for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++)
+        drawTile(L.data[y*W + x], x*TILE, y*TILE);
+
+    // depth sort: walk the rows, dropping the character in at its own row
+    const prow = Math.floor(P.y / TILE);
+    for (let y = y0; y <= y1; y++) {
+      for (const L of sorted)
+        for (let x = x0; x <= x1; x++) drawTile(L.data[y*W + x], x*TILE, y*TILE);
+      if (y === prow) drawChar();
+    }
+    if (prow > y1) drawChar();
+
+    for (const L of over)
+      for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++)
+        drawTile(L.data[y*W + x], x*TILE, y*TILE);
+
+    if (showGrid) {
+      ctx.fillStyle = 'rgba(255,60,120,.32)';
+      for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++)
+        if (solid[y*W + x]) ctx.fillRect(x*TILE, y*TILE, TILE, TILE);
+    }
+
+    $('#pos').textContent = `tile ${Math.floor(P.x/TILE)},${Math.floor(P.y/TILE)}  zoom ${zoom}x`;
+  }
+
+  // Drive the loop from rAF *and* a timer, stepping at most once per frame budget.
+  // Some embedded/background browser views throttle rAF to a crawl; the timer keeps
+  // the walkthrough usable there without double-stepping when rAF is healthy.
+  let lastStep = 0;
+  function step() {
+    const now = performance.now();
+    if (now - lastStep < 15) return;
+    lastStep = now;
+    frame();
+  }
+  function raf() { step(); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+  setInterval(step, 16);
+
+  function drawChar() {
+    const row = P.moving ? chr.rows.walk : chr.rows.idle;
+    const f = P.moving ? (Math.floor(P.t) % chr.framesPerDir) : 0;
+    const col = (DIR[P.dir] ?? 3) * chr.framesPerDir + f;
+    ctx.drawImage(charSheet, col*FW, row*FH, FW, FH,
+                  Math.round(P.x - FW/2), Math.round(P.y - FH + 6), FW, FH);
+  }
+
+  function resize() {
+    cv.width = Math.min(innerWidth - 24, 1400);
+    cv.height = Math.min(innerHeight - 24, 900);
+    ctx.imageSmoothingEnabled = false;
+  }
+  addEventListener('resize', resize);
+  resize();
+  frame();
+}).catch(e => fail(e.stack || String(e)));
+</script>

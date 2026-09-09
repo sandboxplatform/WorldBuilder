@@ -1,0 +1,7242 @@
+{
+ "labels": {
+  "int.single.bathroom.n1": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n10": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n100": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n101": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n102": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n103": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n104": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n105": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n106": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n107": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n108": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n109": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n11": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n110": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n111": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n112": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n113": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n114": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n115": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n116": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n117": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n118": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n119": {
+   "concept": "washbasin",
+   "confidence": "high",
+   "note": "pedestal basins in several colours",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n12": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n120": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n121": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n122": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n123": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n124": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n125": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n126": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n127": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n128": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n129": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n13": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n130": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n131": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n132": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n133": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n134": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n135": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n136": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n137": {
+   "concept": "shower",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n138": {
+   "concept": "shower_head",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n139": {
+   "concept": "shower_head",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n14": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n140": {
+   "concept": "shower_head",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n141": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n142": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n143": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n144": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n145": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n146": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n147": {
+   "composite": true,
+   "concept": "towel_rail",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n148": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n149": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n15": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n150": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n151": {
+   "concept": "bathtub",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n152": {
+   "concept": "bathtub",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n153": {
+   "concept": "bathtub",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n154": {
+   "concept": "bathtub",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n155": {
+   "concept": "tap",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.bathroom.n156": {
+   "concept": "radiator",
+   "confidence": "low",
+   "note": "grey slotted panel; could be a vent or a drain",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n157": {
+   "concept": "radiator",
+   "confidence": "low",
+   "note": "grey slotted panel; could be a vent or a drain",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n158": {
+   "concept": "radiator",
+   "confidence": "low",
+   "note": "grey slotted panel; could be a vent or a drain",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n159": {
+   "concept": "tap",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n16": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n17": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n18": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n19": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n2": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n20": {
+   "composite": true,
+   "concept": "wall_shelf",
+   "confidence": "high",
+   "note": "with toiletries",
+   "placement": "wall"
+  },
+  "int.single.bathroom.n21": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n22": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n23": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n24": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n25": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n26": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n27": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n28": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n29": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n3": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n30": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n31": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n32": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n33": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n34": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n35": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n36": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n37": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n38": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n39": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n4": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n40": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n41": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n42": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n43": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n44": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n45": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n46": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n47": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n48": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n49": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n5": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n50": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n51": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n52": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n53": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n54": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n55": {
+   "concept": "toilet",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n56": {
+   "concept": "cleaning_trolley",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n57": {
+   "concept": "cleaning_trolley",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n58": {
+   "concept": "plunger",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n59": {
+   "concept": "plunger",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n6": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n60": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n61": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n62": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n63": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n64": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n65": {
+   "concept": "bathtub",
+   "confidence": "medium",
+   "note": "long grey basin; could be a communal trough sink",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n66": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n67": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n68": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n69": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n7": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n70": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n71": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n72": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n73": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n74": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n75": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n76": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n77": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n78": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n79": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n8": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n80": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n81": {
+   "concept": "bath_mat",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.bathroom.n82": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "note": "stacked with towels",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n83": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "note": "stacked with towels",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n84": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "note": "stacked with towels",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n85": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "note": "stacked with towels",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n86": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "high",
+   "note": "stacked with towels",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n87": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n88": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n89": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n9": {
+   "composite": true,
+   "concept": "vanity",
+   "confidence": "high",
+   "note": "basin, mirror and counter together",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n90": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n91": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n92": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n93": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n94": {
+   "concept": "washing_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n95": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n96": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n97": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n98": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.bathroom.n99": {
+   "concept": "laundry_basket",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n1": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n10": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n11": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n12": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n13": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n14": {
+   "concept": "lectern",
+   "confidence": "medium",
+   "note": "open book or binder on a stand",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n15": {
+   "concept": "lectern",
+   "confidence": "medium",
+   "note": "open book or binder on a stand",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n16": {
+   "concept": "lectern",
+   "confidence": "medium",
+   "note": "open book or binder on a stand",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n17": {
+   "concept": "lectern",
+   "confidence": "medium",
+   "note": "open book or binder on a stand",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n18": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n19": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n2": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n20": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n21": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n22": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n23": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n24": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "flat and corner desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n25": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n26": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n27": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n28": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "screen on a desk",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n29": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "screen on a desk",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n3": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n30": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "screen on a desk",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n31": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "screen on a desk",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n32": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "screen on a desk",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n33": {
+   "concept": "dome_light",
+   "confidence": "low",
+   "note": "smooth domes, could be ceiling lights or beanbags",
+   "placement": "mounted"
+  },
+  "int.single.conference_hall.n34": {
+   "concept": "dome_light",
+   "confidence": "low",
+   "note": "smooth domes, could be ceiling lights or beanbags",
+   "placement": "mounted"
+  },
+  "int.single.conference_hall.n35": {
+   "concept": "dome_light",
+   "confidence": "low",
+   "note": "smooth domes, could be ceiling lights or beanbags",
+   "placement": "mounted"
+  },
+  "int.single.conference_hall.n36": {
+   "concept": "av_equipment",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n37": {
+   "concept": "av_equipment",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n38": {
+   "concept": "chair",
+   "confidence": "high",
+   "note": "auditorium seating",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n39": {
+   "concept": "chair",
+   "confidence": "high",
+   "note": "auditorium seating",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n4": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n40": {
+   "concept": "chair",
+   "confidence": "high",
+   "note": "auditorium seating",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n41": {
+   "concept": "vending_machine",
+   "confidence": "medium",
+   "note": "screened unit, could be an information kiosk",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n42": {
+   "concept": "vending_machine",
+   "confidence": "medium",
+   "note": "screened unit, could be an information kiosk",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n43": {
+   "concept": "dispenser",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n44": {
+   "concept": "dispenser",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n45": {
+   "concept": "lectern",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n46": {
+   "concept": "lectern",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n47": {
+   "concept": "light_strip",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n48": {
+   "concept": "light_strip",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n49": {
+   "concept": "light_strip",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n5": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n50": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n51": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n52": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n53": {
+   "concept": "speaker",
+   "confidence": "low",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n54": {
+   "concept": "portrait",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n55": {
+   "concept": "portrait",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n56": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n57": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n58": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.conference_hall.n59": {
+   "concept": "fire_extinguisher",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n6": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n60": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n61": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n62": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n63": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n64": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n65": {
+   "concept": "banner",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.conference_hall.n66": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall",
+   "state": [
+    "lit"
+   ]
+  },
+  "int.single.conference_hall.n67": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall",
+   "state": [
+    "lit"
+   ]
+  },
+  "int.single.conference_hall.n68": {
+   "concept": "projector_screen",
+   "confidence": "high",
+   "placement": "wall",
+   "state": [
+    "lit"
+   ]
+  },
+  "int.single.conference_hall.n7": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n8": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.conference_hall.n9": {
+   "concept": "desk",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "curved conference desk sections",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n1": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n10": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n100": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n101": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n102": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n103": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n104": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n105": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n106": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n107": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n108": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n109": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n11": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n110": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n111": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n112": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n113": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n114": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n115": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n116": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n117": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n118": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n119": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n12": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n120": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n121": {
+   "concept": "counter",
+   "confidence": "medium",
+   "placement": "wall",
+   "state": [
+    "with_basin"
+   ]
+  },
+  "int.single.kitchen.n122": {
+   "concept": "counter",
+   "confidence": "medium",
+   "placement": "wall",
+   "state": [
+    "with_basin"
+   ]
+  },
+  "int.single.kitchen.n123": {
+   "concept": "counter",
+   "confidence": "medium",
+   "placement": "wall",
+   "state": [
+    "with_basin"
+   ]
+  },
+  "int.single.kitchen.n124": {
+   "concept": "counter",
+   "confidence": "medium",
+   "placement": "wall",
+   "state": [
+    "with_basin"
+   ]
+  },
+  "int.single.kitchen.n125": {
+   "concept": "counter",
+   "confidence": "medium",
+   "placement": "wall",
+   "state": [
+    "with_basin"
+   ]
+  },
+  "int.single.kitchen.n126": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n127": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n128": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n129": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n13": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n130": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n131": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n132": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n133": {
+   "composite": true,
+   "concept": "counter",
+   "confidence": "high",
+   "note": "counter with crockery on top",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n134": {
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n135": {
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n136": {
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n137": {
+   "concept": "stool",
+   "confidence": "low",
+   "note": "small grey object, identity unclear in isolation",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n138": {
+   "concept": "stool",
+   "confidence": "low",
+   "note": "small grey object, identity unclear in isolation",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n139": {
+   "concept": "rug",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n14": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n140": {
+   "concept": "rug",
+   "confidence": "high",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n141": {
+   "concept": "sink",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n142": {
+   "concept": "sink",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n143": {
+   "concept": "sink",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n144": {
+   "concept": "sink",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n145": {
+   "concept": "stove",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "lit"
+   ]
+  },
+  "int.single.kitchen.n146": {
+   "concept": "stove",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "lit"
+   ]
+  },
+  "int.single.kitchen.n147": {
+   "concept": "dish_rack",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n148": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n149": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n15": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n150": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n151": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n152": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n153": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n154": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n155": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n156": {
+   "concept": "cooker",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n157": {
+   "concept": "extractor_hood",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n158": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n159": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n16": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n160": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n161": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n162": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n163": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n164": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n165": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n166": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n167": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n168": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n169": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n17": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n170": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n171": {
+   "concept": "fridge",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n172": {
+   "concept": "sack",
+   "confidence": "low",
+   "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n173": {
+   "concept": "sack",
+   "confidence": "low",
+   "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n174": {
+   "concept": "sack",
+   "confidence": "low",
+   "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n175": {
+   "concept": "sack",
+   "confidence": "low",
+   "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n176": {
+   "concept": "sack",
+   "confidence": "low",
+   "note": "brown and white bundles with tied tops; sacks is the best reading, a flock of birds is possible",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n177": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n178": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n179": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n18": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n180": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n181": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "note": "rounded body, spout and visible blue water; some paired with a tap on a stand",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n182": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "note": "rounded body, spout and visible blue water; some paired with a tap on a stand",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n183": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "note": "rounded body, spout and visible blue water; some paired with a tap on a stand",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n184": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "note": "rounded body, spout and visible blue water; some paired with a tap on a stand",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n185": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n186": {
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n187": {
+   "concept": "microwave",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n188": {
+   "concept": "microwave",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n189": {
+   "concept": "microwave",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n19": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n190": {
+   "concept": "microwave",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n191": {
+   "concept": "water_dispenser",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n192": {
+   "concept": "oven",
+   "confidence": "medium",
+   "note": "two dark glass doors over a vent; double oven",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n193": {
+   "concept": "grill",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n194": {
+   "concept": "grill",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n195": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n196": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n197": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n198": {
+   "concept": "kettle",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n199": {
+   "concept": "apron",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n2": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n20": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n200": {
+   "concept": "apron",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n201": {
+   "concept": "apron",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n202": {
+   "concept": "apron",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n203": {
+   "concept": "lamp",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n204": {
+   "concept": "lamp",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n205": {
+   "concept": "lamp",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n206": {
+   "concept": "lamp",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n207": {
+   "concept": "cutting_board",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n208": {
+   "concept": "cutting_board",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n209": {
+   "concept": "knife",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n21": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n210": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n211": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n212": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n213": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n214": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n215": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n216": {
+   "concept": "food",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n217": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n218": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n219": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n22": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n220": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n221": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n222": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n223": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n224": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n225": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n226": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set: corner/edge/centre",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n227": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n228": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n229": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n23": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n230": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n231": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n232": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n233": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n234": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n235": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n236": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n237": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n238": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n239": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n24": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n240": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n241": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n242": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n243": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n244": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n245": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n246": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n247": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n248": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n249": {
+   "colour": [
+    "white"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n25": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n250": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n251": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n252": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n253": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n254": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n255": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n256": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n257": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n258": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n259": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n26": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n260": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n261": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n262": {
+   "colour": [
+    "pink"
+   ],
+   "concept": "rug",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "floor_overlay"
+  },
+  "int.single.kitchen.n263": {
+   "concept": "bottle",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n264": {
+   "concept": "bottle",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n265": {
+   "concept": "bottle",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n266": {
+   "concept": "bottle",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n267": {
+   "concept": "bottle",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n268": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n269": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n27": {
+   "colour": [
+    "grey"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n270": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n271": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n272": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n273": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n274": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n275": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n276": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n277": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n278": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n279": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n28": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n280": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n281": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n282": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n283": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n284": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n285": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n286": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n287": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n288": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n289": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n29": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n290": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n291": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n292": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n293": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n294": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n295": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n296": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n297": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n298": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n299": {
+   "concept": "bench",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n3": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n30": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n300": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n301": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n302": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n303": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n304": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n305": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n306": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n307": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n308": {
+   "concept": "bench",
+   "confidence": "high",
+   "facing": [
+    "vertical"
+   ],
+   "note": "same slat pattern as the horizontal benches; these are the side-facing variant",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n309": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n31": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n310": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n311": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n312": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n313": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n314": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n315": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n316": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n317": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n318": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n319": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n32": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n320": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n321": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n322": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n323": {
+   "concept": "dresser",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n324": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n325": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n326": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n327": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n328": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n329": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n33": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n330": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n331": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n332": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n333": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n334": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n335": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n336": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n337": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n338": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n339": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n34": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n340": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n341": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n342": {
+   "concept": "shelf",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n343": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n344": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n345": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n346": {
+   "concept": "shelf",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n347": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n348": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n349": {
+   "concept": "curtain",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n35": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n350": {
+   "concept": "shelf",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n351": {
+   "concept": "mirror",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n352": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n353": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n354": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n355": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n356": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n357": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n358": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n359": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n36": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n360": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n361": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n362": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n363": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n364": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n365": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n366": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n367": {
+   "concept": "tablecloth",
+   "confidence": "high",
+   "note": "autotile set",
+   "part": "modular",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n368": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n369": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n37": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n370": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n371": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n372": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n373": {
+   "concept": "chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n374": {
+   "concept": "blender",
+   "confidence": "low",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n375": {
+   "concept": "blender",
+   "confidence": "low",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n376": {
+   "concept": "utensil_rack",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n377": {
+   "composite": true,
+   "concept": "shelf",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n378": {
+   "concept": "knife_block",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n379": {
+   "concept": "cookware",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n38": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n380": {
+   "concept": "cookware",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n381": {
+   "concept": "cookware",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n382": {
+   "concept": "cookware",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n383": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n384": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n385": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n386": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n387": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n388": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n389": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n39": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n390": {
+   "concept": "plate",
+   "confidence": "high",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n391": {
+   "concept": "toaster",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n392": {
+   "concept": "toaster",
+   "confidence": "medium",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n393": {
+   "concept": "cup",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n394": {
+   "concept": "cup",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n395": {
+   "concept": "cup",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n396": {
+   "concept": "glass",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n397": {
+   "concept": "glass",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.kitchen.n398": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n399": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n4": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n40": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n400": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n401": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n402": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n403": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n404": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n405": {
+   "concept": "plate",
+   "confidence": "high",
+   "note": "pastries",
+   "placement": "on_surface",
+   "state": [
+    "full"
+   ]
+  },
+  "int.single.kitchen.n406": {
+   "concept": "display_case",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n407": {
+   "concept": "display_case",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n408": {
+   "concept": "display_case",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n41": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n42": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n43": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n44": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n45": {
+   "colour": [
+    "blue"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n46": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n47": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n48": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n49": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n5": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n50": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n51": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n52": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n53": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n54": {
+   "colour": [
+    "red"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n55": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n56": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n57": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n58": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n59": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n6": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n60": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n61": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n62": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n63": {
+   "colour": [
+    "beige"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n64": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n65": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n66": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n67": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n68": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n69": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n7": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n70": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n71": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n72": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n73": {
+   "colour": [
+    "yellow"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n74": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n75": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n76": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n77": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n78": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n79": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n8": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n80": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n81": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n82": {
+   "colour": [
+    "orange"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n83": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n84": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n85": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n86": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n87": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n88": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cupboard",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n89": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n9": {
+   "colour": [
+    "white"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n90": {
+   "colour": [
+    "brown"
+   ],
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "part": "modular",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n91": {
+   "concept": "table",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n92": {
+   "concept": "table",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n93": {
+   "concept": "table",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n94": {
+   "concept": "counter",
+   "confidence": "high",
+   "note": "context shows it among drawer units, not tables",
+   "placement": "wall"
+  },
+  "int.single.kitchen.n95": {
+   "composite": true,
+   "concept": "table",
+   "confidence": "high",
+   "note": "table with an appliance on top",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n96": {
+   "composite": true,
+   "concept": "table",
+   "confidence": "high",
+   "note": "table with an appliance on top",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n97": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n98": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.kitchen.n99": {
+   "concept": "table",
+   "confidence": "high",
+   "note": "several carry items on top (composites)",
+   "placement": "floor"
+  },
+  "int.single.living_room.n1": {
+   "concept": "cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.living_room.n10": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n100": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n101": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n102": {
+   "concept": "cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.living_room.n103": {
+   "concept": "cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.living_room.n104": {
+   "concept": "cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.living_room.n105": {
+   "concept": "cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "int.single.living_room.n106": {
+   "concept": "fruit_bowl",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n107": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n108": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n109": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n11": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n110": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n111": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n112": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n113": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n114": {
+   "concept": "fireplace",
+   "confidence": "high",
+   "note": "hearth with flue",
+   "placement": "wall"
+  },
+  "int.single.living_room.n115": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n116": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n117": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n118": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n119": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n12": {
+   "concept": "string_lights",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "int.single.living_room.n120": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n121": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n122": {
+   "concept": "chair",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "placement": "floor"
+  },
+  "int.single.living_room.n13": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n14": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n15": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n16": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n17": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n18": {
+   "concept": "plant",
+   "confidence": "high",
+   "note": "potted",
+   "placement": "floor"
+  },
+  "int.single.living_room.n19": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n2": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n20": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n21": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n22": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n23": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n24": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n25": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n26": {
+   "composite": true,
+   "concept": "console_table",
+   "confidence": "high",
+   "note": "with mirror and items on top",
+   "placement": "floor"
+  },
+  "int.single.living_room.n27": {
+   "concept": "lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n28": {
+   "concept": "cushion",
+   "confidence": "low",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n29": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n3": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n30": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n31": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n32": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n33": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n34": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n35": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n36": {
+   "composite": true,
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n37": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n38": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n39": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n4": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n40": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n41": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n42": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n43": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n44": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n45": {
+   "concept": "cabinet",
+   "confidence": "high",
+   "material": [
+    "wood"
+   ],
+   "note": "tall, mirrored doors",
+   "placement": "floor"
+  },
+  "int.single.living_room.n46": {
+   "composite": true,
+   "concept": "side_table",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n47": {
+   "composite": true,
+   "concept": "side_table",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n48": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n49": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n5": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n50": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n51": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n52": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n53": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n54": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n55": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n56": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n57": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n58": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n59": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n6": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "sofa",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n60": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n61": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n62": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n63": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n64": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n65": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n66": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n67": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n68": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n69": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n7": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n70": {
+   "composite": true,
+   "concept": "sideboard",
+   "confidence": "high",
+   "note": "most carry bowls, flowers or lamps",
+   "placement": "floor"
+  },
+  "int.single.living_room.n71": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n72": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n73": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n74": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n75": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n76": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n77": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n78": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n79": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "table lamp",
+   "placement": "on_surface"
+  },
+  "int.single.living_room.n8": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n80": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n81": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n82": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n83": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n84": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n85": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n86": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n87": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n88": {
+   "concept": "lamp",
+   "confidence": "high",
+   "note": "floor lamp on a stand",
+   "placement": "floor"
+  },
+  "int.single.living_room.n89": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n9": {
+   "colour": [
+    "purple"
+   ],
+   "concept": "armchair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "int.single.living_room.n90": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n91": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n92": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n93": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n94": {
+   "concept": "display_cabinet",
+   "confidence": "medium",
+   "note": "tall glazed unit, could be a longcase clock",
+   "placement": "floor"
+  },
+  "int.single.living_room.n95": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n96": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n97": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n98": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "int.single.living_room.n99": {
+   "concept": "firewood",
+   "confidence": "medium",
+   "note": "stacked timber; the theme also contains fireplaces",
+   "placement": "floor"
+  },
+  "office.single.office.n1": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n10": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n100": {
+   "concept": "plant",
+   "confidence": "medium",
+   "note": "shown with shelving in context",
+   "placement": "floor"
+  },
+  "office.single.office.n101": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n102": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n103": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n104": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n105": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n106": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n107": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n108": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n109": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n11": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n110": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n111": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n112": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n113": {
+   "concept": "paperwork",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n114": {
+   "concept": "paperwork",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n115": {
+   "concept": "paperwork",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n116": {
+   "concept": "paperwork",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n117": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n118": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n119": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n12": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n120": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n121": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n122": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n123": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n124": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n125": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n126": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n127": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "off"
+   ]
+  },
+  "office.single.office.n128": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n129": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n13": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n130": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n131": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n132": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n133": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n134": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n135": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n136": {
+   "composite": true,
+   "concept": "monitor",
+   "confidence": "high",
+   "note": "these sprites include the desk beneath the monitor",
+   "placement": "on_surface",
+   "state": [
+    "on"
+   ]
+  },
+  "office.single.office.n137": {
+   "concept": "laptop",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n138": {
+   "concept": "laptop",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n139": {
+   "concept": "laptop",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n14": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n140": {
+   "concept": "laptop",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n141": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n142": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n143": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n144": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n145": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n146": {
+   "concept": "desk_lamp",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n147": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n148": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n149": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n15": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n150": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n151": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n152": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n153": {
+   "concept": "desk_accessory",
+   "confidence": "medium",
+   "note": "photo frames, mugs and papers",
+   "placement": "on_surface"
+  },
+  "office.single.office.n154": {
+   "concept": "desk_accessory",
+   "confidence": "medium",
+   "note": "photo frames, mugs and papers",
+   "placement": "on_surface"
+  },
+  "office.single.office.n155": {
+   "concept": "desk_accessory",
+   "confidence": "medium",
+   "note": "photo frames, mugs and papers",
+   "placement": "on_surface"
+  },
+  "office.single.office.n156": {
+   "concept": "desk_accessory",
+   "confidence": "medium",
+   "note": "photo frames, mugs and papers",
+   "placement": "on_surface"
+  },
+  "office.single.office.n157": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n158": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n159": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n16": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n160": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n161": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n162": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n163": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n164": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n165": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n166": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n167": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n168": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n169": {
+   "concept": "printer",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n17": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n170": {
+   "concept": "presentation_screen",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n171": {
+   "concept": "presentation_screen",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n172": {
+   "concept": "presentation_screen",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n173": {
+   "concept": "presentation_screen",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n174": {
+   "concept": "vending_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n175": {
+   "concept": "vending_machine",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n176": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n177": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n178": {
+   "concept": "server_rack",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n179": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n18": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n180": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n181": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n182": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n183": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n184": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n185": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n186": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n187": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n188": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n189": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n19": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n190": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n191": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n192": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n193": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n194": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n195": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n196": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n197": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n198": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n199": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n2": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n20": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n200": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n201": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n202": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n203": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n204": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n205": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n206": {
+   "concept": "filing_cabinet",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n207": {
+   "concept": "whiteboard",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n208": {
+   "concept": "whiteboard",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n209": {
+   "concept": "whiteboard",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n21": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n210": {
+   "concept": "whiteboard",
+   "confidence": "medium",
+   "placement": "wall"
+  },
+  "office.single.office.n211": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n212": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n213": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n214": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n215": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n216": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n217": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n218": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n219": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n22": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n220": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n221": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n222": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n223": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n224": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n225": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n226": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n227": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n228": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n229": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n23": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n230": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n231": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n232": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n233": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n234": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n235": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n236": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n237": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n238": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n239": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n24": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n240": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n241": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n242": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n243": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n244": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n245": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n246": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n247": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n248": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n249": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n25": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n250": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n251": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n252": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n253": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n254": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n255": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n256": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n257": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n258": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n259": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n26": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n260": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n261": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n262": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n263": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n264": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n265": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n266": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n267": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n268": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n269": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n27": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n270": {
+   "concept": "plant",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n271": {
+   "concept": "plant",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n272": {
+   "concept": "plant",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n273": {
+   "concept": "plant",
+   "confidence": "medium",
+   "placement": "floor"
+  },
+  "office.single.office.n274": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n275": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n276": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n277": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n278": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n279": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n28": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n280": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n281": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n282": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n283": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n284": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n285": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n286": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n287": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n288": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n289": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n29": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n290": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n291": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n292": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n293": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n294": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n295": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n296": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n297": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n298": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n299": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n3": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n30": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n300": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n301": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n302": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n303": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n304": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n305": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n306": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n307": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n308": {
+   "concept": "office_chair",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n309": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n31": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n310": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n311": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n312": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n313": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n314": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n315": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n316": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n317": {
+   "concept": "monitor",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n318": {
+   "composite": true,
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n319": {
+   "composite": true,
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n32": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n320": {
+   "composite": true,
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n321": {
+   "composite": true,
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n322": {
+   "composite": true,
+   "concept": "coffee_machine",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n323": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n324": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n325": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n326": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n327": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n328": {
+   "composite": true,
+   "concept": "cash_register",
+   "confidence": "high",
+   "placement": "on_surface"
+  },
+  "office.single.office.n329": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n33": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n330": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n331": {
+   "concept": "pc_tower",
+   "confidence": "medium",
+   "note": "was swept into the backpack range; it is a tower unit",
+   "placement": "floor"
+  },
+  "office.single.office.n332": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n333": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n334": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n335": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n336": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n337": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n338": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n339": {
+   "concept": "backpack",
+   "confidence": "high",
+   "placement": "floor"
+  },
+  "office.single.office.n34": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n35": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n36": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n37": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n38": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n39": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n4": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n40": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n41": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n42": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n43": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n44": {
+   "concept": "desk",
+   "confidence": "high",
+   "note": "desk surface; sheet band rows 28-51",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n45": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n46": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n47": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n48": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n49": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n5": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n50": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n51": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n52": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n53": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n54": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n55": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n56": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n57": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n58": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n59": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n6": {
+   "concept": "desk",
+   "confidence": "high",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n60": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n61": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n62": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n63": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n64": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n65": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n66": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n67": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n68": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n69": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n7": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n70": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n71": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n72": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n73": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n74": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n75": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n76": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n77": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n78": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n79": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n8": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n80": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n81": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n82": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n83": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n84": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n85": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n86": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n87": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n88": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n89": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n9": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n90": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n91": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n92": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n93": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n94": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n95": {
+   "concept": "partition",
+   "confidence": "high",
+   "note": "cubicle partition panel; sheet band rows 0-7",
+   "part": "modular",
+   "placement": "floor"
+  },
+  "office.single.office.n96": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "office.single.office.n97": {
+   "concept": "painting",
+   "confidence": "high",
+   "placement": "wall"
+  },
+  "office.single.office.n98": {
+   "concept": "plant",
+   "confidence": "medium",
+   "note": "shown with shelving in context",
+   "placement": "floor"
+  },
+  "office.single.office.n99": {
+   "concept": "plant",
+   "confidence": "medium",
+   "note": "shown with shelving in context",
+   "placement": "floor"
+  }
+ },
+ "note": "Vision-pass labels. Sidecar to catalog.json so they survive a catalog rebuild."
+}

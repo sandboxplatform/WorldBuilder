@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "worldbuilder-viewer",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "WorldBuilder/tools/serve_viewer.py",
+        "8823"
+      ],
+      "port": 8823
+    }
+  ]
+}

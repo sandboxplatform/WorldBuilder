@@ -1,0 +1,13 @@
+{
+ "theme": "office",
+ "method": "second pass: the smooth/grained/woven variation across the desk set turned out to be surface finish, not a desk-versus-partition distinction, so the concept is confirmed and finish moves to its own measured facet",
+ "labels": {
+  "1:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "2:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "3:1-25":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "6:4-20":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "7:1-35":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "8:1-24":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"},
+  "9:1-25":  {"concept": "desk", "placement": "floor", "part": "modular", "confidence": "high"}
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "theme": "living_room",
+ "method": "vision pass with theme-sheet context",
+ "labels": {
+  "1:1":     {"concept": "cabinet", "placement": "floor", "confidence": "medium"},
+  "1:2-11":  {"shape": {"wide": "sofa", "tall": "armchair", "square": "armchair"}, "placement": "floor", "colour": ["purple"], "confidence": "high"},
+  "1:12":    {"concept": "string_lights", "placement": "wall", "confidence": "medium"},
+  "1:13-18": {"concept": "plant", "placement": "floor", "confidence": "high", "note": "potted"},
+  "1:19-26": {"concept": "console_table", "placement": "floor", "composite": true, "confidence": "high", "note": "with mirror and items on top"},
+  "1:27":    {"concept": "lamp", "placement": "on_surface", "confidence": "high"},
+  "1:28":    {"concept": "cushion", "placement": "on_surface", "confidence": "low"},
+  "1:29-35": {"concept": "sofa", "placement": "floor", "composite": true, "confidence": "high"},
+
+  "2:1":     {"concept": "sofa", "placement": "floor", "composite": true, "confidence": "high"},
+  "2:2-10":  {"concept": "cabinet", "placement": "floor", "material": ["wood"], "confidence": "high", "note": "tall, mirrored doors"},
+  "2:11-12": {"concept": "side_table", "placement": "floor", "composite": true, "confidence": "high"},
+  "2:13-35": {"concept": "sideboard", "placement": "floor", "composite": true, "confidence": "high", "note": "most carry bowls, flowers or lamps"},
+
+  "3:1-9":   {"concept": "lamp", "placement": "on_surface", "confidence": "high", "note": "table lamp"},
+  "3:10-18": {"concept": "lamp", "placement": "floor", "confidence": "high", "note": "floor lamp on a stand"},
+  "3:19-24": {"concept": "display_cabinet", "placement": "floor", "confidence": "medium", "note": "tall glazed unit, could be a longcase clock"},
+  "3:25-31": {"concept": "firewood", "placement": "floor", "confidence": "medium", "note": "stacked timber; the theme also contains fireplaces"},
+  "3:32-35": {"concept": "cabinet", "placement": "floor", "confidence": "medium"},
+
+  "4:1":     {"concept": "fruit_bowl", "placement": "on_surface", "confidence": "high"},
+  "4:2-9":   {"concept": "fireplace", "placement": "wall", "confidence": "high", "note": "hearth with flue"},
+  "4:10-17": {"concept": "chair", "placement": "floor", "material": ["wood"], "confidence": "high"}
+ }
+}
