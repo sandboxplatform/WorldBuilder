@@ -142,6 +142,25 @@ deliberately excluded: you walk over a rug and under a branch.
 
 Add your own with **+ layer**; you choose tiles or objects.
 
+## Lighting
+
+The **night** slider previews the map after dark. Most lights are not placed at all:
+they are read off the sprites you already put down — a street lamp lights because the
+catalog knows it is a street lamp — using the same table and the same arithmetic
+`tools/lights.py` uses at export, so the preview and the game agree. The panel says
+how many came from sprites and how many you placed.
+
+The **light** tool (`l`) places one by hand for where the art implies nothing: click to
+drop, drag to move, and set radius, colour, flicker and whether it burns all the time
+or only after dark. Hand-placed lights are saved in the map and travel with the export
+alongside the derived ones.
+
+The index the editor reads is built from the catalog:
+
+```bash
+python3 tools/build_lights_index.py
+```
+
 ## Choosing what you draw on
 
 Click a layer's **name** in the Layers list — that is the one every stroke lands on,
@@ -292,7 +311,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-33 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+40 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring

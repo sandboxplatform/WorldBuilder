@@ -235,6 +235,7 @@
       <button data-tool="pick" data-key="i" data-tip="Eyedropper — click the map to make what is there your stamp. alt+click does this from any tool."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.2 12.8 6l-6.1 6.1-3.3 1.2 1.2-3.3z"/><path d="M11.4 1.6 14.4 4.6"/></svg><em>pick</em></button>
       <button data-tool="pan" data-key="h" data-tip="Drag to scroll the view. wasd or the arrow keys do the same; space also holds pan."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8v12.4M1.8 8h12.4M8 1.8 6 4M8 1.8 10 4M8 14.2 6 12M8 14.2 10 12M1.8 8 4 6M1.8 8 4 10M14.2 8 12 6M14.2 8 12 10"/></svg><em>pan</em></button>
       <button data-tool="move" data-key="m" data-tip="Drag a placed sprite to reposition it. Arrow keys nudge the selected one."><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="2.5" width="7" height="7" rx="1"/><path d="M9.5 9.5 14 14M14 14v-3.6M14 14h-3.6"/></svg><em>move</em></button>
+      <button data-tool="light" data-key="l" data-tip="Place a light, or grab one to move it. Delete removes the selected light."><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6a4.4 4.4 0 0 0-2.6 7.9c.5.4.8 1 .8 1.6v.4h3.6v-.4c0-.6.3-1.2.8-1.6A4.4 4.4 0 0 0 8 1.6z"/><path d="M6.2 13.2h3.6M6.8 14.8h2.4"/></svg><em>light</em></button>
       <button data-tool="select" data-key="v" data-tip="Drag a box to select. Delete clears it, and while a box is up all editing is confined to it."><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="9" rx="1" stroke-dasharray="3 2.2"/></svg><em>select</em></button>
     </div>
     <div class="row"><small>snap</small>
@@ -253,6 +254,26 @@
     <h3>Export</h3>
     <div class="row"><button id="btnExport">export bundle</button></div>
     <div class="row"><small>writes an atlas + Tiled JSON + character to <code>out/</code></small></div>
+    <h3>Lighting</h3>
+    <div class="row"><small>night</small>
+      <input id="nightSlider" type="range" min="0" max="100" value="0" style="flex:1"
+             data-tip="Preview the map after dark. Lights are read off the sprites you placed; this is the same arithmetic the game uses.">
+      <small id="nightVal" style="width:30px;text-align:right">off</small></div>
+    <div class="row"><small id="lightInfo" style="color:var(--dim)">—</small></div>
+    <div id="lightEdit" hidden>
+      <div class="row"><small style="width:42px">radius</small>
+        <input id="liR" type="range" min="16" max="320" step="4" style="flex:1">
+        <small id="liRv" style="width:34px;text-align:right"></small></div>
+      <div class="row"><small style="width:42px">colour</small>
+        <input id="liC" type="color" style="flex:1;height:24px;padding:0">
+        <select id="liW" data-tip="Whether this light burns all the time or only after dark.">
+          <option value="night">night</option><option value="always">always</option>
+        </select></div>
+      <div class="row"><small style="width:42px">flicker</small>
+        <input id="liF" type="range" min="0" max="100" step="5" style="flex:1">
+        <button id="liDel" class="danger" data-tip="Remove this light.">delete</button></div>
+    </div>
+
     <h3>Collision</h3>
     <div class="row"><button data-tool="coll+" data-tip="Mark tiles solid by hand. Overrides what auto worked out.">paint</button><button data-tool="coll-" data-tip="Clear solid tiles by hand. Overrides what auto worked out.">erase</button></div>
     <div class="row"><button id="btnAuto" class="on">auto</button><button id="btnCollAuto">rebuild</button><button id="btnCollClear">clear</button></div>

@@ -469,7 +469,7 @@ export async function run() {
 
   await t('every tool has an icon, a tip and a working hover', async () => {
     const btns = [...document.querySelectorAll('.tools [data-tool]')];
-    eq(btns.length, 8, 'tool count');
+    eq(btns.length, 9, 'tool count');
     ok(btns.every(b => b.querySelector('svg')), 'a tool has no icon');
     ok(btns.every(b => (b.dataset.tip || '').length > 20), 'a tool has no usable tip');
     ok(btns.every(b => b.dataset.key), 'a tool has no shortcut in its tip');
@@ -683,6 +683,58 @@ export async function run() {
     ok(t.classList.contains('show'), 'no warning when covering with see-through art');
     ok(/see-through/.test(t.textContent), `unexpected warning: ${t.textContent}`);
     ok(/walls|higher layer/.test(t.textContent), 'the warning does not name where to put it');
+  });
+
+  await t('lights are derived from sprites, and match what the exporter derives', async () => {
+    await loadLightsIndex();
+    ok(state.lightsIdx, 'lights.json missing — run tools/build_lights_index.py');
+    const d = await fetch('/api/map?name=chester_harbour').then(r => r.json()).catch(() => null);
+    if (!d) return;                                   // the sample map is optional
+    deserialise(d);
+    await loadSingles();
+    const got = derivedLights();
+    // the number the Python exporter reports for this map; the editor previewing
+    // something different from what ships is the failure worth catching
+    eq(got.length, 50, 'editor derivation drifted from the exporter');
+    ok(got.every(l => l.r > 0 && l.color && l.when), 'a derived light is malformed');
+    ok(got.some(l => l.kind === 'street_lamp'), 'no street lamps found');
+  });
+
+  await t('a light can be placed, moved, edited and deleted', async () => {
+    await freshMap(12, 12);
+    await loadLightsIndex();
+    eq(M.lights.length, 0, 'a new map starts with hand-placed lights');
+
+    tool('light');
+    down(at(4, 4)); up(); await sleep(120);
+    eq(M.lights.length, 1, 'clicking with the light tool placed nothing');
+    const l = M.lights[0];
+    eq(state.selLight, l, 'the new light was not selected');
+    ok(state.night > 0, 'placing a light in daylight left nothing to see');
+
+    // dragging it moves it, and it is not snapped to the grid.
+    // Copy the position first: `l` is the live object, so comparing it with itself
+    // afterwards would pass no matter what happened.
+    const was = { x: l.x, y: l.y };
+    down(at(4, 4)); move(at(7, 6)); up(); await sleep(120);
+    eq(M.lights.length, 1, 'the drag placed a second light instead of moving one');
+    ok(M.lights[0].x !== was.x || M.lights[0].y !== was.y, 'the light did not move');
+
+    const r = document.querySelector('#liR');
+    r.value = '160'; r.oninput({ target: r }); await sleep(60);
+    eq(M.lights[0].r, 160, 'radius control did nothing');
+
+    // and it survives the round trip through the map file
+    const ser = serialise();
+    eq(ser.lights.length, 1, 'hand-placed light was not saved');
+    deserialise(ser);
+    eq(M.lights.length, 1, 'hand-placed light was lost on reload');
+    eq(M.lights[0].r, 160, 'radius was lost on reload');
+
+    selectLight(M.lights[0]);
+    document.querySelector('#liDel').click(); await sleep(120);
+    eq(M.lights.length, 0, 'delete left the light behind');
+    setNight(0);
   });
 
   const pass = results.filter(r => r[0] === 'pass').length;

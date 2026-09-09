@@ -22,7 +22,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # the vocab but not named here falls back to LIT_DEFAULT.
 LIGHT_KINDS = {
     # streets and structures -- big, steady, cool-white
-    "street_lamp":     dict(r=132, color="#ffe3ad", intensity=0.95, flicker=0.0,  when="night"),
+    # 104 rather than a rounder 130: street lamps on these maps sit about 224px
+    # apart, and a radius over half that leaves no dark between them at all --
+    # continuous light reads as dusk, not as a lit street
+    "street_lamp":     dict(r=104, color="#ffe3ad", intensity=0.95, flicker=0.0,  when="night"),
     # a bare "lamp" is the interior kind -- the vocab calls the outdoor ones
     # street_lamp, so this must not inherit a 132px night-only streetlight
     "lamp":            dict(r=100, color="#ffdca8", intensity=0.8,  flicker=0.0,  when="always"),
@@ -68,7 +71,7 @@ NOT_LIGHTS = {"fire_extinguisher", "fire_hydrant", "fire_truck", "lighthouse_doo
 LIT_DEFAULT = dict(r=96, color="#ffd9a0", intensity=0.8, flicker=0.0, when="night")
 
 # Ambient tint the runtime lerps between. Not a light -- the colour of the dark.
-AMBIENT = {"day": "#ffffff", "dusk": "#e0a86a", "night": "#1b2a4a", "darkness": 0.72}
+AMBIENT = {"day": "#ffffff", "dusk": "#e0a86a", "night": "#141f38", "darkness": 0.82}
 
 
 def _sheet_cells():
@@ -159,6 +162,20 @@ def lights_for(m, facets=None, classes=None, labels=None, cells=None):
             cy = y0 + (min(bh / 4, T) if bh > 2 * T else bh / 2)
             out.append({"x": round(cx, 1), "y": round(cy, 1), "kind": kind,
                         "id": aid, **spec})
+
+    # Lights placed by hand in the editor. They come last so that when the same
+    # spot is both derived and authored, the authored one is the later word --
+    # which is how the editor's own preview stacks them too.
+    for l in m.get("lights", []):
+        out.append({"x": round(float(l.get("x", 0)), 1),
+                    "y": round(float(l.get("y", 0)), 1),
+                    "kind": l.get("kind") or "custom",
+                    "id": None,
+                    "r": float(l.get("r", LIT_DEFAULT["r"])),
+                    "color": l.get("color", LIT_DEFAULT["color"]),
+                    "intensity": float(l.get("intensity", LIT_DEFAULT["intensity"])),
+                    "flicker": float(l.get("flicker", 0.0)),
+                    "when": l.get("when", LIT_DEFAULT["when"])})
     return out
 
 

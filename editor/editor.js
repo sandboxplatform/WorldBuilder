@@ -25,7 +25,8 @@ const state = {
   tile: 32, zoom: 2, cam: { x: 0, y: 0 },
   sheets: {}, sheetsBySize: {}, sheet: null, img: new Map(),
   stamp: null,                       // {sheet, col, row, w, h}
-  tool: "paint", showGrid: true, showColl: false, snap: 32, sel: null, nextGroup: 1, marquee: null,
+  tool: "paint", showGrid: true, showColl: false, snap: 32,
+  night: 0, lightsIdx: null, selLight: null, sel: null, nextGroup: 1, marquee: null,
   palMode: "sheets", singles: null, singleCat: null, singlePage: 0,
   clock: 0, animTimer: null, autoColl: true,
   layerIdx: 0, undo: [], redo: [], playing: false,
@@ -34,6 +35,9 @@ const state = {
 
 const M = {
   name: "untitled", tile: 32, size: [40, 30], background: DEFAULT_BG,
+  // lights you placed by hand; the derived ones are not stored, they are read
+  // back off the sprites every time so they follow what you paint
+  lights: [],
   layers: LAYERS.map(L => ({ name: L.name, role: L.role, visible: true,
                              grid: null, items: [] })),
   collision: new Set(), spawns: [],
@@ -325,6 +329,147 @@ async function setPalMode(mode) {
   } else { fillSheetSelect(); drawPalette(); }
 }
 
+/* ------------------------------------------------- lighting */
+/*
+ * Two kinds of light. Derived ones are read off the sprites already placed -- a
+ * street lamp lights because the catalog knows it is a street lamp -- and are never
+ * stored, so they follow the map as you paint it. Authored ones are yours, live in
+ * the map file, and are what you reach for when the art implies nothing.
+ *
+ * The editor draws them with the same arithmetic the runtime uses, because a night
+ * preview that disagrees with the game is worse than no preview at all.
+ */
+async function loadLightsIndex() {
+  if (state.lightsIdx) return state.lightsIdx;
+  state.lightsIdx = await fetch("lights.json").then(r => r.ok ? r.json() : null)
+                                              .catch(() => null);
+  return state.lightsIdx;
+}
+
+function derivedLights() {
+  const idx = state.lightsIdx;
+  if (!idx) return [];
+  const T = M.tile, out = [];
+  for (const L of M.layers) {
+    if (!L.visible) continue;
+    for (const it of (L.items || [])) {
+      const kind = idx.byId[it.id];
+      if (!kind) continue;
+      const a = state.singles?.byId?.[it.id];
+      const bw = a?.anim ? a.anim.frame[0] : (a?.bbox?.[2] ?? T);
+      const bh = a?.anim ? a.anim.frame[1] : (a?.bbox?.[3] ?? T);
+      // a lamp glows at its head, not its feet -- the same rule the exporter uses
+      out.push({ ...(idx.kinds[kind] || idx.kinds._default), kind,
+                 x: it.x + bw / 2,
+                 y: it.y + (bh > 2 * T ? Math.min(bh / 4, T) : bh / 2) });
+    }
+    if (!L.grid) continue;
+    for (let y = 0; y < L.grid.length; y++) {
+      const row = L.grid[y];
+      for (let x = 0; x < row.length; x++) {
+        const ref = row[x];
+        if (!ref || isSprite(ref)) continue;
+        const kind = idx.sheetCells[ref.slice(5)];   // drop the "tile:" prefix
+        if (!kind) continue;
+        out.push({ ...(idx.kinds[kind] || idx.kinds._default), kind,
+                   x: x * T + T / 2, y: y * T + T / 2 });
+      }
+    }
+  }
+  return out;
+}
+
+function allLights() { return derivedLights().concat(M.lights || []); }
+
+function ambientAt(n) {
+  const amb = state.lightsIdx?.ambient
+    || { day: "#ffffff", dusk: "#e0a86a", night: "#1b2a4a", darkness: 0.72 };
+  const hex = h => { const m = hexA(h, 1).match(/[\d.]+/g); return [+m[0], +m[1], +m[2]]; };
+  const [a, b, t] = n < 0.5 ? [amb.day, amb.dusk, n * 2] : [amb.dusk, amb.night, (n - .5) * 2];
+  const A = hex(a), B = hex(b);
+  const c = A.map((v, i) => Math.round(v + (B[i] - v) * t));
+  return { rgb: `rgb(${c[0]},${c[1]},${c[2]})`, darkness: amb.darkness };
+}
+
+// flicker as two slow sines rather than noise: a candle breathes, it does not glitch
+function lightStrength(l, i) {
+  const gate = (l.when === "night") ? state.night : 1;
+  if (gate <= 0) return 0;
+  if (!l.flicker) return l.intensity * gate;
+  const p = i * 1.7 + l.x * 0.013 + l.y * 0.017;
+  const w = Math.sin(state.clock * 0.009 + p) * 0.6
+          + Math.sin(state.clock * 0.021 + p * 2.3) * 0.4;
+  return l.intensity * gate * (1 - l.flicker * 0.5 * (1 - w));
+}
+
+function lightBuf(w, h) {
+  let c = lightBuf._c;
+  if (!c) c = lightBuf._c = document.createElement("canvas");
+  if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+  return c;
+}
+
+function drawLighting(ctx, cv, ox, oy) {
+  if (state.night <= 0) return false;
+  const lights = allLights();
+  const Z = state.zoom;
+  const { rgb, darkness } = ambientAt(state.night);
+  const buf = lightBuf(cv.width, cv.height);
+  const b = buf.getContext("2d");
+
+  b.globalCompositeOperation = "source-over";
+  b.clearRect(0, 0, buf.width, buf.height);
+  b.globalAlpha = darkness * state.night;
+  b.fillStyle = rgb;
+  b.fillRect(0, 0, buf.width, buf.height);
+
+  // punch the pools of light out of the dark, then add their colour back on top --
+  // holes alone give you grey daylight through a stencil, with no warmth
+  b.globalCompositeOperation = "destination-out";
+  let anyFlicker = false;
+  lights.forEach((l, i) => {
+    const s = lightStrength(l, i);
+    if (s <= 0.01) return;
+    if (l.flicker) anyFlicker = true;
+    const cx = ox + l.x * Z, cy = oy + l.y * Z, r = l.r * Z;
+    if (cx + r < 0 || cy + r < 0 || cx - r > buf.width || cy - r > buf.height) return;
+    const g = b.createRadialGradient(cx, cy, 0, cx, cy, r);
+    g.addColorStop(0, `rgba(255,255,255,${Math.min(1, s)})`);
+    g.addColorStop(0.55, `rgba(255,255,255,${Math.min(1, s) * 0.45})`);
+    g.addColorStop(1, "rgba(255,255,255,0)");
+    b.globalAlpha = 1; b.fillStyle = g;
+    b.fillRect(cx - r, cy - r, r * 2, r * 2);
+  });
+  b.globalCompositeOperation = "source-over";
+  ctx.drawImage(buf, 0, 0);
+
+  ctx.save();
+  ctx.globalCompositeOperation = "lighter";
+  lights.forEach((l, i) => {
+    const s = lightStrength(l, i);
+    if (s <= 0.01) return;
+    const cx = ox + l.x * Z, cy = oy + l.y * Z, r = l.r * Z;
+    if (cx + r < 0 || cy + r < 0 || cx - r > cv.width || cy - r > cv.height) return;
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+    g.addColorStop(0, hexA(l.color, s * 0.5));
+    g.addColorStop(1, hexA(l.color, 0));
+    ctx.fillStyle = g;
+    ctx.fillRect(cx - r, cy - r, r * 2, r * 2);
+  });
+  ctx.restore();
+  return anyFlicker;
+}
+// #rgb, #rrggbb, or something a hand-edited map made up: never return a colour the
+// canvas will throw on, because one bad light would take the whole frame down
+function hexA(hex, a) {
+  let h = String(hex || "").replace("#", "");
+  if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+  if (h.length !== 6 || /[^0-9a-f]/i.test(h)) h = "ffd9a0";
+  const v = [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16));
+  return `rgba(${v[0]},${v[1]},${v[2]},${a})`;
+}
+
+
 /* ------------------------------------------------------------------ draw */
 function draw() {
   const cv = $("#map"), ctx = cv.getContext("2d");
@@ -401,6 +546,10 @@ function draw() {
     }
     drawItems();                 // this layer's sprites sit above its own tiles
   }
+  // the world is lit before the editor draws on top of it: a grid you cannot see
+  // through the dark is no use, and nor is a collision tint
+  if (drawLighting(ctx, cv, ox, oy)) anyAnim = true;
+
   if (state.showGrid) {
     // crisp 1px lines: offset by .5 so they land on a pixel instead of straddling two
     ctx.lineWidth = 1;
@@ -427,6 +576,20 @@ function draw() {
     for (const k of M.collision) { const [x,y] = k.split(",").map(Number);
       ctx.fillRect(ox + x*S, oy + y*S, S, S); }
   }
+  if (state.tool === "light" || state.selLight) {
+    const Z = state.zoom;
+    for (const l of (M.lights || [])) {
+      const cx = ox + l.x * Z, cy = oy + l.y * Z;
+      const on = l === state.selLight;
+      ctx.strokeStyle = on ? "#ffc65c" : "rgba(255,214,120,.55)";
+      ctx.lineWidth = on ? 2 : 1;
+      ctx.beginPath(); ctx.arc(cx, cy, l.r * Z, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = l.color;
+      ctx.beginPath(); ctx.arc(cx, cy, on ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#000"; ctx.lineWidth = 1; ctx.stroke();
+    }
+  }
+
   ctx.strokeStyle = cssVar("--mapEdge"); ctx.lineWidth = 2;
   ctx.strokeRect(ox - 1, oy - 1, W*S + 2, H*S + 2);
   const r = selRect();
@@ -773,6 +936,22 @@ function onMapDown(ev) {
     }
   }
 
+  if (t === "light") {
+    const p = pixelAt(ev, false);
+    const hit = lightAt(p.x, p.y);
+    if (hit) { snapshot(); selectLight(hit); drag = { light: hit,
+                 dx: hit.x - p.x, dy: hit.y - p.y }; return; }
+    snapshot();
+    const l = { ...NEW_LIGHT, x: Math.round(p.x), y: Math.round(p.y), kind: "custom" };
+    M.lights.push(l);
+    selectLight(l);
+    updateLightInfo();
+    // placing a light in broad daylight shows nothing, so bring the night up
+    if (state.night === 0) { $("#nightSlider").value = 60; setNight(60); }
+    drag = { light: l, dx: 0, dy: 0 };
+    return;
+  }
+
   // objects: select and drag, or drop a new one
   if (t === "move" || (t === "paint" && state.stamp?.sprite)) {
     const p = pixelAt(ev);
@@ -842,6 +1021,11 @@ function onMapMove(ev) {
     if (k !== drag.last && dropSprite(ev, true)) drag.last = k;
     draw(); return;
   }
+  if (drag.light) { const p = pixelAt(ev, false);
+    // free placement: a light is not a tile and rarely wants to sit on a corner
+    drag.light.x = Math.round(p.x + drag.dx);
+    drag.light.y = Math.round(p.y + drag.dy);
+    draw(); return; }
   if (drag.obj) { const p = pixelAt(ev, false);
     const nx = snapObj(p.x + drag.dx), ny = snapObj(p.y + drag.dy);
     const [ow, oh] = objSize(drag.obj.id);
@@ -986,6 +1170,7 @@ function serialise() {
       layers.push(out);
     }
   }
+  const lights = (M.lights || []).map(l => ({ ...l }));
   const runs = []; let run = null;
   [...M.collision].map(k => k.split(",").map(Number))
     .sort((a, b) => a[1] - b[1] || a[0] - b[0])
@@ -996,6 +1181,7 @@ function serialise() {
   if (run) runs.push(run);
   const out = { format: "worldbuilder-map/1", tile: M.tile, size: M.size,
                 background: M.background, layers, regions: [], collisions: runs,
+                lights,
                 spawns: M.spawns, pois: [], character: state.charId || null };
   // your manual collision decisions, so reopening does not silently re-derive them
   if (M.overrides.size) out.collisionOverrides = [...M.overrides];
@@ -1006,6 +1192,8 @@ function deserialise(d) {
   M.tile = d.tile; state.tile = d.tile; $("#tileSize").value = d.tile;
   fillSheetSelect();
   M.size = d.size; M.background = d.background || DEFAULT_BG;
+  M.lights = (d.lights || []).map(l => ({ ...l }));
+  state.selLight = null;
   const byName = Object.fromEntries((d.layers || []).map(L => [L.name, L]));
   const names = [...new Set([...LAYERS.map(L => L.name), ...(d.layers || []).map(L => L.name)])];
   const defRole = Object.fromEntries(LAYERS.map(L => [L.name, L.role]));
@@ -1677,6 +1865,48 @@ function escapeHtml(t) {
 }
 
 
+/* ------------------------------------------------- light authoring */
+const NEW_LIGHT = { r: 96, color: "#ffd9a0", intensity: 0.85, flicker: 0, when: "night" };
+
+function lightAt(px, py) {
+  // topmost first, and generous: the marker is small but the thing you are aiming
+  // at is a light, so anywhere in its inner third counts
+  for (let i = (M.lights || []).length - 1; i >= 0; i--) {
+    const l = M.lights[i];
+    const d = Math.hypot(px - l.x, py - l.y);
+    if (d <= Math.max(10, l.r * 0.33)) return l;
+  }
+  return null;
+}
+function selectLight(l) {
+  state.selLight = l;
+  const box = $("#lightEdit");
+  if (!box) return;
+  box.hidden = !l;
+  if (!l) return draw();
+  $("#liR").value = l.r; $("#liRv").textContent = l.r + "px";
+  $("#liC").value = l.color;
+  $("#liW").value = l.when;
+  $("#liF").value = Math.round(l.flicker * 100);
+  draw();
+}
+function updateLightInfo() {
+  const el = $("#lightInfo"); if (!el) return;
+  const d = derivedLights().length, a = (M.lights || []).length;
+  el.textContent = state.lightsIdx
+    ? `${d} from sprites · ${a} placed by hand`
+    : "lights.json missing — run tools/build_lights_index.py";
+}
+function setNight(v) {
+  state.night = v / 100;
+  $("#nightVal").textContent = v ? `${v}%` : "off";
+  updateLightInfo();
+  // flicker rides the existing animation timer: drawLighting reports it the same
+  // way an animated sprite does, so there is no second clock to keep in step
+  draw();
+}
+
+
 function init() {
   ensureGrids(); renderLayers();
   state.cam = { x: -state.tile, y: -state.tile };
@@ -1713,6 +1943,23 @@ function init() {
   $("#btnUndo").onclick = undo; $("#btnRedo").onclick = redo;
   $("#btnExport").onclick = doExport;
   $("#charSel").onchange = e => { state.charId = e.target.value; charImg(); draw(); };
+  loadLightsIndex().then(updateLightInfo);
+  $("#nightSlider").oninput = e => setNight(+e.target.value);
+  const editLight = (fn) => {
+    const l = state.selLight; if (!l) return;
+    fn(l); draw();
+  };
+  $("#liR").oninput = e => editLight(l => {
+    l.r = +e.target.value; $("#liRv").textContent = l.r + "px"; });
+  $("#liC").oninput = e => editLight(l => { l.color = e.target.value; });
+  $("#liW").onchange = e => editLight(l => { l.when = e.target.value; });
+  $("#liF").oninput = e => editLight(l => { l.flicker = +e.target.value / 100; });
+  $("#liDel").onclick = () => {
+    const l = state.selLight; if (!l) return;
+    snapshot();
+    M.lights = M.lights.filter(x => x !== l);
+    selectLight(null); updateLightInfo();
+  };
   $("#btnCollAuto").onclick = collisionFromLayers;
   $("#btnCollClear").onclick = () => { snapshot(); state.autoColl = false;
     $("#btnAuto").classList.remove("on");
