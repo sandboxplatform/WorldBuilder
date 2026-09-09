@@ -1342,16 +1342,45 @@ function setCol(which, px) {
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } }
 function recall(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
+/*
+ * Collapsing is not just a width of zero: the clamp in setCol would fight it, and a
+ * collapsed panel still needs somewhere to click to come back. The gutter stays put
+ * and keeps the chevron, so the way out is where the way in was.
+ */
+const PANEL = { colL: "aside:not(.right)", colR: "aside.right",
+                gut: { colL: "#gutL", colR: "#gutR" },
+                chev: { colL: "#chevL", colR: "#chevR" },
+                label: { colL: "tiles", colR: "tools" } };
+
+function collapsed(which) { return recall("wb." + which + ".off") === "1"; }
+
+function setCollapsed(which, off) {
+  $(PANEL[which]).classList.toggle("collapsed", off);
+  $(PANEL.gut[which]).classList.toggle("off", off);
+  const width = off ? 0 : (+recall("wb." + which) || LAYOUT[which][2]);
+  document.documentElement.style.setProperty("--" + which, width + "px");
+  const chev = $(PANEL.chev[which]);
+  const left = which === "colL";
+  // the chevron always points the way the panel will move
+  chev.textContent = off === left ? "›" : "‹";
+  chev.dataset.tip = `${off ? "Show" : "Collapse"} the ${PANEL.label[which]} panel.`;
+  store("wb." + which + ".off", off ? "1" : "0");
+  draw();
+}
+
 function initLayout() {
   for (const which of ["colL", "colR"]) {
     const saved = +recall("wb." + which);
     if (saved) setCol(which, saved);
+    setCollapsed(which, collapsed(which));
   }
   const ph = recall("wb.palH");
   if (ph) $("#palWrap").style.height = ph + "px";
 
   const drag = (el, which, sign) => {
     el.addEventListener("mousedown", e => {
+      if (e.target.closest(".chev")) return;      // the chevron is a button, not a grip
+      if (collapsed(which)) return;               // nothing to drag while it is away
       e.preventDefault();
       const app = $("#app").getBoundingClientRect();
       el.classList.add("drag"); document.body.classList.add("resizing");
@@ -1363,10 +1392,15 @@ function initLayout() {
       addEventListener("mousemove", move); addEventListener("mouseup", up);
     });
     // a double click restores the default width
-    el.addEventListener("dblclick", () => setCol(which, LAYOUT[which][2]));
+    el.addEventListener("dblclick", e => {
+      if (e.target.closest(".chev") || collapsed(which)) return;
+      setCol(which, LAYOUT[which][2]);
+    });
   };
   drag($("#gutL"), "colL", 1);
   drag($("#gutR"), "colR", -1);
+  $("#chevL").onclick = () => setCollapsed("colL", !collapsed("colL"));
+  $("#chevR").onclick = () => setCollapsed("colR", !collapsed("colR"));
 
   if (window.ResizeObserver)
     new ResizeObserver(() => {

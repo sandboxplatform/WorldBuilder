@@ -39,9 +39,31 @@
   /* drag handles between the three columns; the palette resizes on its own edge */
   .gutter{background:var(--panel);border-left:1px solid var(--line);border-right:1px solid var(--line);
     cursor:col-resize;position:relative}
-  .gutter::after{content:"";position:absolute;left:50%;top:50%;width:2px;height:26px;
+  .gutter::after{content:"";position:absolute;left:50%;top:34%;width:2px;height:26px;
     transform:translate(-50%,-50%);background:var(--line);border-radius:1px}
   .gutter:hover::after,.gutter.drag::after{background:var(--accent)}
+  .gutter.off{cursor:default}
+  .gutter.off::after{display:none}
+  /* the chevron lives in the gutter: the one place that is still on screen when the
+     panel it belongs to has been collapsed away */
+  .chev{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:16px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);border-radius:4px;background:var(--ctl);color:var(--dim);
+    font-size:10px;line-height:1;cursor:pointer}
+  .chev:hover{color:var(--ink);border-color:var(--ctlHi);background:var(--selBg)}
+  /* collapsed, the gutter sits hard against the window edge, and a chevron centred
+     on 6px hangs half of itself off screen -- so tuck it inward */
+  #gutL.off .chev{left:0;transform:translate(0,-50%)}
+  #gutR.off .chev{left:auto;right:0;transform:translate(0,-50%)}
+  /* Every child is pinned to its own track. Left to auto-placement, a collapsed
+     panel (display:none) shifts everything after it one column left, which put the
+     map canvas in the 6px gutter track. */
+  aside:not(.right){grid-column:1;grid-row:2}
+  #gutL{grid-column:2;grid-row:2}
+  #stage{grid-column:3;grid-row:2}
+  #gutR{grid-column:4;grid-row:2}
+  aside.right{grid-column:5;grid-row:2}
+  aside.collapsed{display:none}
   body.resizing{cursor:col-resize;user-select:none}
   header{grid-column:1/-1;display:flex;align-items:center;gap:8px;padding:0 10px;
     background:var(--panel);border-bottom:1px solid var(--line)}
@@ -181,7 +203,9 @@
       <small id="stampInfo">none</small></div>
   </aside>
 
-  <div class="gutter" id="gutL" data-tip="Drag to resize. Double click to reset."></div>
+  <div class="gutter" id="gutL" data-tip="Drag to resize. Double click to reset.">
+    <button class="chev" id="chevL" data-tip="Collapse the tiles panel.">‹</button>
+  </div>
 
   <div id="stage">
     <canvas id="map"></canvas>
@@ -189,7 +213,9 @@
     <div id="toast"></div>
   </div>
 
-  <div class="gutter" id="gutR" data-tip="Drag to resize. Double click to reset."></div>
+  <div class="gutter" id="gutR" data-tip="Drag to resize. Double click to reset.">
+    <button class="chev" id="chevR" data-tip="Collapse the tools panel.">›</button>
+  </div>
 
   <aside class="right">
     <h3>Tool</h3>

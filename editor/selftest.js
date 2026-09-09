@@ -338,6 +338,8 @@ export async function run() {
   await t('columns resize, clamp and persist', async () => {
     const aside = document.querySelector('aside');
     const g = document.querySelector('#gutL');
+    // a collapsed gutter has nothing to drag, so start from a known-open panel
+    setCollapsed('colL', false); await sleep(150);
     const drag = to => {
       const r = g.getBoundingClientRect();
       g.dispatchEvent(new MouseEvent('mousedown', {clientX:r.left+3, clientY:300, bubbles:true}));
@@ -397,6 +399,31 @@ export async function run() {
     dlg.close('ok'); await sleep(500);
     ok(!(await listed()).includes(NAME), 'map survived a confirmed delete');
     ok(objs !== undefined && M.layers.length > 0, 'canvas was wiped by a delete');
+  });
+
+  await t('side panels collapse and come back', async () => {
+    const stage = () => document.querySelector('#stage').getBoundingClientRect().width;
+    for (const [chev, sel, key] of [['#chevL', 'aside:not(.right)', 'colL'],
+                                    ['#chevR', 'aside.right', 'colR']]) {
+      setCollapsed(key, false); await sleep(150);
+      const open = stage();
+      const panel = document.querySelector(sel);
+      ok(!panel.classList.contains('collapsed'), `${key} did not start open`);
+
+      document.querySelector(chev).click(); await sleep(200);
+      ok(panel.classList.contains('collapsed'), `${key} did not collapse`);
+      ok(stage() > open, `${key} collapsed but the map did not gain the space`);
+      eq(localStorage.getItem('wb.' + key + '.off'), '1', `${key} not persisted`);
+      // the chevron has to survive its own panel, or there is no way back
+      const c = document.querySelector(chev).getBoundingClientRect();
+      ok(c.width > 0 && c.left >= 0 && c.right <= innerWidth,
+         `${key} chevron went off screen when collapsed`);
+
+      document.querySelector(chev).click(); await sleep(200);
+      ok(!panel.classList.contains('collapsed'), `${key} did not come back`);
+      ok(Math.abs(stage() - open) < 2, `${key} did not restore its width`);
+      ok(document.querySelector('#map').width > 100, 'map canvas lost its size');
+    }
   });
 
   const pass = results.filter(r => r[0] === 'pass').length;

@@ -73,7 +73,10 @@ whole. Picking one gives a sprite stamp; it exports as an object placement.
 ## Layout
 
 The three columns resize: drag either gutter, double click one to restore its default.
-The palette resizes on its own bottom edge. All three sizes persist per browser.
+The chevron in each gutter collapses that side panel away and brings it back — the
+chevron stays put when the panel goes, so the way out is where the way in was. The
+palette resizes on its own bottom edge. Every size and collapsed state persists per
+browser.
 
 ## Saving and deleting
 
@@ -246,7 +249,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-27 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+28 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
@@ -255,7 +258,8 @@ thumbnail picker (cell count matches the option list, every cell has a preview,
 choosing one moves the palette), picker search and its empty state, the theme toggle
 cycling system/light/dark and repainting both chrome and canvas, column resizing with its clamps and reset, and
 every tool having an icon, a tip and a shortcut that shows on hover, and
-deleting a saved world including the cancel path.
+deleting a saved world including the cancel path, and collapsing
+each side panel and restoring it.
 
 ## Licensing
 
