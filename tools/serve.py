@@ -282,8 +282,27 @@ class Server(http.server.ThreadingHTTPServer):
     daemon_threads = True
 
 
+def seed_maps():
+    """A deploy reads WB_MAPS, which is an empty volume the first time it mounts,
+    while the maps the image ships sit unused in <root>/maps. Copy them across so a
+    fresh deployment opens with the same worlds as a local checkout. A name already
+    in the volume is somebody's save and is never overwritten."""
+    import shutil
+    src = os.path.join(ROOT, "maps")
+    if os.path.abspath(src) == os.path.abspath(MAPS) or not os.path.isdir(src):
+        return
+    for f in sorted(os.listdir(src)):
+        # __selftest and friends are test artifacts, not worlds
+        if not f.endswith(".json") or f.startswith("__"):
+            continue
+        dst = os.path.join(MAPS, f)
+        if not os.path.exists(dst):
+            shutil.copyfile(os.path.join(src, f), dst)
+
+
 if __name__ == "__main__":
     os.makedirs(MAPS, exist_ok=True)
+    seed_maps()
     with Server((HOST, PORT), functools.partial(Handler, directory=ROOT)) as httpd:
         where = "127.0.0.1" if HOST == "127.0.0.1" else HOST
         print(f"WorldBuilder serving {ROOT} on http://{where}:{PORT}")
