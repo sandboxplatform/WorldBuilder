@@ -69,27 +69,28 @@ def main():
                         continue
                     im, _ = refs_mod.resolve(pal[v], size)
                     grid[y][x] = add_cell(im.crop((0, 0, T, T)))
-        else:
-            for p in L["placements"]:
-                im, _fp = refs_mod.resolve(p["id"], size)
-                bx, by, _bw, _bh = im.getbbox() or (0, 0, 0, 0)
-                # align on the content, plus any sub-tile offset the object carries
-                off = p.get("off", (0, 0))
-                ox = p["at"][0] * T + off[0] - bx
-                oy = p["at"][1] * T + off[1] - by
-                # an off-grid sprite straddles cells, so slice on the offset grid
-                sx, sy = ox % T, oy % T
-                for cy in range(-(sy > 0) * T, im.height + T, T):
-                    for cx in range(-(sx > 0) * T, im.width + T, T):
-                        cell = im.crop((cx, cy, cx + T, cy + T))
-                        if cell.getbbox() is None:
-                            continue
-                        gx, gy = (ox + cx) // T, (oy + cy) // T
-                        if not (0 <= gx < cols and 0 <= gy < rows):
-                            continue
-                        idx = add_cell(cell)
-                        if idx:
-                            grid[gy][gx] = idx
+        # placements are not exclusive to object layers: an object dropped on a
+        # tile layer lives in the same list, and slicing it is the same work
+        for p in L.get("placements", []):
+            im, _fp = refs_mod.resolve(p["id"], size)
+            bx, by, _bw, _bh = im.getbbox() or (0, 0, 0, 0)
+            # align on the content, plus any sub-tile offset the object carries
+            off = p.get("off", (0, 0))
+            ox = p["at"][0] * T + off[0] - bx
+            oy = p["at"][1] * T + off[1] - by
+            # an off-grid sprite straddles cells, so slice on the offset grid
+            sx, sy = ox % T, oy % T
+            for cy in range(-(sy > 0) * T, im.height + T, T):
+                for cx in range(-(sx > 0) * T, im.width + T, T):
+                    cell = im.crop((cx, cy, cx + T, cy + T))
+                    if cell.getbbox() is None:
+                        continue
+                    gx, gy = (ox + cx) // T, (oy + cy) // T
+                    if not (0 <= gx < cols and 0 <= gy < rows):
+                        continue
+                    idx = add_cell(cell)
+                    if idx:
+                        grid[gy][gx] = idx
         out_layers.append((L["name"], grid))
 
     # ---- pack the atlas ----

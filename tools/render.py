@@ -82,9 +82,10 @@ def main():
                 for x, v in enumerate(row):
                     if v != -1:
                         draw(pal[v], x, y)
-        else:
-            for p in layer["placements"]:
-                draw(p["id"], p["at"][0], p["at"][1], tuple(p.get("off", (0, 0))))
+        # a terrain layer carries placements too: whole objects dropped onto a tile
+        # layer keep their own entry rather than being flattened into the grid
+        for p in layer.get("placements", []):
+            draw(p["id"], p["at"][0], p["at"][1], tuple(p.get("off", (0, 0))))
 
     if a.scale > 1:
         canvas = canvas.resize((canvas.width * a.scale, canvas.height * a.scale),
