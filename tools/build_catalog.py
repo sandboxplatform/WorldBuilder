@@ -211,7 +211,9 @@ def main():
             if not fn.lower().endswith(".png"):
                 continue
             path = os.path.join(dirpath, fn)
-            rel = os.path.relpath(path, EXTRACTED)
+            # os.sep is a backslash on Windows; classify() and every stored path
+            # are POSIX-shaped, so normalise here rather than at each use
+            rel = os.path.relpath(path, EXTRACTED).replace(os.sep, "/")
             c = classify(rel)
             if c is None:
                 skipped += 1
@@ -251,7 +253,7 @@ def main():
 
     cat = {
         "version": 1,
-        "root": os.path.relpath(EXTRACTED, ROOT),
+        "root": os.path.relpath(EXTRACTED, ROOT).replace(os.sep, "/"),
         "note": "LimeZu asset packs - licensed, NOT redistributable. Keep local.",
         "assets": sorted(entries.values(), key=lambda e: e["id"]),
     }

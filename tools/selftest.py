@@ -180,10 +180,10 @@ def _():
                         "'editor/editor.js','utf8'))"],
                        capture_output=True, text=True, cwd=ROOT)
     assert r.returncode == 0, r.stderr[-400:]
-    html = open(os.path.join(ROOT, "editor", "index.html")).read()
+    html = open(os.path.join(ROOT, "editor", "index.html"), encoding="utf-8").read()
     for el in ("newDlg", "sheetSel", "charSel", "selBadge", "snapSel", "btnAuto"):
         assert f'id="{el}"' in html, f"missing #{el}"
-    js = open(os.path.join(ROOT, "editor", "editor.js")).read()
+    js = open(os.path.join(ROOT, "editor", "editor.js"), encoding="utf-8").read()
     import re
     refs = set(re.findall(r'\$\("#([A-Za-z0-9_]+)"\)', js))
     ids = set(re.findall(r'id="([A-Za-z0-9_]+)"', html))
