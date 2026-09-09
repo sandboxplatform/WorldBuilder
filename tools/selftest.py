@@ -256,6 +256,52 @@ def _server():
         proc.wait(timeout=5)
 
 
+@check("lights are derived from the sprites a map already has")
+def _lights():
+    """Phase 1 of the lighting plan: the exporter reads lights off the placements,
+    so nobody hand-places a light under every lamp. This guards the derivation, not
+    the look -- that is the runtime's job."""
+    sys.path.insert(0, TOOLS)
+    import lights as L
+
+    facets = json.load(open(os.path.join(ROOT, "catalog", "facets.json")))["assets"]
+    classes, labels, cells = L._vocab_classes(), L._labels(), L._sheet_cells()
+
+    # an outdoor map lit by its street lamps, and an indoor one by its screens --
+    # the indoor case only works through the vision labels, since the office pack
+    # numbers its sprites and has no name to parse
+    for name, want in (("chester_harbour", "street_lamp"), ("office_floor", "monitor")):
+        path = os.path.join(ROOT, "maps", f"{name}.json")
+        if not os.path.exists(path):
+            continue
+        m = json.load(open(path))
+        got = L.lights_for(m, facets, classes, labels, cells)
+        assert got, f"{name}: no lights derived at all"
+        kinds = {g["kind"] for g in got}
+        assert want in kinds, f"{name}: expected some {want}, got {sorted(kinds)}"
+
+        w, h = m["size"][0] * m["tile"], m["size"][1] * m["tile"]
+        for g in got:
+            assert 0 <= g["x"] <= w and 0 <= g["y"] <= h, f"{name}: light off the map"
+            assert g["r"] > 0 and 0 < g["intensity"] <= 1, f"{name}: silly light {g}"
+            assert g["when"] in ("night", "always"), f"{name}: bad when {g['when']}"
+
+    # things that read like lights and are not
+    for trap in L.NOT_LIGHTS:
+        kind, spec = L._kind_for([trap], classes)
+        assert spec is None, f"{trap} was treated as a light"
+
+    # and the shape the runtime actually reads
+    layer = L.tiled_layer(L.lights_for(json.load(
+        open(os.path.join(ROOT, "maps", "chester_harbour.json"))),
+        facets, classes, labels, cells), 9)
+    assert layer["type"] == "objectgroup" and layer["name"] == "lights"
+    need = {"r", "color", "intensity", "flicker", "when"}
+    for o in layer["objects"]:
+        assert o["point"] is True, "lights must be point objects"
+        assert {q["name"] for q in o["properties"]} == need, f"missing props on {o['id']}"
+
+
 def main():
     print(f"running {len(RESULTS)} checks\n")
     failed = 0

@@ -114,3 +114,23 @@ is not exported.
 ```bash
 python tools/mapfmt.py maps/demo_street.json
 ```
+
+## Lights (export only)
+
+Lights are not authored in the map file — they are **derived at export time** from the
+sprites already placed, the way collision is derived from object type. See
+`tools/lights.py`.
+
+Three sources, in decreasing order of trust: the vision label in `catalog/labels.json`
+(the only thing that knows what the office pack's numbered sprites are), the concept
+parsed from the asset name in `catalog/facets.json`, and finally the `lighting` class
+in `catalog/vocab.json`. A tile stamped straight off a sheet carries no name, so
+`catalog/sheet_xy.json` maps its cell back to the sprite that lives there.
+
+The export writes a Tiled `objectgroup` named `lights` — point objects with `r`,
+`color`, `intensity`, `flicker` and `when` (`night` or `always`) — plus `ambient_*`
+map properties. That shape is chosen because the runtime already parses object layers
+(spawns, POIs, transitions) and because a light is *data*: baking it into pixels would
+freeze the time of day and explode the atlas, which dedupes tiles by content hash.
+
+    python3 tools/lights.py maps/chester_harbour.json    # what would be emitted

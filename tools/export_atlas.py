@@ -129,6 +129,21 @@ def main():
                            "opacity": 1, "visible": True,
                            "data": [v for row in grid for v in row]})
             lid += 1
+    # Lights are read off the sprites already placed -- see tools/lights.py. They go
+    # out as an object layer because that is what the runtime already knows how to
+    # parse, and because a light is data about the map, not baked-in pixels: baking
+    # would freeze the time of day and blow up the atlas, which dedupes by content.
+    try:
+        import lights as lights_mod
+        derived = lights_mod.lights_for(m)
+    except Exception as e:                       # never fail an export over lighting
+        print(f"  lights skipped: {e}")
+        derived = None
+    if derived is not None:
+        layers.append(lights_mod.tiled_layer(derived, lid))
+        lid += 1
+        print(f"  {len(derived)} lights derived")
+
     if a.profile == "watercooler":
         for lname in ("props", "props-over", "collisions", "pois", "spawns",
                       "transitions"):
@@ -145,6 +160,8 @@ def main():
              "version": "1.10", "tiledversion": "1.11.2",
              "nextlayerid": lid, "nextobjectid": 1,
              "tilesets": [tileset], "layers": layers}
+    if derived is not None:
+        tiled["properties"] = lights_mod.ambient_props()
     map_path = os.path.join(a.outdir, f"{name}.json")
     json.dump(tiled, open(map_path, "w"), indent=1)
 

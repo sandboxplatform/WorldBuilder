@@ -47,7 +47,7 @@ Then open <http://127.0.0.1:8823/> — the root redirects to the editor. The edi
 python3 tools/selftest.py
 ```
 
-16 checks over the tools and data. The editor has its own 26 checks — load it, then in
+17 checks over the tools and data. The editor has its own 26 checks — load it, then in
 the console:
 
 ```js
