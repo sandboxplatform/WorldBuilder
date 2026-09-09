@@ -139,6 +139,23 @@ deliberately excluded: you walk over a rug and under a branch.
 
 Add your own with **+ layer**; you choose tiles or objects.
 
+## Putting a sprite on a chosen layer
+
+Select a layer and place a sprite, and it lands on **that** layer — not on `props`.
+Any layer can hold both tiles and sprites; a layer's sprites draw above its own tiles
+and below the next layer, which is what makes "put this lamp on overhead" mean
+something. They block from where they sit, save with their layer, and the sprite count
+shows beside the layer name.
+
+## Stamps and transparency
+
+A stamp block is a rectangle, but the art inside it rarely is. The camping dock has
+transparent corners, and writing those cells anyway used to replace whatever they were
+laid over — water became blank canvas. Cells that are fully transparent in the sheet
+are now skipped, so a stamp only ever adds pixels and you can lay a dock straight over
+water. Emptiness is measured from the sheet itself, one tile at a time and cached, so
+it holds for any sheet without another build step.
+
 ## Two kinds of layer
 
 **Tile layers** (`floor, walls, ground, furniture, objects, overhead`) snap to the
@@ -251,7 +268,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-28 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+30 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
@@ -260,8 +277,9 @@ thumbnail picker (cell count matches the option list, every cell has a preview,
 choosing one moves the palette), picker search and its empty state, the theme toggle
 cycling system/light/dark and repainting both chrome and canvas, column resizing with its clamps and reset, and
 every tool having an icon, a tip and a shortcut that shows on hover, and
-deleting a saved world including the cancel path, and collapsing
-each side panel and restoring it.
+deleting a saved world including the cancel path, collapsing
+each side panel and restoring it, a stamp leaving what is under its transparent
+cells alone, and a sprite landing on the chosen layer and surviving a save.
 
 ## Licensing
 

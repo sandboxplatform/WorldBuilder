@@ -346,7 +346,10 @@ function draw() {
   for (const L of M.layers) {
     if (!L.visible) continue;
     if (state.playing && L.name === "overhead") { held.push(L); continue; }
-    if (L.role === "objects") {
+    // sprites sit on whichever layer they were placed on, so every layer draws its
+    // own -- after its tiles, and in layer order, which is what makes "put this lamp
+    // on overhead" mean anything
+    const drawItems = () => {
       for (const it of L.items) {
         const a = spriteDef("sprite:" + it.id) || state.singles?.byId?.[it.id];
         if (!a) continue;
@@ -366,9 +369,8 @@ function draw() {
                          (a.bbox[2] || T)*Z + 2, (a.bbox[3] || T)*Z + 2);
         }
       }
-      continue;
-    }
-    if (!L.grid) continue;
+    };
+    if (L.role === "objects" || !L.grid) { drawItems(); continue; }
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
       const ref = L.grid[y][x]; if (!ref) continue;
       if (isSprite(ref)) {
@@ -393,6 +395,7 @@ function draw() {
       const im = imgFor(sh.image); if (!im.complete) continue;
       ctx.drawImage(im, r.col*T, r.row*T, T, T, ox + x*S, oy + y*S, S, S);
     }
+    drawItems();                 // this layer's sprites sit above its own tiles
   }
   if (state.showGrid) {
     // crisp 1px lines: offset by .5 so they land on a pixel instead of straddling two
@@ -482,17 +485,24 @@ function pixelAt(ev, snap = true) {
 // An object occupies whole cells: snap its top-left to the grid so a 1x3 and a 3x2
 // both sit square, whatever area they cover.
 function snapObj(v) { return Math.round(v / state.snap) * state.snap; }
-function objLayer() { return M.layers[state.layerIdx]?.role === "objects"
-  ? M.layers[state.layerIdx]
-  : M.layers.find(L => L.role === "objects"); }
+// A sprite goes on the layer you have selected -- that is the whole point of picking
+// one. Only when nothing is selected does it fall back to the objects layer.
+function objLayer() {
+  return M.layers[state.layerIdx] || M.layers.find(L => L.role === "objects");
+}
 function hitObject(px, py) {
-  const L = objLayer(); if (!L) return null;
-  for (let i = L.items.length - 1; i >= 0; i--) {
-    const it = L.items[i];
-    const a = state.singles?.byId?.[it.id]; if (!a) continue;
-    const w = a.anim ? a.anim.frame[0] : a.bbox[2];
-    const h = a.anim ? a.anim.frame[1] : a.bbox[3];
-    if (px >= it.x && py >= it.y && px < it.x + w && py < it.y + h) return { L, it, i };
+  // topmost first, across every visible layer: you click what you can see, not what
+  // happens to live on the layer that is selected
+  for (let li = M.layers.length - 1; li >= 0; li--) {
+    const L = M.layers[li];
+    if (!L.visible || !L.items) continue;
+    for (let i = L.items.length - 1; i >= 0; i--) {
+      const it = L.items[i];
+      const a = state.singles?.byId?.[it.id]; if (!a) continue;
+      const w = a.anim ? a.anim.frame[0] : a.bbox[2];
+      const h = a.anim ? a.anim.frame[1] : a.bbox[3];
+      if (px >= it.x && py >= it.y && px < it.x + w && py < it.y + h) return { L, it, i };
+    }
   }
   return null;
 }
@@ -526,6 +536,38 @@ function objSize(id) {
   return a.anim ? [a.anim.frame[0], a.anim.frame[1]] : [a.bbox[2], a.bbox[3]];
 }
 
+/*
+ * A stamp block is a rectangle, but the art inside it rarely is: the camping dock
+ * comes with transparent corners, and writing those cells anyway replaced whatever
+ * they were laid over -- water became blank canvas. Cells that are fully transparent
+ * in the sheet are skipped, so a stamp only ever adds pixels.
+ *
+ * Emptiness is measured from the sheet itself, one tile at a time and cached, rather
+ * than baked into an index: the sheets are already loaded for the palette, and it
+ * keeps this true for any sheet without another build step.
+ */
+const emptyTiles = new Map();
+function tileIsEmpty(sheetId, col, row) {
+  const key = `${sheetId}#${col},${row}`;
+  const hit = emptyTiles.get(key);
+  if (hit !== undefined) return hit;
+  const sh = sheetOf(sheetId); if (!sh) return false;
+  const im = imgFor(sh.image);
+  if (!im.complete || !im.naturalWidth) return false;   // unknown yet: paint it
+  const T = state.tile;
+  let c = tileIsEmpty._c;
+  if (!c) { c = tileIsEmpty._c = document.createElement("canvas"); c.width = c.height = T; }
+  if (c.width !== T) { c.width = c.height = T; }
+  const x = c.getContext("2d", { willReadFrequently: true });
+  x.clearRect(0, 0, T, T);
+  x.drawImage(im, col * T, row * T, T, T, 0, 0, T, T);
+  const d = x.getImageData(0, 0, T, T).data;
+  let empty = true;
+  for (let i = 3; i < d.length; i += 4) if (d[i] > 8) { empty = false; break; }
+  emptyTiles.set(key, empty);
+  return empty;
+}
+
 function applyStamp(x, y) {
   const st = state.stamp; if (!st) return;
   const L = M.layers[state.layerIdx];
@@ -535,7 +577,7 @@ function applyStamp(x, y) {
   const gid = (st.w * st.h > 1) ? state.nextGroup++ : 0;
   for (let dy = 0; dy < st.h; dy++) for (let dx = 0; dx < st.w; dx++) {
     const tx = x + dx, ty = y + dy;
-    if (editable(tx, ty)) {
+    if (editable(tx, ty) && !tileIsEmpty(st.sheet, st.col + dx, st.row + dy)) {
       L.grid[ty][tx] = makeRef(st.sheet, st.col + dx, st.row + dy);
       L.groups[ty][tx] = gid;
     }
@@ -614,9 +656,15 @@ function onMapDown(ev) {
   }
 
   if (t === "erase") {
-    // an object layer has no grid: take the whole sprite under the cursor
+    // an object layer has no grid: take the whole sprite under the cursor. A tile
+    // layer may now hold sprites too, so try one before falling through to tiles.
     if (M.layers[state.layerIdx]?.role === "objects") {
       snapshot(); eraseObjectAt(ev); drag = { erasingObjects: true }; draw(); return;
+    }
+    const b = $("#map").getBoundingClientRect();
+    if (hitObject((ev.clientX - b.left + state.cam.x) / state.zoom,
+                  (ev.clientY - b.top + state.cam.y) / state.zoom)) {
+      snapshot(); eraseObjectAt(ev); draw(); return;
     }
   }
 
@@ -731,8 +779,9 @@ function onMapUp() {
       }
       for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
         if (!editable(x, y)) continue;
-        L.grid[y][x] = makeRef(st.sheet, st.col + ((x - x0) % st.w),
-                                        st.row + ((y - y0) % st.h));
+        const sc = st.col + ((x - x0) % st.w), sr = st.row + ((y - y0) % st.h);
+        if (tileIsEmpty(st.sheet, sc, sr)) continue;   // never blank out what is under
+        L.grid[y][x] = makeRef(st.sheet, sc, sr);
         // one group per repetition of the stamp, so erase still lifts a whole block
         L.groups[y][x] = multi
           ? 1 + state.nextGroup + Math.floor((y - y0) / st.h) * 4096
@@ -757,7 +806,9 @@ function renderLayers() {
     <div class="layer ${i === state.layerIdx ? "sel" : ""}" data-i="${i}">
       <input type="checkbox" ${L.visible ? "checked" : ""} data-vis="${i}">
       <span>${L.name}</span>
-      <small style="color:var(--dim)">${L.role === "objects" ? "obj" : ""}</small>
+      <small style="color:var(--dim)">${L.items?.length
+        ? L.items.length + (L.role === "objects" ? " obj" : " spr")
+        : (L.role === "objects" ? "obj" : "")}</small>
     </div>`).join("");
   $$("#layers .layer").forEach(el => el.onclick = e => {
     if (e.target.dataset.vis !== undefined) return;
@@ -767,6 +818,17 @@ function renderLayers() {
 }
 
 /* ------------------------------------------------------- save / load / new */
+// tile position plus a pixel offset inside it: keeps the format readable and
+// backwards compatible (no "off" means tile-aligned, as before)
+function placementsOf(L) {
+  return L.items.map(it => {
+    const tx = Math.floor(it.x / M.tile), ty = Math.floor(it.y / M.tile);
+    const ox = it.x - tx * M.tile, oy = it.y - ty * M.tile;
+    const p = { id: it.id, at: [tx, ty] };
+    if (ox || oy) p.off = [ox, oy];
+    return p;
+  });
+}
 function serialise() {
   const layers = [];
   for (const L of M.layers) {
@@ -775,13 +837,7 @@ function serialise() {
       // tile position plus a pixel offset inside it: keeps the format readable and
       // backwards compatible (no "off" means tile-aligned, as before)
       layers.push({ name: L.name, role: "objects", units: "px",
-        placements: L.items.map(it => {
-          const tx = Math.floor(it.x / M.tile), ty = Math.floor(it.y / M.tile);
-          const ox = it.x - tx * M.tile, oy = it.y - ty * M.tile;
-          const p = { id: it.id, at: [tx, ty] };
-          if (ox || oy) p.off = [ox, oy];
-          return p;
-        }) });
+                    placements: placementsOf(L) });
       continue;
     }
     const pal = [], pi = new Map();
@@ -790,11 +846,14 @@ function serialise() {
       if (!pi.has(ref)) { pi.set(ref, pal.length); pal.push(ref); }
       return pi.get(ref);
     }));
-    if (pal.length) {
+    if (pal.length || L.items.length) {
       const out = { name: L.name, role: "terrain", palette: pal, grid };
       // stamp grouping is an editing aid, not art: renderers ignore it, but keeping
       // it means a reopened map still erases multi-tile objects as one piece
       if (L.groups?.some(r => r.some(v => v))) out.groups = L.groups;
+      // sprites dropped on a tile layer travel with it; readers that only know about
+      // grids ignore the key, and the exporter already walks placements on any layer
+      if (L.items.length) out.placements = placementsOf(L);
       layers.push(out);
     }
   }
@@ -836,8 +895,13 @@ function deserialise(d) {
     if (L && L.role === "terrain") L.grid.forEach((row, y) => row.forEach((v, x) => {
       if (v !== -1) g[y][x] = L.palette[v];
       if (L.groups?.[y]?.[x]) gr[y][x] = L.groups[y][x]; }));
+    const items = (L?.placements || [])
+      .filter(p => !p.id.startsWith("tile:"))
+      .map(p => ({ id: p.id,
+                   x: p.at[0] * d.tile + (p.off ? p.off[0] : 0),
+                   y: p.at[1] * d.tile + (p.off ? p.off[1] : 0) }));
     return { name: n, role: defRole[n] || "tiles", visible: true, grid: g,
-             groups: gr, items: [] };
+             groups: gr, items };
   });
   if (!M.layers.some(L => L.role === "objects"))
     M.layers.push({ name: "props", role: "objects", visible: true, grid: null, items: [] });
@@ -1131,20 +1195,19 @@ function derivedCollision() {
   const out = new Set();
   for (const L of M.layers) {
     if (!L.visible) continue;
-    if (L.role === "objects") {
-      for (const it of L.items) {
-        const a = state.singles?.byId?.[it.id];
-        if (a && a.blocks === false) continue;
-        const box = a?.cbox;
-        const [w, h] = objSize(it.id);
-        const bx = it.x + (box ? box[0] : 0), by = it.y + (box ? box[1] : 0);
-        const bw = box ? box[2] : w, bh = box ? box[3] : h;
-        for (let y = Math.floor(by / M.tile); y <= Math.floor((by + bh - 1) / M.tile); y++)
-          for (let x = Math.floor(bx / M.tile); x <= Math.floor((bx + bw - 1) / M.tile); x++)
-            if (inBounds(x, y)) out.add(key(x, y));
-      }
-      continue;
+    // sprites block from wherever they were placed, not only from the props layer
+    for (const it of (L.items || [])) {
+      const a = state.singles?.byId?.[it.id];
+      if (a && a.blocks === false) continue;
+      const box = a?.cbox;
+      const [w, h] = objSize(it.id);
+      const bx = it.x + (box ? box[0] : 0), by = it.y + (box ? box[1] : 0);
+      const bw = box ? box[2] : w, bh = box ? box[3] : h;
+      for (let y = Math.floor(by / M.tile); y <= Math.floor((by + bh - 1) / M.tile); y++)
+        for (let x = Math.floor(bx / M.tile); x <= Math.floor((bx + bw - 1) / M.tile); x++)
+          if (inBounds(x, y)) out.add(key(x, y));
     }
+    if (L.role === "objects") continue;
     if (!SOLID_TILE_LAYERS.has(L.name) || !L.grid) continue;
     L.grid.forEach((row, y) => row.forEach((ref, x) => { if (ref) out.add(key(x, y)); }));
   }

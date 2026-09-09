@@ -429,6 +429,62 @@ export async function run() {
     }
   });
 
+  await t('a stamp never blanks out what is under its transparent cells', async () => {
+    await freshMap(10, 10);
+    const cam = state.sheetsBySize['32'].find(s => s.id.includes('camping'));
+    ok(cam, 'camping sheet missing');
+    selectSheet(cam.id);
+    await new Promise(r => { const im = imgFor(cam.image);
+      im.complete ? r() : im.addEventListener('load', r, { once: true }); });
+
+    // a block with transparent cells in it -- the dock-over-water shape
+    let block = null;
+    for (let row = 0; row < Math.min(cam.rows - 1, 80) && !block; row++)
+      for (let col = 0; col < cam.cols - 1; col++) {
+        const e = [[0,0],[1,0],[0,1],[1,1]].map(([dx,dy]) => tileIsEmpty(cam.id, col+dx, row+dy));
+        if (e.some(Boolean) && e.some(v => !v)) { block = { col, row, e }; break; }
+      }
+    ok(block, 'no partly transparent block found in the camping sheet');
+
+    layer('floor');
+    const L = M.layers[state.layerIdx];
+    const base = 'tile:' + cam.id + '#40,40';        // a stand-in for the water below
+    for (let y = 2; y < 5; y++) for (let x = 2; x < 5; x++) L.grid[y][x] = base;
+
+    state.stamp = { sheet: cam.id, col: block.col, row: block.row, w: 2, h: 2 };
+    applyStamp(2, 2);
+    const cells = [[0,0],[1,0],[0,1],[1,1]];
+    cells.forEach(([dx, dy], i) => {
+      const got = L.grid[2 + dy][2 + dx];
+      if (block.e[i]) ok(got === base, 'a transparent cell overwrote what was under it');
+      else ok(got !== base, 'a solid cell did not paint');
+    });
+  });
+
+  await t('a sprite lands on the layer you picked and stays there', async () => {
+    await freshMap(10, 10);
+    await loadSingles();
+    const cat = Object.keys(state.singles.cats).find(c => c.startsWith('int.single.'));
+    const rec = state.singles.cats[cat][0];
+
+    layer('walls');                                  // a tile layer, not props
+    const target = M.layers[state.layerIdx];
+    eq(objLayer().name, 'walls', 'placement did not follow the selected layer');
+    target.items.push({ id: rec.id, x: 64, y: 64 });
+
+    const ser = serialise();
+    const saved = ser.layers.find(l => l.name === 'walls');
+    ok(saved && saved.placements && saved.placements.length === 1,
+       'sprite on a tile layer was not saved');
+    deserialise(ser);
+    eq(M.layers.find(l => l.name === 'walls').items.length, 1, 'lost on reload');
+    eq(M.layers.find(l => l.name === 'props').items.length, 0, 'leaked onto props');
+
+    // and it blocks from where it sits, not from props
+    state.autoColl = true; recomputeCollision();
+    ok(M.collision.size > 0, 'a sprite on a tile layer contributes no collision');
+  });
+
   const pass = results.filter(r => r[0] === 'pass').length;
   console.log(results.map(r => `${r[0]}  ${r[1]}${r[2] ? '\n        ' + r[2] : ''}`).join('\n'));
   return { pass, fail: results.length - pass,
