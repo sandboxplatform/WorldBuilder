@@ -17,6 +17,10 @@ const LAYERS = [
   { name: "props", role: "objects" },
 ];
 
+// Whole numbers to work at, halves below to see a big map at once: Chester Harbour
+// is 116x72 tiles, 3712px of art at 1x, which no window shows in one piece.
+const ZOOMS = [0.25, 0.5, 1, 2, 3, 4, 5, 6];
+
 const state = {
   tile: 32, zoom: 2, cam: { x: 0, y: 0 },
   sheets: {}, sheetsBySize: {}, sheet: null, img: new Map(),
@@ -402,12 +406,17 @@ function draw() {
     ctx.lineWidth = 1;
     // read once, not per line: getComputedStyle inside the loop costs a reflow each
     const minor = cssVar("--gridMinor"), major = cssVar("--gridMajor");
+    // zoomed out, a line every few pixels is a haze over the map rather than a
+    // guide: keep the every-8 majors, which still say where you are
+    const minors = S >= 12;
     for (let x = 0; x <= W; x++) {
+      if (x % 8 && !minors) continue;
       const gx = Math.round(ox + x*S) + .5;
       ctx.strokeStyle = x % 8 ? minor : major;
       ctx.beginPath(); ctx.moveTo(gx, oy); ctx.lineTo(gx, oy + H*S); ctx.stroke();
     }
     for (let y = 0; y <= H; y++) {
+      if (y % 8 && !minors) continue;
       const gy = Math.round(oy + y*S) + .5;
       ctx.strokeStyle = y % 8 ? minor : major;
       ctx.beginPath(); ctx.moveTo(ox, gy); ctx.lineTo(ox + W*S, gy); ctx.stroke();
@@ -1079,6 +1088,16 @@ async function doExport() {
 
 /* ------------------------------------------------------------------- init */
 // keep the map roughly on screen when panning
+function stepZoom(dir) {
+  const i = ZOOMS.indexOf(state.zoom);
+  const next = ZOOMS[Math.max(0, Math.min(ZOOMS.length - 1, i + dir))];
+  if (i < 0 || next === state.zoom) return;
+  state.zoom = next;
+  $("#zoomLbl").textContent = next + "x";
+  // zooming out shrinks the map under a camera that was aimed at the old extent
+  clampCam(); draw();
+}
+
 function clampCam() {
   const cv = $("#map"), S = state.tile * state.zoom;
   const pad = 4 * S;
@@ -1657,10 +1676,7 @@ function init() {
   const map = $("#map");
   map.onmousedown = onMapDown;
   map.onmousemove = onMapMove;
-  map.onwheel = ev => { ev.preventDefault();
-    const before = state.zoom;
-    state.zoom = Math.max(1, Math.min(6, state.zoom + (ev.deltaY < 0 ? 1 : -1)));
-    if (state.zoom !== before) { $("#zoomLbl").textContent = state.zoom + "x"; draw(); } };
+  map.onwheel = ev => { ev.preventDefault(); stepZoom(ev.deltaY < 0 ? 1 : -1); };
 
   addEventListener("keydown", e => {
     keys.add(e.key.toLowerCase());
@@ -1715,8 +1731,8 @@ function init() {
     if (k === "m") setTool("move");
     if (k === "[") { state.layerIdx = Math.max(0, state.layerIdx - 1); renderLayers(); }
     if (k === "]") { state.layerIdx = Math.min(M.layers.length - 1, state.layerIdx + 1); renderLayers(); }
-    if (k === "-") { state.zoom = Math.max(1, state.zoom - 1); $("#zoomLbl").textContent = state.zoom+"x"; draw(); }
-    if (k === "=" || k === "+") { state.zoom = Math.min(6, state.zoom + 1); $("#zoomLbl").textContent = state.zoom+"x"; draw(); }
+    if (k === "-") stepZoom(-1);
+    if (k === "=" || k === "+") stepZoom(1);
   });
   addEventListener("keyup", e => keys.delete(e.key.toLowerCase()));
   addEventListener("resize", draw);
