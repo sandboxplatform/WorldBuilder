@@ -1261,18 +1261,43 @@ async function openPicker() {
 function cssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
-function setTheme(mode) {
-  document.documentElement.dataset.theme = mode;
+// Three states, not two. "system" is the default and follows the OS live, so the
+// editor matches everything else on screen without being told to; picking light or
+// dark pins it until you cycle back round to system.
+const THEMES = ["system", "light", "dark"];
+const THEME_ICON = { system: "◐", light: "☀", dark: "☾" };
+const DARK_MQ = matchMedia("(prefers-color-scheme: dark)");
+let themePref = "system";
+
+function resolveTheme(pref) {
+  return pref === "system" ? (DARK_MQ.matches ? "dark" : "light") : pref;
+}
+function setTheme(pref) {
+  if (!THEMES.includes(pref)) pref = "system";
+  themePref = pref;
+  document.documentElement.dataset.theme = resolveTheme(pref);
   const b = $("#btnTheme");
-  if (b) { b.textContent = mode === "light" ? "☀" : "☾"; }
-  try { localStorage.setItem("wb.theme", mode); } catch (e) { /* private mode */ }
+  if (b) {
+    b.textContent = THEME_ICON[pref];
+    b.dataset.tip = pref === "system"
+      ? "Following your system setting. Click for light."
+      : `Pinned to ${pref}. Click for ${pref === "light" ? "dark" : "system"}.`;
+  }
+  try { localStorage.setItem("wb.theme", pref); } catch (e) { /* private mode */ }
   draw(); drawPalette(); if (state.palMode === "singles") drawSingles();
 }
+function cycleTheme() {
+  setTheme(THEMES[(THEMES.indexOf(themePref) + 1) % THEMES.length]);
+}
 function initTheme() {
-  let mode = null;
-  try { mode = localStorage.getItem("wb.theme"); } catch (e) { /* private mode */ }
-  if (!mode) mode = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  setTheme(mode);
+  let pref = null;
+  try { pref = localStorage.getItem("wb.theme"); } catch (e) { /* private mode */ }
+  // "light"/"dark" written by an older build still mean pinned; anything else is system
+  setTheme(THEMES.includes(pref) ? pref : "system");
+  // repaint when the OS flips while we are following it
+  DARK_MQ.addEventListener("change", () => {
+    if (themePref === "system") setTheme("system");
+  });
 }
 
 
@@ -1381,8 +1406,7 @@ function init() {
   initTheme();
   initLayout();
   initTips();
-  $("#btnTheme").onclick = () =>
-    setTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+  $("#btnTheme").onclick = cycleTheme;
   $("#pickBtn").onclick = () => ($("#pickPop")?.hidden === false ? closePicker() : openPicker());
   addEventListener("mousedown", e => {
     if (!e.target.closest("#pickPop") && !e.target.closest("#pickBtn")) closePicker();

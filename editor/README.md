@@ -95,9 +95,11 @@ overrides.
 
 ## Light and dark
 
-The header's ☾/☀ button switches theme; the choice is remembered per browser and the
-first visit follows the OS setting. All chrome reads CSS variables, so the switch is
-one attribute on `<html>`; canvases ask for the current value when they repaint.
+The header button cycles three states: **◐ system** (the default — follows your OS
+setting live, so the editor matches everything else on screen), **☀ light** and
+**☾ dark**, which stay pinned until you cycle back round to system. The choice is
+remembered per browser. All chrome reads CSS variables, so the switch is one attribute
+on `<html>`; canvases ask for the current value when they repaint.
 
 A map that has never been given a background of its own follows the theme, as does
 the area outside the map bounds. A map carrying a deliberate background keeps it in
@@ -242,7 +244,7 @@ marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
 collision, animation playback, tile-size switching, painting outside the map, the
 thumbnail picker (cell count matches the option list, every cell has a preview,
 choosing one moves the palette), picker search and its empty state, the theme toggle
-repainting both chrome and canvas, column resizing with its clamps and reset, and
+cycling system/light/dark and repainting both chrome and canvas, column resizing with its clamps and reset, and
 every tool having an icon, a tip and a shortcut that shows on hover.
 
 ## Licensing

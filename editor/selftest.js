@@ -310,22 +310,29 @@ export async function run() {
     document.querySelector('#modeSheets').click(); await sleep(400);
   });
 
-  await t('theme toggle switches, persists and repaints', async () => {
+  await t('theme cycles system -> light -> dark and repaints', async () => {
     const btn = document.querySelector('#btnTheme');
-    const start = document.documentElement.dataset.theme;
-    btn.click(); await sleep(200);
-    const other = document.documentElement.dataset.theme;
-    ok(other !== start, 'theme did not change');
-    eq(localStorage.getItem('wb.theme'), other, 'theme not persisted');
-    const chrome = getComputedStyle(document.querySelector('aside')).backgroundColor;
+    const html = document.documentElement;
+    const chrome = () => getComputedStyle(document.querySelector('aside')).backgroundColor;
     const px = () => document.querySelector('#map').getContext('2d')
       .getImageData(2, 2, 1, 1).data.join(',');
-    const backdrop = px();
-    btn.click(); await sleep(200);
-    eq(document.documentElement.dataset.theme, start, 'toggle is not reversible');
-    ok(getComputedStyle(document.querySelector('aside')).backgroundColor !== chrome,
-       'panel colour did not follow the theme');
-    ok(px() !== backdrop, 'map canvas backdrop did not repaint on theme change');
+    const osDark = matchMedia('(prefers-color-scheme: dark)').matches;
+
+    setTheme('system'); await sleep(150);
+    eq(localStorage.getItem('wb.theme'), 'system', 'preference not persisted');
+    eq(html.dataset.theme, osDark ? 'dark' : 'light', 'system did not follow the OS');
+
+    const seen = [], chromes = [], pixels = [];
+    for (let i = 0; i < 3; i++) {
+      seen.push(localStorage.getItem('wb.theme'));
+      chromes.push(chrome()); pixels.push(px());
+      btn.click(); await sleep(150);
+    }
+    eq(seen, ['system', 'light', 'dark'], 'cycle order');
+    eq(localStorage.getItem('wb.theme'), 'system', 'cycle did not come back round');
+    // light and dark must differ in both the chrome and the canvas; system matches one
+    ok(chromes[1] !== chromes[2], 'panel colour is the same in light and dark');
+    ok(pixels[1] !== pixels[2], 'map canvas is the same in light and dark');
   });
 
   await t('columns resize, clamp and persist', async () => {
