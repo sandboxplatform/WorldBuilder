@@ -546,8 +546,22 @@ function draw() {
     }
     drawItems();                 // this layer's sprites sit above its own tiles
   }
-  // the world is lit before the editor draws on top of it: a grid you cannot see
-  // through the dark is no use, and nor is a collision tint
+  if (state.playing) {
+    drawPlayerShadow(ctx, ox, oy);
+    drawPlayer(ctx, ox, oy, S);
+    for (const L of held) {
+      if (!L.grid) continue;
+      for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+        const r = parseRef(L.grid[y][x]); if (!r) continue;
+        const sh = sheetOf(r.id); if (!sh) continue;
+        const im = imgFor(sh.image); if (!im.complete) continue;
+        ctx.drawImage(im, r.col*T, r.row*T, T, T, ox + x*S, oy + y*S, S, S);
+      }
+    }
+  }
+  // Everything the map is made of has been drawn; now it gets dark. The character
+  // is inside this, not on top of it -- a figure standing unlit in a dark street is
+  // the one thing that gives a lighting system away.
   if (drawLighting(ctx, cv, ox, oy)) anyAnim = true;
 
   if (state.showGrid) {
@@ -614,18 +628,6 @@ function draw() {
     ctx.fillRect(ox + sp.at[0]*S + S*.25, oy + sp.at[1]*S + S*.25, S*.5, S*.5);
   }
   drawSizing(ctx, ox, oy, S);
-  if (state.playing) {
-    drawPlayer(ctx, ox, oy, S);
-    for (const L of held) {
-      if (!L.grid) continue;
-      for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
-        const r = parseRef(L.grid[y][x]); if (!r) continue;
-        const sh = sheetOf(r.id); if (!sh) continue;
-        const im = imgFor(sh.image); if (!im.complete) continue;
-        ctx.drawImage(im, r.col*T, r.row*T, T, T, ox + x*S, oy + y*S, S, S);
-      }
-    }
-  }
   // keep a slow repaint going only while something on the map is animating
   if (anyAnim && !state.animTimer) {
     state.animTimer = setInterval(() => { state.clock += 140; draw(); }, 140);
@@ -1333,6 +1335,77 @@ function tick() {
   draw();
   requestAnimationFrame(tick);
 }
+
+/*
+ * The shadow a character stands in.
+ *
+ * Nothing is baked into the character sheets -- measured: zero semi-transparent
+ * pixels along the bottom of a frame -- so without this they float. The pack's
+ * objects carry their own shadows, drawn for a sun somewhere off the top-left,
+ * which is what the daylight case matches.
+ *
+ * After dark the sun is not what is casting it. Every light in reach pulls the
+ * shadow away from itself, weighted by how strongly it falls here, so walking past
+ * a lamp swings the shadow around and stretches it as you leave. With no light
+ * nearby there is nothing to cast one, and it fades to nothing -- which is the
+ * point: an unlit figure with a crisp shadow looks worse than no shadow at all.
+ */
+// Tuned against the pack's own baked shadows, which are strong: a timid ellipse
+// under a character reads as dirt when the lamp post beside it has a hard shadow.
+const SHADOW = { rx: 8, ry: 3.2, reach: 30, minAlpha: 0.28, maxAlpha: 0.58 };
+
+function shadowCast(wx, wy) {
+  // Daylight: the sun the pack's own object shadows were drawn for, off to the
+  // upper left, so a character agrees with the scenery around it.
+  const day = 1 - state.night;
+  let sx = -0.35 * day, sy = 0.62 * day, weight = day, lenAcc = 0.34 * day;
+
+  if (state.night > 0) {
+    const lights = allLights();
+    for (let i = 0; i < lights.length; i++) {
+      const l = lights[i];
+      const d = Math.hypot(wx - l.x, wy - l.y);
+      if (d > l.r) continue;
+      const s = lightStrength(l, i) * (1 - d / l.r) * state.night;
+      if (s <= 0.01) continue;
+      const k = Math.max(d, 1);
+      sx += ((wx - l.x) / k) * s;
+      sy += ((wy - l.y) / k) * s * 0.55;   // squashed: the ground is seen at an angle
+      // stand under the lamp and the shadow is a puddle; walk to the edge of its
+      // pool and it stretches out behind you
+      lenAcc += Math.min(1, d / (l.r * 0.55)) * s;
+      weight += s;
+    }
+  }
+  if (weight < 0.02) return null;          // nothing is casting it
+  const len = lenAcc / weight;
+  const m = Math.hypot(sx, sy) || 1;
+  return { ux: sx / m, uy: sy / m, len,
+           alpha: SHADOW.minAlpha + (SHADOW.maxAlpha - SHADOW.minAlpha)
+                  * Math.min(1, weight) };
+}
+
+function drawPlayerShadow(ctx, ox, oy) {
+  if (!charDef()) return;
+  const cast = shadowCast(P.x, P.y);
+  if (!cast) return;
+  const Z = state.zoom;
+  const reach = SHADOW.reach * cast.len;
+  // anchored at the feet and thrown outward, rather than centred on the offset:
+  // a shadow that detaches from the character reads as a smudge on the floor
+  const cx = ox + (P.x + cast.ux * reach * 0.5) * Z;
+  const cy = oy + (P.y + cast.uy * reach * 0.5) * Z;
+  ctx.save();
+  ctx.translate(cx, cy);
+  ctx.rotate(Math.atan2(cast.uy, cast.ux));
+  ctx.beginPath();
+  ctx.ellipse(0, 0, (SHADOW.rx + reach * 0.5) * Z, SHADOW.ry * Z, 0, 0, Math.PI * 2);
+  ctx.fillStyle = `rgba(6,8,14,${cast.alpha})`;
+  ctx.filter = `blur(${(1.1 * Z).toFixed(1)}px)`;
+  ctx.fill();
+  ctx.restore();
+}
+
 function drawPlayer(ctx, ox, oy, S) {
   const c = charDef(); if (!c) return;
   const im = charImg(); if (!im || !im.complete) return;

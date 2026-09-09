@@ -737,6 +737,68 @@ export async function run() {
     setNight(0);
   });
 
+  await t('a character casts a shadow away from whatever is lighting it', async () => {
+    await freshMap(20, 20);
+    await loadLightsIndex();
+    const put = (x, y) => { M.lights = [{ x, y, r: 120, color: '#ffe3ad',
+      intensity: 1, flicker: 0, when: 'night', kind: 'custom' }]; };
+
+    setNight(100);
+    // a lamp to the left throws the shadow right, and vice versa
+    put(200, 300);
+    const right = shadowCast(260, 300);
+    ok(right && right.ux > 0.5, `lamp on the left did not throw the shadow right (${right && right.ux})`);
+    put(320, 300);
+    const left = shadowCast(260, 300);
+    ok(left && left.ux < -0.5, 'lamp on the right did not throw the shadow left');
+
+    // under the lamp it is a puddle; out at the edge of its pool it stretches
+    put(260, 300);
+    const under = shadowCast(266, 300);
+    put(200, 300);
+    const away = shadowCast(310, 300);
+    ok(away.len > under.len, `shadow did not lengthen with distance (${under.len} -> ${away.len})`);
+
+    // nothing lighting it, nothing casting it
+    M.lights = [];
+    eq(shadowCast(500, 500), null, 'a shadow appeared in the dark with no light');
+
+    // daylight still gives one, matching the sun the pack art was drawn for
+    setNight(0);
+    const day = shadowCast(500, 500);
+    ok(day && day.uy > 0 && day.ux < 0, 'no daylight shadow, or the sun moved');
+    setNight(0);
+  });
+
+  await t('the character is inside the lighting, not painted over it', async () => {
+    await freshMap(16, 16);
+    await loadLightsIndex();
+    await grabTiles(RB, 11, 6, 1, 1);
+    layer('floor'); tool('rect');
+    down(at(0, 0)); move(at(15, 15)); up(); await sleep(120);
+
+    startPlay();
+    P.x = 8 * M.tile; P.y = 8 * M.tile; P.moving = false;
+    const cv = map(), ctx = cv.getContext('2d');
+    // the camera only follows on the play tick, so put it where it will be
+    state.cam = { x: P.x * state.zoom - cv.width / 2, y: P.y * state.zoom - cv.height / 2 };
+    draw(); await sleep(150);
+    const sx = Math.round(-state.cam.x + P.x * state.zoom);
+    const sy = Math.round(-state.cam.y + (P.y - 20) * state.zoom);
+    ok(sx > 0 && sy > 0 && sx < cv.width && sy < cv.height,
+       `sample point ${sx},${sy} is off the canvas`);
+    const at2 = () => ctx.getImageData(sx, sy, 1, 1).data.join(',');
+    ok(at2() !== '0,0,0,0', 'sample point is not on the character');
+
+    setNight(0); draw(); await sleep(200);
+    const lit = at2();
+    M.lights = [];                       // no lights at all: full dark
+    setNight(100); draw(); await sleep(200);
+    const dark = at2();
+    ok(lit !== dark, 'night did not reach the character');
+    stopPlay(); setNight(0);
+  });
+
   const pass = results.filter(r => r[0] === 'pass').length;
   console.log(results.map(r => `${r[0]}  ${r[1]}${r[2] ? '\n        ' + r[2] : ''}`).join('\n'));
   return { pass, fail: results.length - pass,

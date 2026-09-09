@@ -161,6 +161,23 @@ The index the editor reads is built from the catalog:
 python3 tools/build_lights_index.py
 ```
 
+## Shadows
+
+Characters carry no shadow of their own — measured: zero semi-transparent pixels along
+the bottom of a frame — so in walk mode one is drawn for them. The pack's objects
+already have theirs baked in, drawn for a sun off the upper left, and in daylight the
+character's matches it.
+
+After dark the sun is not what casts it. Every light in reach pulls the shadow away
+from itself, weighted by how strongly it falls where the character stands, so walking
+past a lamp swings the shadow around and stretches it as you leave the pool. Stand
+where nothing lights you and there is nothing to cast one, and it fades away.
+
+Objects deliberately get no second shadow. Interiors and Office ship separable
+`Black_Shadow` and `Shadowless` sheets, but Exteriors do not — 144 incidental files
+against ~31,700 — so their baked shadows cannot be removed, and a system that worked
+indoors only would look inconsistent with the outdoor maps.
+
 ## Choosing what you draw on
 
 Click a layer's **name** in the Layers list — that is the one every stroke lands on,
@@ -311,7 +328,7 @@ references actually exists in the HTML.
 await import('./selftest.js').then(m => m.run())
 ```
 
-40 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
+42 checks driving the real UI through synthetic events: multi-tile stamps, rect fill
 and single-click, whole-group erase (including after a save/load cycle), flood fill,
 eyedropper, object snapping, select-and-drag, the marquee mask and its warning,
 marquee delete, undo/redo, save/reload fidelity, export, walk mode honouring
