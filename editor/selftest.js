@@ -115,6 +115,66 @@ export async function run() {
     eq(M.layers[state.layerIdx].name, 'walls', 'layer follows the pick');
   });
 
+  await t('fill lays a sprite down as itself', async () => {
+    await freshMap();
+    const cats = state.singles.cats;
+    const cat = Object.keys(cats).find(c => cats[c].some(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    const a = await grabSprite(cat, cats[cat].findIndex(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    layer('floor'); tool('fill'); down(at(4, 4)); up(); await sleep(80);
+    const floor = M.layers.find(l => l.name === 'floor');
+    eq(floor.grid[4][4], `sprite:${a.id}`, 'fill did not lay the sprite down');
+    ok(!floor.grid.flat().some(r => r && r.includes('undefined')),
+       'fill wrote a ref nothing can resolve');
+
+    // one bigger than a cell would overlap its neighbours: refused, not mangled
+    await freshMap();
+    const big = Object.keys(cats).map(c => cats[c].find(e => e.tiles[0] * e.tiles[1] > 1))
+      .find(Boolean);
+    state.stamp = { sprite: big.id, w: big.tiles[0], h: big.tiles[1], image: big.image };
+    layer('floor'); tool('fill'); down(at(4, 4)); up(); await sleep(80);
+    eq(filled('floor'), 0, 'a multi-tile sprite filled anyway');
+  });
+
+  await t('eyedropper picks a sprite off a tile layer', async () => {
+    await freshMap();
+    const cats = state.singles.cats;
+    const cat = Object.keys(cats).find(c => cats[c].some(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    const a = await grabSprite(cat, cats[cat].findIndex(e => e.tiles[0] === 1 && e.tiles[1] === 1));
+    layer('floor'); tool('fill'); down(at(4, 4)); up(); await sleep(80);
+
+    // pick it back while the palette is showing sheets, which cannot display it
+    document.querySelector('#modeSheets').click(); await sleep(400);
+    state.stamp = null;
+    map().dispatchEvent(new MouseEvent('mousedown',
+      {clientX: at(4,4).x, clientY: at(4,4).y, altKey: true, bubbles: true}));
+    up(); await sleep(700);
+    eq(state.stamp?.sprite, a.id, 'sprite not picked');
+    eq(state.palMode, 'singles', 'palette did not follow the sprite');
+    eq(M.layers[state.layerIdx].name, 'floor', 'layer did not follow the pick');
+
+    // and nothing comes out of a layer you cannot see
+    M.layers.forEach(l => l.visible = false);
+    state.stamp = null;
+    map().dispatchEvent(new MouseEvent('mousedown',
+      {clientX: at(4,4).x, clientY: at(4,4).y, altKey: true, bubbles: true}));
+    up(); await sleep(300);
+    M.layers.forEach(l => l.visible = true);
+    eq(state.stamp, null, 'picked out of a hidden layer');
+  });
+
+  await t('eyedropper picks the object under the cursor', async () => {
+    await freshMap();
+    const a = await grabSprite('int.single.living_room', 1);
+    layer('props'); tool('paint'); down(at(5, 5)); up(); await sleep(80);
+    eq(objs().length, 1, 'setup: object did not place');
+    state.stamp = null;
+    map().dispatchEvent(new MouseEvent('mousedown',
+      {clientX: at(5,5).x + 2, clientY: at(5,5).y + 2, altKey: true, bubbles: true}));
+    up(); await sleep(700);
+    eq(state.stamp?.sprite, a.id, 'object not picked');
+    eq(M.layers[state.layerIdx].role, 'objects', 'layer did not follow the object');
+  });
+
   await t('objects snap to the grid however messy the click', async () => {
     await freshMap(); await grabSprite('int.single.living_room', 0);
     layer('props'); tool('paint');

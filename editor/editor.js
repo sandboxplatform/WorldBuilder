@@ -640,7 +640,16 @@ function eraseObjectAt(ev) {
 function floodFill(x, y) {
   const L = M.layers[state.layerIdx], target = L.grid[y][x];
   const st = state.stamp; if (!st) return;
-  const rep = makeRef(st.sheet, st.col, st.row);
+  // A sprite stamp has no sheet, column or row: makeRef used to build
+  // "tile:undefined#undefined,undefined" out of them and flood the region with a ref
+  // nothing can resolve -- invisible in the editor and broken in every exporter.
+  // A sprite fills as itself, and one bigger than a cell cannot: it would overlap
+  // its neighbour on every side, so say so rather than lay down a mess.
+  if (st.sprite && (st.w > 1 || st.h > 1)) {
+    toast(`${st.w}×${st.h} is too big to fill with — try a 1×1 sprite or a tile`, false);
+    return;
+  }
+  const rep = st.sprite ? "sprite:" + st.sprite : makeRef(st.sheet, st.col, st.row);
   if (target === rep) return;
   const q = [[x, y]], seen = new Set();
   while (q.length) {
@@ -650,12 +659,59 @@ function floodFill(x, y) {
     q.push([cx+1,cy],[cx-1,cy],[cx,cy+1],[cx,cy-1]);
   }
 }
-function pickAt(x, y) {
+async function pickTile(i, r) {
+  state.layerIdx = i;
+  // the stamp and the palette have to agree: picking a sheet tile while the singles
+  // palette is up left you holding a tile the palette could not show
+  if (state.palMode !== "sheets") await setPalMode("sheets");
+  selectSheet(r.id);
+  state.stamp = { sheet: r.id, col: r.col, row: r.row, w: 1, h: 1 };
+  drawPalette(); drawStampPreview(); renderLayers();
+}
+
+async function pickSprite(i, id) {
+  const a = state.singles?.byId?.[id];
+  if (!a) return false;
+  state.layerIdx = i;
+  state.stamp = { sprite: id, w: a.tiles[0], h: a.tiles[1], image: a.image };
+  // ids read pack.kind.category.name, and the category is the palette's own key
+  const cats = state.singles.cats;
+  let cat = id.slice(0, id.lastIndexOf("."));
+  if (!cats[cat]) cat = Object.keys(cats).find(c => cats[c].some(e => e.id === id));
+  if (cat) {
+    state.singleCat = cat;
+    if (state.palMode !== "singles") await setPalMode("singles");
+    else { fillSingleSelect(); drawSingles(); }
+    // a category runs to hundreds of sprites, so scroll the one you picked into view
+    const n = singleList().findIndex(e => e.id === id), wrap = $("#palWrap");
+    if (n >= 0 && wrap) {
+      const row = Math.floor(n / SINGLE_COLS);
+      wrap.scrollTop = Math.max(0, row * SINGLE_CELL - wrap.clientHeight / 2);
+    }
+    drawSingles();
+  }
+  drawStampPreview(); renderLayers();
+  return true;
+}
+
+// The eyedropper hands back whatever is under the cursor. A tile layer holds sheet
+// tiles and whole sprites, and objects sit above both, so all three have to answer
+// -- picking used to parse for a tile: ref and give up on anything else, which on a
+// map painted from the singles palette meant it never picked anything at all.
+function pickAt(x, y, ev) {
+  // objects first, the way erase already takes the sprite on top before the tiles
+  if (ev) {
+    const p = pixelAt(ev, false), hit = hitObject(p.x, p.y);
+    if (hit) { pickSprite(M.layers.indexOf(hit.L), hit.it.id); return; }
+  }
   for (let i = M.layers.length - 1; i >= 0; i--) {
-    const r = parseRef(M.layers[i].grid?.[y]?.[x]);
-    if (r) { state.layerIdx = i; selectSheet(r.id);
-      state.stamp = { sheet: r.id, col: r.col, row: r.row, w: 1, h: 1 };
-      drawPalette(); drawStampPreview(); renderLayers(); return; }
+    const L = M.layers[i];
+    if (L.visible === false) continue;   // a hidden layer is not what you clicked on
+    const ref = L.grid?.[y]?.[x];
+    const r = parseRef(ref);
+    if (r) { pickTile(i, r); return; }
+    const sd = isSprite(ref) ? spriteDef(ref) : null;
+    if (sd) { pickSprite(i, sd.id); return; }
   }
 }
 
@@ -665,7 +721,7 @@ function onMapDown(ev) {
   const c = cellAt(ev);
   if (state.sizing) { state.sizing.from = c; state.sizing.to = c;
                       drag = { sizing: true }; draw(); return; }
-  if (ev.altKey) { pickAt(c.x, c.y); return; }
+  if (ev.altKey) { pickAt(c.x, c.y, ev); return; }
   const t = state.tool;
   if (t === "pan") { drag = { pan: true, sx: ev.clientX, sy: ev.clientY,
                               cx: state.cam.x, cy: state.cam.y }; return; }
@@ -738,15 +794,15 @@ function onMapDown(ev) {
   snapshot();
   if (t === "rect") { drag = { rect: true, from: c, to: c }; draw(); return; }
   drag = { paint: true };
-  applyTool(c.x, c.y);
+  applyTool(c.x, c.y, ev);
   draw();
 }
-function applyTool(x, y) {
+function applyTool(x, y, ev) {
   switch (state.tool) {
     case "paint": applyStamp(x, y); break;
     case "erase": eraseAt(x, y); break;
     case "fill": if (inBounds(x, y)) floodFill(x, y); break;
-    case "pick": pickAt(x, y); break;
+    case "pick": pickAt(x, y, ev); break;
     case "coll+": if (editable(x, y)) { M.collision.add(key(x, y));
                                         M.overrides.set(key(x, y), true); } break;
     case "coll-": M.collision.delete(key(x, y)); M.overrides.set(key(x, y), false); break;
@@ -776,7 +832,7 @@ function onMapMove(ev) {
     if (objFits(nx, ny, ow, oh)) { drag.obj.x = nx; drag.obj.y = ny; }
     draw(); return; }
   if (drag.rect) { drag.to = c; draw(); previewRect(drag); return; }
-  applyTool(c.x, c.y); draw();
+  applyTool(c.x, c.y, ev); draw();
 }
 function previewRect(d) {
   const ctx = $("#map").getContext("2d"), S = state.tile * state.zoom;
