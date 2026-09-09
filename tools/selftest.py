@@ -4,7 +4,7 @@ End-to-end self test. Exercises every tool and data file and reports what breaks
 
     python tools/selftest.py
 """
-import json, os, subprocess, sys, tempfile, traceback
+import base64, json, os, subprocess, sys, tempfile, traceback
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PY = os.path.join(ROOT, ".venv", "bin", "python")
@@ -189,6 +189,71 @@ def _():
     ids = set(re.findall(r'id="([A-Za-z0-9_]+)"', html))
     missing = sorted(refs - ids)
     assert not missing, f"js references ids not in html: {missing}"
+
+
+@check("server serves the app, not a file listing")
+def _server():
+    """The deployed root once answered with a directory listing -- the app has no
+    index.html at the root, so it has to redirect. Boots the real server on a spare
+    port with auth on, and checks the routes that only matter once it is hosted."""
+    import socket, time, urllib.error, urllib.request
+
+    with socket.socket() as s_:
+        s_.bind(("127.0.0.1", 0))
+        port = s_.getsockname()[1]
+
+    env = dict(os.environ, WB_USER="t", WB_PASS="p")
+    proc = subprocess.Popen([PY, os.path.join(TOOLS, "serve.py"), str(port)],
+                            env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    base = f"http://127.0.0.1:{port}"
+    auth = "Basic " + base64.b64encode(b"t:p").decode()
+
+    def get(path, creds=True, redirect=True):
+        r = urllib.request.Request(base + path)
+        if creds:
+            r.add_header("Authorization", auth)
+        opener = urllib.request.build_opener()
+        if not redirect:
+            class NoRedirect(urllib.request.HTTPRedirectHandler):
+                def redirect_request(self, *a): return None
+            opener = urllib.request.build_opener(NoRedirect)
+        try:
+            with opener.open(r, timeout=5) as resp:
+                return resp.status, resp.headers, resp.read()
+        except urllib.error.HTTPError as e:
+            return e.code, e.headers, b""
+
+    try:
+        for _ in range(50):                       # wait for the port to answer
+            try:
+                get("/editor/")
+                break
+            except Exception:
+                time.sleep(0.1)
+
+        code, hdrs, _ = get("/", redirect=False)
+        assert code == 302, f"root returned {code}, not a redirect"
+        assert hdrs["Location"] == "/editor/", f"root went to {hdrs['Location']}"
+
+        for path in ("/tools/", "/catalog/", "/maps/"):
+            code, _, _ = get(path)
+            assert code == 404, f"{path} listed its contents ({code})"
+
+        code, _, body = get("/editor/")
+        assert code == 200 and b"<title>" in body, "editor did not load"
+
+        code, _, _ = get("/editor/", creds=False)
+        assert code == 401, f"unauthenticated request got {code}, not 401"
+
+        code, _, _ = get("/.git/config")
+        assert code == 404, "dotted paths are reachable"
+
+        code, hdrs, _ = get("/editor/thumbs_cats.png")
+        assert code == 200 and "immutable" in hdrs.get("Cache-Control", ""), \
+            "artwork is not cached"
+    finally:
+        proc.terminate()
+        proc.wait(timeout=5)
 
 
 def main():

@@ -81,6 +81,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         if self._forbidden():
             return self._json({"error": "not found"}, 404)
         parsed = urllib.parse.urlparse(self.path)
+        # The root is the app. Locally you learn to type /editor/; deployed, the bare
+        # URL is what you hand someone, and it used to answer with a file listing.
+        if parsed.path == "/":
+            self.send_response(302)
+            self.send_header("Location", "/editor/")
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
         if parsed.path == "/api/maps":
             os.makedirs(MAPS, exist_ok=True)
             names = sorted(f[:-5] for f in os.listdir(MAPS) if f.endswith(".json"))
@@ -223,6 +231,12 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    def list_directory(self, path):
+        """No directory listings anywhere: they are not part of the app, and they
+        advertise tools/ and catalog/ to anyone who gets in."""
+        self.send_error(404, "Not Found")
+        return None
 
     # ------------------------------------------------------------------ output
     def end_headers(self):

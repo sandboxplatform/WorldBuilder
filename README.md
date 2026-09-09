@@ -38,7 +38,7 @@ python3 -m venv .venv && ./.venv/bin/pip install pillow numpy
 python3 tools/serve.py 8823
 ```
 
-Then open <http://127.0.0.1:8823/editor/>. The editor's own guide is in
+Then open <http://127.0.0.1:8823/> — the root redirects to the editor. The editor's own guide is in
 [editor/README.md](editor/README.md).
 
 ## Tests
@@ -47,7 +47,7 @@ Then open <http://127.0.0.1:8823/editor/>. The editor's own guide is in
 python3 tools/selftest.py
 ```
 
-15 checks over the tools and data. The editor has its own 26 checks — load it, then in
+16 checks over the tools and data. The editor has its own 26 checks — load it, then in
 the console:
 
 ```js
