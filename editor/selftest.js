@@ -346,15 +346,29 @@ export async function run() {
       dispatchEvent(new MouseEvent('mousemove', {clientX:to, clientY:300}));
       dispatchEvent(new MouseEvent('mouseup'));
     };
-    drag(430); await sleep(150);
-    ok(Math.abs(aside.getBoundingClientRect().width - 430) < 3, 'column did not follow the drag');
-    eq(localStorage.getItem('wb.colL'), '430', 'width not persisted');
+    // a width the current window can actually accommodate
+    const target = Math.round(Math.min(430, colMax('colL') - 20));
+    drag(target); await sleep(150);
+    ok(Math.abs(aside.getBoundingClientRect().width - target) < 3,
+       'column did not follow the drag');
+    eq(localStorage.getItem('wb.colL'), String(target), 'width not persisted');
     drag(20); await sleep(150);
-    ok(aside.getBoundingClientRect().width >= 190, 'column collapsed past its minimum');
-    drag(5000); await sleep(150);
-    ok(aside.getBoundingClientRect().width <= 620, 'column grew past its maximum');
+    ok(aside.getBoundingClientRect().width >= LAYOUT.colL[0],
+       'column collapsed past its minimum');
+
+    // the cap follows the window rather than a fixed pixel count, so a wide screen
+    // gets wide panels -- it only has to leave the map something to live in
+    drag(innerWidth + 500); await sleep(150);
+    const grown = aside.getBoundingClientRect().width;
+    ok(grown <= colMax('colL') + 2, 'column grew past its maximum');
+    ok(grown > 620 || colMax('colL') <= 620,
+       `cap did not scale with a ${innerWidth}px window (got ${Math.round(grown)})`);
+    ok(document.querySelector('#stage').getBoundingClientRect().width >= 200,
+       'the map was squeezed out');
+
     g.dispatchEvent(new MouseEvent('dblclick', {bubbles:true})); await sleep(150);
-    ok(Math.abs(aside.getBoundingClientRect().width - 280) < 3, 'double click did not reset');
+    ok(Math.abs(aside.getBoundingClientRect().width - LAYOUT.colL[1]) < 3,
+       'double click did not reset');
     ok(document.querySelector('#map').width > 0, 'map canvas lost its size on resize');
   });
 

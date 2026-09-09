@@ -1421,11 +1421,21 @@ function initTheme() {
  * its own bottom edge (native CSS resize) and its ResizeObserver repaints it.
  * All three sizes persist per browser.
  */
-const LAYOUT = { colL: [190, 620, 280], colR: [170, 460, 210] };
+// [minimum, default]. The maximum is not a fixed number of pixels: on a 5120px
+// display a 620px cap is arbitrary, and the only real constraint is leaving the map
+// something to live in.
+const LAYOUT = { colL: [140, 280], colR: [140, 210] };
+const MAP_MIN = 280;              // the map never shrinks below this
+
+function colMax(which) {
+  const other = $(PANEL[which === "colL" ? "colR" : "colL"]);
+  const taken = other && !other.classList.contains("collapsed")
+    ? other.getBoundingClientRect().width : 0;
+  return Math.max(LAYOUT[which][0], innerWidth - taken - MAP_MIN - 24);
+}
 
 function setCol(which, px) {
-  const [lo, hi] = LAYOUT[which];
-  const v = Math.max(lo, Math.min(hi, Math.round(px)));
+  const v = Math.max(LAYOUT[which][0], Math.min(colMax(which), Math.round(px)));
   document.documentElement.style.setProperty("--" + which, v + "px");
   store("wb." + which, v);
   draw();                       // the stage changed width; the canvas is sized to it
@@ -1449,7 +1459,7 @@ function collapsed(which) { return recall("wb." + which + ".off") === "1"; }
 function setCollapsed(which, off) {
   $(PANEL[which]).classList.toggle("collapsed", off);
   $(PANEL.gut[which]).classList.toggle("off", off);
-  const width = off ? 0 : (+recall("wb." + which) || LAYOUT[which][2]);
+  const width = off ? 0 : (+recall("wb." + which) || LAYOUT[which][1]);
   document.documentElement.style.setProperty("--" + which, width + "px");
   const chev = $(PANEL.chev[which]);
   const left = which === "colL";
@@ -1491,7 +1501,7 @@ function initLayout() {
     // a double click restores the default width
     el.addEventListener("dblclick", e => {
       if (e.target.closest(".chev") || collapsed(which)) return;
-      setCol(which, LAYOUT[which][2]);
+      setCol(which, LAYOUT[which][1]);
     });
   };
   drag($("#gutL"), "colL", 1);
@@ -1507,6 +1517,16 @@ function initLayout() {
       const h = $("#palWrap").clientHeight;
       if (h) store("wb.palH", h);
     }).observe($("#palWrap"));
+
+  // the cap moves with the window, so a panel sized on a wide screen re-clamps
+  // rather than squeezing the map out of existence on a narrow one
+  addEventListener("resize", () => {
+    for (const which of ["colL", "colR"])
+      if (!collapsed(which)) {
+        const now = $(PANEL[which]).getBoundingClientRect().width;
+        if (now > colMax(which)) setCol(which, colMax(which));
+      }
+  });
 }
 
 

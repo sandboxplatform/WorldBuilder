@@ -73,6 +73,9 @@ whole. Picking one gives a sprite stamp; it exports as an object placement.
 ## Layout
 
 The three columns resize: drag either gutter, double click one to restore its default.
+There is no fixed pixel cap — a panel can take as much of the window as it likes, so
+long as the map keeps 280px; on a wide screen that means genuinely wide panels, and
+the limit re-clamps if you shrink the window.
 Either side panel folds away to give the map the space: **◧** and **◨** in the header,
 or the chevron tab at the top of each gutter. The chevron stays put when the panel
 goes, so the way out is where the way in was, and the header button lights up while
